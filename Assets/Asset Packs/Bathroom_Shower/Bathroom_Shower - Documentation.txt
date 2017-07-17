@@ -1,0 +1,7 @@
+A realistic bathroom shower effect, complete with shower model, water droplets, mist, splashes and sound effects.
+
+Load the Bathroom_Shower.unity for an example scene, or drag Bathroom_Shower prefab in the Project window into the Hierarchy window.
+
+Have fun!
+
+If you have any questions then please get in touch at bendurrant@rivermillstudios.com
