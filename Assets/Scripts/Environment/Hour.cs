@@ -16,7 +16,7 @@ public class Hour : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        amPM = "a.m.";
+        amPM = "AM";
         accumulated = 21600.0f;
     }
 	
@@ -29,13 +29,13 @@ public class Hour : MonoBehaviour {
         
         if(hour>= 12)
         {            
-            amPM = "p.m.";
+            amPM = "PM";
             //if (hour >= 13)
             //    hour = hour % 12;
         }
         else
         {
-            amPM = "a.m.";
+            amPM = "AM";
         }
         
         time.text = (hour%12==0?12:hour%12/*hour*/ ).ToString() + ":" + minute.ToString("00") + " " + amPM;
