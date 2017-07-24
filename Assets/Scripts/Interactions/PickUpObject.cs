@@ -22,16 +22,27 @@ public class PickUpObject : MonoBehaviour {
     public AudioClip teleportFireBack;
     AudioSource audioPlayBack;
 
-    public FirstPersonController fps;
+    Mood mood;
 
     // Use this for initialization
     void Start () {
 
         audioPlayBack = GetComponent<AudioSource>();
+        mood = GetComponent<Mood>();
     }
 	
 	// Update is called once per frame
 	void Update () {
+
+        if (isCarrying)
+        {
+            carry(carriedObject);
+            checkDrop();
+        }
+        else
+        {
+            PickUp();
+        }
 
     }
 
@@ -42,8 +53,9 @@ public class PickUpObject : MonoBehaviour {
 
     void PickUp()
     {
-		if(Input.GetButtonDown("PickUp"))
+		if(Input.GetKeyDown("f"))
         {
+            Debug.Log("tapped");
             int x = Screen.width / 2;
             int y = Screen.height / 2;
 
@@ -58,6 +70,7 @@ public class PickUpObject : MonoBehaviour {
                     isCarrying = true;
                     carriedObject = p.gameObject;
                     p.rb.isKinematic = true;
+                    mood.happyMeter += p.point;
                 }
             }
         }
@@ -65,7 +78,7 @@ public class PickUpObject : MonoBehaviour {
 
     void checkDrop()
     {
-		if(Input.GetButtonDown("PickUp"))
+		if(Input.GetKeyDown(KeyCode.F))
         {
             dropObject();
         }

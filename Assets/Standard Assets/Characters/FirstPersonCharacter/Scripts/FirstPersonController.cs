@@ -11,6 +11,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
     public class FirstPersonController : MonoBehaviour
     {
         [SerializeField] private bool m_IsWalking;
+        [SerializeField] private bool m_IsInverted;
         [SerializeField] private float m_WalkSpeed;
         [SerializeField] private float m_RunSpeed;
         [SerializeField] [Range(0f, 1f)] private float m_RunstepLenghten;
@@ -81,6 +82,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
+            //camera invert
+            if (Input.GetKeyDown(KeyCode.I) && m_IsInverted == false)
+            {
+                m_MouseLook.YSensitivity = -2;
+                m_IsInverted = true;
+            }
+            else if (Input.GetKeyDown(KeyCode.I) && m_IsInverted == true)
+            {
+                m_MouseLook.YSensitivity = 2;
+                m_IsInverted = false;
+            }
         }
 
 
