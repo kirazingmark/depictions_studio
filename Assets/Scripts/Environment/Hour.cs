@@ -17,12 +17,12 @@ public class Hour : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         amPM = "a.m.";
-        accumulated = 0.0f;
+        accumulated = 21600.0f;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        accumulated += Time.deltaTime* 1440.0f;
+        accumulated += Time.deltaTime* 144.0f;
         second = (int)(accumulated % 60);
         minute = (int)((accumulated / 60) % 60);
         hour = (int)((accumulated / 3600) % 24);
