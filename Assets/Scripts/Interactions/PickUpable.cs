@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickUpable : MonoBehaviour {
+public class PickUpable : MonoBehaviour
+{
 
     public enum ObjectType { Bad, Good, Alcohol };
-    public enum ObjectType2 { Food , Stuffs}
-    
+    public enum ObjectType2 { Food, Stuffs }
+
     public ObjectType ot;
     public ObjectType2 ot2;
 
@@ -15,21 +16,25 @@ public class PickUpable : MonoBehaviour {
     public float point;
     public bool on = false;
 
-	// Use this for initialization
-	void Start () {
-        rb = GetComponent<Rigidbody>();
+    Mood playerMood;
 
+    // Use this for initialization
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+        playerMood = GetComponent<Mood>();
         if (ot == ObjectType.Bad)
             point = -5f;
         else if (ot == ObjectType.Alcohol)
             point = -10f;
         else
             point = 5f;
-        
-	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
 
         if (pickedUp)
         {
@@ -43,4 +48,16 @@ public class PickUpable : MonoBehaviour {
             }
         }
     }
+
+    //function to destroy the garbage - put it outside the update function
+
+    void OnCollisionEnter(Collider target)
+    {
+        if (target.gameObject.tag.Equals("bin") == true)
+        {
+            Destroy(this.gameObject);
+            playerMood.happyMeter += 2;
+        }
+    }
+
 }
