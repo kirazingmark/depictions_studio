@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickUpable : MonoBehaviour {
+public class PickUpable : MonoBehaviour
+{
 
     public enum ObjectType { Bad, Good, Alcohol };
-    public enum ObjectType2 { Food , Stuffs}
-    
+    public enum ObjectType2 { Food, Stuffs }
+
     public ObjectType ot;
     public ObjectType2 ot2;
 
@@ -17,8 +18,14 @@ public class PickUpable : MonoBehaviour {
 
     Mood playerMood;
 
+<<<<<<< HEAD
 	// Use this for initialization
 	void Start () {
+=======
+    // Use this for initialization
+    void Start()
+    {
+>>>>>>> cd45a502e57c1e67772a70afc8a6c55409ed2c9b
         rb = GetComponent<Rigidbody>();
         playerMood = GetComponent<Mood>();
         if (ot == ObjectType.Bad)
@@ -27,11 +34,12 @@ public class PickUpable : MonoBehaviour {
             point = -10f;
         else
             point = 5f;
-        
-	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
 
         if (pickedUp)
         {
@@ -57,4 +65,8 @@ public class PickUpable : MonoBehaviour {
         }
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cd45a502e57c1e67772a70afc8a6c55409ed2c9b
