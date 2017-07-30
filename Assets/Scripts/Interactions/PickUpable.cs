@@ -15,10 +15,12 @@ public class PickUpable : MonoBehaviour {
     public float point;
     public bool on = false;
 
+    Mood playerMood;
+
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
-
+        playerMood = GetComponent<Mood>();
         if (ot == ObjectType.Bad)
             point = -5f;
         else if (ot == ObjectType.Alcohol)
@@ -43,4 +45,16 @@ public class PickUpable : MonoBehaviour {
             }
         }
     }
+
+    //function to destroy the garbage - put it outside the update function
+
+    void OnCollisionEnter(Collider target)
+    {
+        if (target.gameObject.tag.Equals("bin") == true)
+        {
+            Destroy(this.gameObject);
+            playerMood.happyMeter += 2;
+        }
+    }
+
 }
