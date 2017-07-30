@@ -5,7 +5,7 @@ using UnityEngine;
 public class PickUpable : MonoBehaviour
 {
 
-    public enum ObjectType { Bad, Good, Alcohol };
+    public enum ObjectType { Bad, Good, Alcohol, Trash };
     public enum ObjectType2 { Food, Stuffs }
 
     public ObjectType ot;
@@ -29,9 +29,12 @@ public class PickUpable : MonoBehaviour
             point = -5f;
         else if (ot == ObjectType.Alcohol)
             point = -10f;
-        else
+        else if (ot == ObjectType.Good)
             point = 5f;
-
+        else if (ot == ObjectType.Trash)
+            point = 0f;
+        else
+            point = 0f;
     }
 
     // Update is called once per frame
