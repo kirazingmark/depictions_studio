@@ -18,14 +18,11 @@ public class PickUpable : MonoBehaviour
 
     Mood playerMood;
 
-<<<<<<< HEAD
-	// Use this for initialization
-	void Start () {
-=======
+
     // Use this for initialization
     void Start()
     {
->>>>>>> cd45a502e57c1e67772a70afc8a6c55409ed2c9b
+
         rb = GetComponent<Rigidbody>();
         playerMood = GetComponent<Mood>();
         if (ot == ObjectType.Bad)
@@ -56,17 +53,13 @@ public class PickUpable : MonoBehaviour
 
     //function to destroy the garbage - put it outside the update function
 
-    void OnCollisionEnter(Collider target)
+    void OnCollisionEnter(Collision target)
     {
-        if (target.gameObject.tag.Equals("bin") == true)
+        if (target.gameObject.tag == "bin")
         {
+            Debug.Log("hitting");
             Destroy(this.gameObject);
             playerMood.happyMeter += 2;
         }
     }
-
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cd45a502e57c1e67772a70afc8a6c55409ed2c9b
