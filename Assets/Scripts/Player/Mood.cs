@@ -29,7 +29,11 @@ public class Mood : MonoBehaviour {
 
         if(happyMeter % 10 == 0)
         {
+<<<<<<< HEAD
           
+=======
+        
+>>>>>>> origin/master
         }
 
         Camera.main.GetComponent<CameraEffect>().Fade = (100 - happyMeter) / 100;
