@@ -16,6 +16,8 @@ public class DoorTrigger2 : MonoBehaviour {
     public AudioClip closeDoor;
     AudioSource audioPlayBack;
 
+    private GUIStyle guiStyle = new GUIStyle();
+
     // Start Function.
     void Start()
     {
@@ -65,8 +67,9 @@ public class DoorTrigger2 : MonoBehaviour {
 
         if (enter)
         {
-
-            GUI.Label(new Rect(Screen.width / 2 - 75, Screen.height - 100, 350, 80), "<color=white><size=35>Open/Close - 'E'</size></color>");
+            guiStyle.fontSize = 12; //change the font size
+            guiStyle.font = (Font)Resources.Load("Fonts/bebas_neue/BebasNeue");
+            GUI.Label(new Rect(Screen.width / 2 - 75, Screen.height - 100, 350, 80), "<color=white><size=35>Open/Close - 'E'</size></color>", guiStyle);
         }
     }
 

@@ -11,6 +11,8 @@ public class AlarmClock : MonoBehaviour
     private bool enter;
     public Rigidbody rb;
 
+    private GUIStyle guiStyle = new GUIStyle();
+
     // Use this for initialization
     void Start()
     {
@@ -38,7 +40,10 @@ public class AlarmClock : MonoBehaviour
         if (enter)
         {
 
-            GUI.Label(new Rect(Screen.width / 2 - 75, Screen.height - 100, 350, 80), "<color=white><size=35>Turn Off - 'E'</size></color>");
+            guiStyle.fontSize = 35; //change the font size
+            guiStyle.fontStyle = FontStyle.Bold;
+            guiStyle.font = (Font)Resources.Load("Fonts/bebas_neue/BebasNeue");
+            GUI.Label(new Rect(Screen.width / 2 - 75, Screen.height - 100, 350, 80), "<color=white><size=35>Turn Off - 'E'</size></color>", guiStyle);
         }
     }
 

@@ -63,8 +63,10 @@ public class PickUpObject : MonoBehaviour {
             RaycastHit hit;
             if(Physics.Raycast(ray, out hit,10))
             {
+
                 PickUpable p = hit.collider.GetComponent<PickUpable>();
-                if(p != null)
+
+                if (p != null)
                 {
                     audioPlayBack.PlayOneShot(pickup, 1.0F);
                     isCarrying = true;
@@ -92,7 +94,5 @@ public class PickUpObject : MonoBehaviour {
         carriedObject.gameObject.GetComponent<Rigidbody>().isKinematic = false;
         carriedObject = null;
     }
-
-
 
 }
