@@ -22,6 +22,8 @@ public class PickUpObject : MonoBehaviour {
     public AudioClip teleportFireBack;
     AudioSource audioPlayBack;
 
+    public string objectName;
+
     Mood mood;
 
     // Use this for initialization
@@ -42,6 +44,7 @@ public class PickUpObject : MonoBehaviour {
         else
         {
             PickUp();
+            TrackObjectName();
         }
 
     }
@@ -61,7 +64,7 @@ public class PickUpObject : MonoBehaviour {
 
             Ray ray = mainCamera.ScreenPointToRay(new Vector3(x, y));
             RaycastHit hit;
-            if(Physics.Raycast(ray, out hit,10))
+            if(Physics.Raycast(ray, out hit, 10))
             {
 
                 PickUpable p = hit.collider.GetComponent<PickUpable>();
@@ -93,6 +96,51 @@ public class PickUpObject : MonoBehaviour {
         isCarrying = false;
         carriedObject.gameObject.GetComponent<Rigidbody>().isKinematic = false;
         carriedObject = null;
+    }
+
+    void TrackObjectName()
+    {
+
+        int x = Screen.width / 2;
+        int y = Screen.height / 2;
+
+        Ray ray = mainCamera.ScreenPointToRay(new Vector3(x, y));
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, 10))
+        {
+            PickUpable p = hit.collider.GetComponent<PickUpable>();
+            if (p != null)
+            {
+                if (p.tag == "Food")
+                {
+                    enter = true;
+                    objectName = "<color=white><size=35>Consume - 'F'</size></color>";
+                }
+                else if (p.tag == "Trash")
+                {
+                    enter = true;
+                    objectName = "<color=white><size=35>Pick Up - 'F'</size></color>";
+                }
+                else
+                {
+
+                }
+
+
+            }
+            else
+                enter = false;
+
+        }
+    }
+
+    void OnGUI()
+    {
+
+        if (enter)
+        {
+            GUI.Label(new Rect(Screen.width / 2 - 75, Screen.height - 100, 350, 80), objectName);
+        }
     }
 
 }
