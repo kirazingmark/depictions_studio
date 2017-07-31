@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PickUpable : MonoBehaviour
 {
-<<<<<<< HEAD
-    public enum ObjectType { Bad, Good, Alcohol };
-=======
+//<<<<<<< HEAD
+ //   public enum ObjectType { Bad, Good, Alcohol };
+//=======
 
     public enum ObjectType { Bad, Good, Alcohol, Trash };
->>>>>>> cda00e551f023df7874aa3af750e6b40990ce251
+//>//>>>>>> cda00e551f023df7874aa3af750e6b40990ce251
     public enum ObjectType2 { Food, Stuffs }
 
     public ObjectType ot;
