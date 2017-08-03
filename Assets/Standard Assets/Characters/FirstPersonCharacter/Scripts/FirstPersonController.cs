@@ -11,7 +11,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
     
     public class FirstPersonController : MonoBehaviour
     {
-        [SerializeField] private bool m_IsWalking;
+        [SerializeField] public bool m_IsWalking;
         [SerializeField] private bool m_IsInverted;
         [SerializeField] private float m_WalkSpeed;
         [SerializeField] private float m_RunSpeed;
@@ -19,7 +19,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private float m_JumpSpeed;
         [SerializeField] private float m_StickToGroundForce;
         [SerializeField] private float m_GravityMultiplier;
-        [SerializeField] private MouseLook m_MouseLook;
+        [SerializeField] public MouseLook m_MouseLook;
         [SerializeField] private bool m_UseFovKick;
         [SerializeField] private FOVKick m_FovKick = new FOVKick();
         [SerializeField] private bool m_UseHeadBob;
@@ -88,12 +88,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
             //camera invert
             if (Input.GetKeyDown(KeyCode.I) && m_IsInverted == false)
             {
-                m_MouseLook.YSensitivity = -2;
+                m_MouseLook.YSensitivity = -1 * m_MouseLook.YSensitivity;
                 m_IsInverted = true;
             }
             else if (Input.GetKeyDown(KeyCode.I) && m_IsInverted == true)
             {
-                m_MouseLook.YSensitivity = 2;
+                m_MouseLook.YSensitivity = m_MouseLook.YSensitivity * -1;
                 m_IsInverted = false;
             }
         }

@@ -75,7 +75,7 @@ public class PickUpObject : MonoBehaviour {
                     isCarrying = true;
                     carriedObject = p.gameObject;
                     p.rb.isKinematic = true;
-                    mood.happyMeter += p.point;
+                    mood.happyMeter += (int)p.point;
                     p.pickedUp = true;
                 }
             }
