@@ -15,7 +15,7 @@ public class Mood : MonoBehaviour {
     void Start () {
 
         happyMeter = 100;
-        //InvokeRepeating("PlayerControl", 10f, 10f);
+        
 
         chara = GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>();
 	}
@@ -25,15 +25,16 @@ public class Mood : MonoBehaviour {
 
         if (happyMeter >= 0)
         {
-            happyMeter -= Time.deltaTime;
-            temp += 1;
+            happyMeter -= Time.deltaTime/determine;
+           
         }
 
-        if(happyMeter % 10 == 0)
+        if((int)happyMeter % 10 == 0)
         {
             //Debug.Log("pie");
-            chara.m_MouseLook.XSensitivity -= 0.01f;
-            chara.m_MouseLook.YSensitivity -= 0.01f;
+            chara.m_MouseLook.XSensitivity = 1 + (happyMeter/100);
+            chara.m_MouseLook.YSensitivity = 1 + (happyMeter / 100);
+            chara.m_WalkSpeed = 1 + (happyMeter / 100);
             if (chara.m_MouseLook.XSensitivity <= 1f)
                 chara.m_MouseLook.XSensitivity = 1f;
             if (chara.m_MouseLook.YSensitivity <= 1f)
@@ -43,14 +44,4 @@ public class Mood : MonoBehaviour {
         Camera.main.GetComponent<CameraEffect>().Fade = (100 - happyMeter) / 100;
 
     }
-
-    //void PlayerControl()
-    //{
-    //    chara.m_MouseLook.XSensitivity -= 0.01f;
-    //    chara.m_MouseLook.YSensitivity -= 0.01f;
-    //    if (chara.m_MouseLook.XSensitivity <= 1f)
-    //        chara.m_MouseLook.XSensitivity = 1f;
-    //    if (chara.m_MouseLook.YSensitivity <= 1f)
-    //        chara.m_MouseLook.YSensitivity = 1f;
-    //}
 }

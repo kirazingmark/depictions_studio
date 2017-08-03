@@ -13,11 +13,15 @@ public class Hour : MonoBehaviour {
     public string amPM;
 
     public Text time;
+    public Text meter;
+
+    Mood mood;
 
 	// Use this for initialization
 	void Start () {
         amPM = "AM";
         accumulated = 21600.0f;
+        mood = GameObject.FindGameObjectWithTag("Player").GetComponent<Mood>();
     }
 	
 	// Update is called once per frame
@@ -39,5 +43,6 @@ public class Hour : MonoBehaviour {
         }
         
         time.text = (hour%12==0?12:hour%12/*hour*/ ).ToString() + ":" + minute.ToString("00") + " " + amPM;
+        meter.text = "Happiness Meter: " + mood.happyMeter.ToString("f0");
 	}
 }

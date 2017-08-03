@@ -8,9 +8,6 @@ public class PickUpObject : MonoBehaviour {
     public Camera mainCamera;
     public GameObject carriedObject;
     public bool isCarrying;
-    public bool isOpening;
-    public bool isTurn;
-	public bool haveKey;
     public bool enter;
     public float distance;
     public float smooth;
@@ -38,6 +35,7 @@ public class PickUpObject : MonoBehaviour {
 
         if (isCarrying)
         {
+            objectName = "";
             carry(carriedObject);
             checkDrop();
         }
@@ -64,7 +62,7 @@ public class PickUpObject : MonoBehaviour {
 
             Ray ray = mainCamera.ScreenPointToRay(new Vector3(x, y));
             RaycastHit hit;
-            if(Physics.Raycast(ray, out hit, 10))
+            if(Physics.Raycast(ray, out hit, 1))
             {
 
                 PickUpable p = hit.collider.GetComponent<PickUpable>();
@@ -106,7 +104,7 @@ public class PickUpObject : MonoBehaviour {
 
         Ray ray = mainCamera.ScreenPointToRay(new Vector3(x, y));
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 10))
+        if (Physics.Raycast(ray, out hit, 1))
         {
             PickUpable p = hit.collider.GetComponent<PickUpable>();
             if (p != null)
