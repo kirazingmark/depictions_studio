@@ -15,9 +15,6 @@ public class Detection : MonoBehaviour
     public GameObject TextPrefab; // A text element to display when the player is in reach of the door
     [HideInInspector] public GameObject TextPrefabInstance; // A copy of the text prefab to prevent data corruption
     [HideInInspector] public bool TextActive;
-    public GameObject Text_MachineDoorPrefab; // A text element to display when the player is in reach of the door
-    [HideInInspector] public GameObject Text_MachineDoorPrefabInstance; // A copy of the text prefab to prevent data corruption
-    [HideInInspector] public bool Text_MachineDoorActive;
 
     [Tooltip("The image or text that is shown in the middle of the the screen.")]
     public GameObject CrosshairPrefab;
@@ -45,7 +42,6 @@ public class Detection : MonoBehaviour
         }
 
         if (TextPrefab == null) Debug.Log("<color=yellow><b>No TextPrefab was found.</b></color>"); // Return an error if no text element was specified
-        if (Text_MachineDoorPrefab == null) Debug.Log("<color=yellow><b>No Text_MachineDoorPrefab was found.</b></color>"); // Return an error if no text element was specified
 
         DebugRayColor.a = Opacity; // Set the alpha value of the DebugRayColor
     }
@@ -86,32 +82,6 @@ public class Detection : MonoBehaviour
                 }
             }
 
-            else if (hit.collider.tag == "MachineDoor")
-            {
-                InReach = true;
-
-                // Display the UI element when the player is in reach of the door
-                if (Text_MachineDoorActive == false && Text_MachineDoorPrefab != null)
-                {
-                    Text_MachineDoorPrefabInstance = Instantiate(Text_MachineDoorPrefab);
-                    Text_MachineDoorActive = true;
-                    //Text_MachineDoorPrefabInstance.transform.SetParent(transform, true); // Make the player the parent object of the text element
-                    Text_MachineDoorPrefabInstance.transform.Rotate(0, 90, 0);
-                }
-
-                // Give the object that was hit the name 'Door'
-                GameObject MachineDoor = hit.transform.gameObject;
-
-                // Get access to the 'Door' script attached to the object that was hit
-                MachineDoor MachineDoorOpening = MachineDoor.GetComponent<MachineDoor>();
-
-                if (Input.GetKey(Character))
-                {
-                    // Open/close the door by running the 'Open' function found in the 'Door' script
-                    if (MachineDoorOpening.RotationPending == false) StartCoroutine(hit.collider.GetComponent<MachineDoor>().Move());
-                }
-            }
-
             else
             {
                 InReach = false;
@@ -121,15 +91,6 @@ public class Detection : MonoBehaviour
                 {
                     DestroyImmediate(TextPrefabInstance);
                     TextActive = false;
-                }
-                else if (Text_MachineDoorActive == true)
-                {
-                    DestroyImmediate(Text_MachineDoorPrefabInstance);
-                    Text_MachineDoorActive = false;
-                }
-                else
-                {
-
                 }
             }
         }
@@ -143,15 +104,6 @@ public class Detection : MonoBehaviour
             {
                 DestroyImmediate(TextPrefabInstance);
                 TextActive = false;
-            }
-            else if (Text_MachineDoorActive == true)
-            {
-                DestroyImmediate(Text_MachineDoorPrefabInstance);
-                Text_MachineDoorActive = false;
-            }
-            else
-            {
-
             }
         }
 
