@@ -19,6 +19,8 @@ public class PickUpObject : MonoBehaviour {
     public AudioClip teleportFireBack;
     AudioSource audioPlayBack;
 
+    public Font customFont;
+
     public string objectName;
 
     Mood mood;
@@ -62,7 +64,7 @@ public class PickUpObject : MonoBehaviour {
 
             Ray ray = mainCamera.ScreenPointToRay(new Vector3(x, y));
             RaycastHit hit;
-            if(Physics.Raycast(ray, out hit, 1))
+            if(Physics.Raycast(ray, out hit, 2))
             {
 
                 PickUpable p = hit.collider.GetComponent<PickUpable>();
@@ -104,7 +106,7 @@ public class PickUpObject : MonoBehaviour {
 
         Ray ray = mainCamera.ScreenPointToRay(new Vector3(x, y));
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 1))
+        if (Physics.Raycast(ray, out hit, 2))
         {
             PickUpable p = hit.collider.GetComponent<PickUpable>();
             if (p != null)
@@ -112,12 +114,17 @@ public class PickUpObject : MonoBehaviour {
                 if (p.tag == "Food")
                 {
                     enter = true;
-                    objectName = "<color=white><size=35>Consume - 'F'</size></color>";
+                    objectName = "<color=white><size=40>Consume - 'F'</size></color>";
                 }
                 else if (p.tag == "Trash")
                 {
                     enter = true;
-                    objectName = "<color=white><size=35>Pick Up - 'F'</size></color>";
+                    objectName = "<color=white><size=40>Pick Up - 'F'</size></color>";
+                }
+                else if (p.tag == "Clothes")
+                {
+                    enter = true;
+                    objectName = "<color=white><size=40>Pick Up - 'F'</size></color>";
                 }
                 else
                 {
@@ -134,6 +141,7 @@ public class PickUpObject : MonoBehaviour {
 
     void OnGUI()
     {
+        GUI.skin.font = customFont;
 
         if (enter)
         {

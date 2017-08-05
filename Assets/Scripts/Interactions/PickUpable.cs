@@ -5,7 +5,7 @@ using UnityEngine;
 public class PickUpable : MonoBehaviour
 {
 
-    public enum ObjectType { Bad, Good, Alcohol, Trash };
+    public enum ObjectType { Bad, Good, Alcohol, Trash, Clothes };
     public enum ObjectType2 { Food, Stuffs }
 
     public ObjectType ot;
@@ -31,6 +31,8 @@ public class PickUpable : MonoBehaviour
         else if (ot == ObjectType.Good)
             point = 5f;
         else if (ot == ObjectType.Trash)
+            point = 0f;
+        else if (ot == ObjectType.Clothes)
             point = 0f;
         else
             point = 0f;
@@ -60,13 +62,25 @@ public class PickUpable : MonoBehaviour
 
     void OnCollisionEnter(Collision target)
     {
-        if (target.gameObject.tag == "bin")
+        if (target.gameObject.tag == "bin" && ot != ObjectType.Clothes)
         {
             Debug.Log("hitting");
             Destroy(this.gameObject);
             playerMood.happyMeter += 2;
             po.carriedObject = null;
             po.isCarrying = false;
+        }
+        else if (target.gameObject.tag == "clothesHamper" && ot == ObjectType.Clothes)
+        {
+            Debug.Log("hitting");
+            Destroy(this.gameObject);
+            playerMood.happyMeter += 2;
+            po.carriedObject = null;
+            po.isCarrying = false;
+        }
+        else
+        {
+
         }
     }
 }
