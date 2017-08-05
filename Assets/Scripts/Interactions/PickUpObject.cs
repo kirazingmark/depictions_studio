@@ -119,6 +119,16 @@ public class PickUpObject : MonoBehaviour {
                     enter = true;
                     objectName = "<color=white><size=35>Pick Up - 'F'</size></color>";
                 }
+                else if (p.tag == "Clothes")
+                {
+                    enter = true;
+                    objectName = "<color=white><size=35>Pick Up - 'F'</size></color>";
+                }
+                else if (p.tag == "AlarmClock")
+                {
+                    enter = true;
+                    objectName = "<color=white><size=35>Turn Off - 'F'</size></color>";
+                }
                 else
                 {
 
