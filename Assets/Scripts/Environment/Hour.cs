@@ -26,7 +26,7 @@ public class Hour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        accumulated += Time.deltaTime* 144.0f;
+        accumulated += Time.deltaTime* 72.0f; // Previously set to 144.0f.
         second = (int)(accumulated % 60);
         minute = (int)((accumulated / 60) % 60);
         hour = (int)((accumulated / 3600) % 24);
@@ -43,6 +43,6 @@ public class Hour : MonoBehaviour {
         }
         
         time.text = (hour%12==0?12:hour%12/*hour*/ ).ToString() + ":" + minute.ToString("00") + " " + amPM;
-        meter.text = "Happiness Meter: " + mood.happyMeter.ToString("f0");
+        meter.text = "[DEBUGGING] Happiness Level: " + mood.happyMeter.ToString("f0");
 	}
 }

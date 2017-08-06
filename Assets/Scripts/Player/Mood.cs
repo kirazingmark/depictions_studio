@@ -5,7 +5,7 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 public class Mood : MonoBehaviour {
 
-    public float determine = 1.0f; //changing how fast the meter can go down, the larger the slower;
+    public float determine = 1f; //changing how fast the meter can go down, the larger the slower. Was previously set to '1.0f'.
 
     public float happyMeter;
     public float temp;
@@ -25,8 +25,17 @@ public class Mood : MonoBehaviour {
 
         if (happyMeter >= 0)
         {
-            happyMeter -= Time.deltaTime/determine;
+            happyMeter -= Time.deltaTime/(determine * 3.0f);
            
+        }
+        // This needs to be fixed, Happiness can still rise above 100.
+        else if (happyMeter > 100)
+        {
+            happyMeter = 100f;
+        }
+        else
+        {
+
         }
 
         if((int)happyMeter % 10 == 0)
