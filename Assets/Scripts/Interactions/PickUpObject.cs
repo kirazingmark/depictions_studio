@@ -157,8 +157,6 @@ public class PickUpObject : MonoBehaviour {
                     {
 
                     }
-
-
                 }
                 else if (e != null)
                 {
@@ -174,7 +172,6 @@ public class PickUpObject : MonoBehaviour {
                 }
                 else
                     enter = false;
-
             }
         }
         
@@ -297,13 +294,7 @@ public class PickUpObject : MonoBehaviour {
 
                 //chara.m_WalkSpeed = 1 + (mood.happyMeter / 100);
             }
-        }
-        
-       
-        
-        
+        }  
     }
-
-
 }
 
