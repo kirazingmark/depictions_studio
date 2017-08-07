@@ -14,6 +14,7 @@ public class Intro_GameManager : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
+        Cursor.visible = false;
         StartCoroutine(DialogueManager());
     }
 	
