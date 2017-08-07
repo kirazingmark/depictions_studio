@@ -17,7 +17,10 @@ public class PickUpObject : MonoBehaviour {
     public AudioClip drop;
     public AudioClip teleportFire;
     public AudioClip teleportFireBack;
-    AudioSource audioPlayBack;
+    public AudioSource audioPlayBack;
+
+    public AudioSource toiletSource;
+    public AudioClip toiletClip;
 
     public Font customFont;
 
@@ -27,9 +30,10 @@ public class PickUpObject : MonoBehaviour {
     public bool oneDay = true;
     bool onToilet;
 
-    Mood mood;
+    public Mood mood;
     CameraSwitcher pCamera;
     public FirstPersonController chara;
+
     // Use this for initialization
     void Start () {
 
@@ -176,6 +180,16 @@ public class PickUpObject : MonoBehaviour {
         
     }
 
+    void OnGUI()
+    {
+        GUI.skin.font = customFont;
+
+        if (enter)
+        {
+            GUI.Label(new Rect(Screen.width / 2 - 75, Screen.height - 100, 350, 80), objectName);
+        }
+    }
+
     void ChangeCamera()
     {
         
@@ -227,7 +241,7 @@ public class PickUpObject : MonoBehaviour {
                             chara.m_WalkSpeed = 0;
                         }
                     }
-                    else if (c.tag == "toilet" /*play sound down there*/)
+                    else if (c.tag == "toilet")
                     {
                         if (!oneDay)
                             mood.happyMeter += 2;
@@ -240,7 +254,7 @@ public class PickUpObject : MonoBehaviour {
                             oneDay = true;
                         }
                     }
-                    else if (c.tag == "toilet2" /*play sound down there*/)
+                    else if (c.tag == "toilet2")
                     {
                         if (!oneDay)
                             mood.happyMeter += 2;
@@ -261,16 +275,28 @@ public class PickUpObject : MonoBehaviour {
         }
         else if(Input.GetKeyDown("f") && sitting)
         {
-            pCamera.Camera2.enabled = false;
-            pCamera.Camera3.enabled = false;
-            pCamera.Camera4.enabled = false;
-            pCamera.Camera5.enabled = false;
-            pCamera.Camera6.enabled = false;
-            //objectName = "<color=white><size=40>Stand Up - 'F'</size></color>";
-            sitting = false;
-            
-            //chara.m_WalkSpeed = 1 + (mood.happyMeter / 100);
+            if (pCamera.Camera3.enabled == true || pCamera.Camera4.enabled == true)
+            {
+                Debug.Log("Bathroom Camera Triggered.");
+                toiletSource.Play();
+                mood.happyMeter += 2; // Happens everytime, needs to be set to only once, or run off a cooldown timer.
+                pCamera.Camera3.enabled = false;
+                pCamera.Camera4.enabled = false;
+            }
+            else
+            {
+                pCamera.Camera2.enabled = false;
+                pCamera.Camera3.enabled = false;
+                pCamera.Camera4.enabled = false;
+                pCamera.Camera5.enabled = false;
+                pCamera.Camera6.enabled = false;
+                
+                //objectName = "<color=white><size=40>Stand Up - 'F'</size></color>";
 
+                sitting = false;
+
+                //chara.m_WalkSpeed = 1 + (mood.happyMeter / 100);
+            }
         }
         
        
@@ -278,14 +304,6 @@ public class PickUpObject : MonoBehaviour {
         
     }
 
-    void OnGUI()
-    {
-        GUI.skin.font = customFont;
 
-        if (enter)
-        {
-            GUI.Label(new Rect(Screen.width / 2 - 75, Screen.height - 100, 350, 80), objectName);
-        }
-    }
 }
 

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ToiletCamera : MonoBehaviour {
 
-    float rotateSpeed = 2;
+    // CONSTANTS & VARIABLES.
+    public float rotateSpeed = 2;
     
-
 	// Use this for initialization
 	void Start () {
 		this.gameObject.transform.Rotate(0, 0, 0);

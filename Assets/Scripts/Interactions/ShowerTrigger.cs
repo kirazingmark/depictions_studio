@@ -12,9 +12,17 @@ public class ShowerTrigger : MonoBehaviour {
     public bool isActive;
     public bool enter;
 
+    public AudioSource showerSource;
+    public AudioClip showerTrack;
+
+    public Font customFont;
+
+    public Mood mood;
+
     // Use this for initialization
     void Start () {
 
+        mood = GetComponent<Mood>();
         Water = GetComponent<ParticleSystem>();
         Mist = GetComponent<ParticleSystem>();
         Splashes = GetComponent<ParticleSystem>();
@@ -31,6 +39,7 @@ public class ShowerTrigger : MonoBehaviour {
         else if (Input.GetButtonDown("E") && enter && isActive)
         {
             StopShower();
+            //mood.happyMeter += 5; // Not currently working, throws a NullReferenceException.
         }
         else if (Input.GetButtonDown("E") && !enter && isActive)
         {
@@ -44,6 +53,7 @@ public class ShowerTrigger : MonoBehaviour {
 
     void StartShower()
     {
+        showerSource.Play();
         Water.Play();
         Water.enableEmission = true;
         Mist.Play();
@@ -55,6 +65,7 @@ public class ShowerTrigger : MonoBehaviour {
 
     void StopShower()
     {
+        showerSource.Stop();
         Water.Stop();
         Water.enableEmission = false;
         Mist.Stop();
@@ -87,10 +98,12 @@ public class ShowerTrigger : MonoBehaviour {
     void OnGUI()
     {
 
+        GUI.skin.font = customFont;
+
         if (enter)
         {
 
-            GUI.Label(new Rect(Screen.width / 2 - 75, Screen.height - 100, 350, 80), "<color=white><size=35>On/Off - 'E'</size></color>");
+            GUI.Label(new Rect(Screen.width / 2 - 75, Screen.height - 100, 350, 80), "<color=white><size=40>On/Off - 'E'</size></color>");
         }
     }
 }
