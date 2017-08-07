@@ -22,14 +22,21 @@ public class PickUpObject : MonoBehaviour {
     public Font customFont;
 
     public string objectName;
+    public bool sitting;
+
+    public bool oneDay = true;
+    bool onToilet;
 
     Mood mood;
-
+    CameraSwitcher pCamera;
+    public FirstPersonController chara;
     // Use this for initialization
     void Start () {
 
         audioPlayBack = GetComponent<AudioSource>();
         mood = GetComponent<Mood>();
+        pCamera = GameObject.FindGameObjectWithTag("Player").GetComponent<CameraSwitcher>();
+        chara = GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>();
     }
 	
 	// Update is called once per frame
@@ -45,8 +52,8 @@ public class PickUpObject : MonoBehaviour {
         {
             PickUp();
             TrackObjectName();
+            ChangeCamera();
         }
-
     }
 
     void carry(GameObject objects)
@@ -78,6 +85,14 @@ public class PickUpObject : MonoBehaviour {
                     mood.happyMeter += (int)p.point;
                     p.pickedUp = true;
                 }
+
+                Easel e = hit.collider.GetComponent<Easel>();
+                {
+                    if(e!= null)
+                    {
+                        pCamera.Camera7.enabled = true;
+                    }
+                }
             }
         }
     }
@@ -100,43 +115,167 @@ public class PickUpObject : MonoBehaviour {
 
     void TrackObjectName()
     {
-
-        int x = Screen.width / 2;
-        int y = Screen.height / 2;
-
-        Ray ray = mainCamera.ScreenPointToRay(new Vector3(x, y));
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 2))
+        if(pCamera.Camera1.enabled == false)
         {
-            PickUpable p = hit.collider.GetComponent<PickUpable>();
-            if (p != null)
-            {
-                if (p.tag == "Food")
-                {
-                    enter = true;
-                    objectName = "<color=white><size=40>Consume - 'F'</size></color>";
-                }
-                else if (p.tag == "Trash")
-                {
-                    enter = true;
-                    objectName = "<color=white><size=40>Pick Up - 'F'</size></color>";
-                }
-                else if (p.tag == "Clothes")
-                {
-                    enter = true;
-                    objectName = "<color=white><size=40>Pick Up - 'F'</size></color>";
-                }
-                else
-                {
-
-                }
-
-
-            }
-            else
-                enter = false;
 
         }
+        else
+        {
+            int x = Screen.width / 2;
+            int y = Screen.height / 2;
+
+            Ray ray = mainCamera.ScreenPointToRay(new Vector3(x, y));
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, 2))
+            {
+                
+                PickUpable p = hit.collider.GetComponent<PickUpable>();
+                Easel e = hit.collider.GetComponent<Easel>();
+                Chair c = hit.collider.GetComponent<Chair>();
+                if (p != null)
+                {
+                    if (p.tag == "Food")
+                    {
+                        enter = true;
+                        objectName = "<color=white><size=40>Consume - 'F'</size></color>";
+                    }
+                    else if (p.tag == "Trash")
+                    {
+                        enter = true;
+                        objectName = "<color=white><size=40>Pick Up - 'F'</size></color>";
+                    }
+                    else if (p.tag == "Clothes")
+                    {
+                        enter = true;
+                        objectName = "<color=white><size=40>Pick Up - 'F'</size></color>";
+                    }
+                    else
+                    {
+
+                    }
+
+
+                }
+                else if (e != null)
+                {
+                    enter = true;
+                    objectName = "<color=white><size=40>Paint - 'F'</size></color>";
+
+                }
+                else if (c != null)
+                {
+                    enter = true;
+                    objectName = "<color=white><size=40>Sit Down - 'F'</size></color>";
+                    
+                }
+                else
+                    enter = false;
+
+            }
+        }
+        
+    }
+
+    void ChangeCamera()
+    {
+        
+        //sitting down
+        if (Input.GetKeyDown("f") && !sitting)
+        {
+            pCamera.Camera1.enabled = false;
+            if(pCamera.Camera1.enabled == false)
+            {
+                sitting = true;
+                chara.m_WalkSpeed = 0;
+            }
+            int x = Screen.width / 2;
+            int y = Screen.height / 2;
+
+            Ray ray = mainCamera.ScreenPointToRay(new Vector3(x, y));
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, 2))
+            {
+                Chair c = hit.collider.GetComponent<Chair>();
+                if (c != null)
+                {
+                    
+                    if (c.tag == "chair")
+                    {
+                        pCamera.Camera2.enabled = true;
+                        if(pCamera.Camera2.enabled == true)
+                        {
+                            sitting = true;
+                            chara.m_WalkSpeed = 0;
+                        }
+                    }
+                    else if (c.tag == "chair2")
+                    {
+                        pCamera.Camera5.enabled = true;
+                        if (pCamera.Camera5.enabled == true)
+                        {
+                            sitting = true;
+                            chara.m_WalkSpeed = 0;
+                        }
+                    }
+                    
+                    else if (c.tag == "chair3")
+                    {
+                        pCamera.Camera6.enabled = true;
+                        if (pCamera.Camera6.enabled == true)
+                        {
+                            sitting = true;
+                            chara.m_WalkSpeed = 0;
+                        }
+                    }
+                    else if (c.tag == "toilet" /*play sound down there*/)
+                    {
+                        if (!oneDay)
+                            mood.happyMeter += 2;
+                        pCamera.Camera4.enabled = true;
+                        
+                        if (pCamera.Camera4.enabled == true)
+                        {
+                            sitting = true;
+                            chara.m_WalkSpeed = 0;
+                            oneDay = true;
+                        }
+                    }
+                    else if (c.tag == "toilet2" /*play sound down there*/)
+                    {
+                        if (!oneDay)
+                            mood.happyMeter += 2;
+                        pCamera.Camera3.enabled = true;
+
+                        if (pCamera.Camera3.enabled == true)
+                        {
+                            sitting = true;
+                            chara.m_WalkSpeed = 0;
+                            oneDay = true;
+                        }
+                    }
+
+
+                }
+            }
+           
+        }
+        else if(Input.GetKeyDown("f") && sitting)
+        {
+            pCamera.Camera2.enabled = false;
+            pCamera.Camera3.enabled = false;
+            pCamera.Camera4.enabled = false;
+            pCamera.Camera5.enabled = false;
+            pCamera.Camera6.enabled = false;
+            //objectName = "<color=white><size=40>Stand Up - 'F'</size></color>";
+            sitting = false;
+            
+            //chara.m_WalkSpeed = 1 + (mood.happyMeter / 100);
+
+        }
+        
+       
+        
+        
     }
 
     void OnGUI()
@@ -148,5 +287,5 @@ public class PickUpObject : MonoBehaviour {
             GUI.Label(new Rect(Screen.width / 2 - 75, Screen.height - 100, 350, 80), objectName);
         }
     }
-
 }
+

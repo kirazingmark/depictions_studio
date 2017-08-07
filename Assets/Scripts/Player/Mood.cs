@@ -9,36 +9,40 @@ public class Mood : MonoBehaviour {
 
     public float happyMeter;
     public float temp;
+    public bool painting;
 
     public FirstPersonController chara;
+    public PickUpObject po;
     // Use this for initialization
     void Start () {
 
         happyMeter = 100;
-        
+        painting = false;
 
         chara = GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>();
-	}
+        po = GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpObject>();
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
 
-        if (happyMeter >= 0)
+        if (happyMeter >= 0 && !painting)
         {
             happyMeter -= Time.deltaTime/(determine * 3.0f);
+        }
+        else 
+        {
            
         }
+
         // This needs to be fixed, Happiness can still rise above 100.
-        else if (happyMeter > 100)
+        if (happyMeter > 100)
         {
             happyMeter = 100f;
         }
-        else
-        {
 
-        }
-
-        if((int)happyMeter % 10 == 0)
+        if ((int)happyMeter % 10 == 0)
         {
             //Debug.Log("pie");
             chara.m_MouseLook.XSensitivity = 1 + (happyMeter/100);
@@ -50,6 +54,7 @@ public class Mood : MonoBehaviour {
                 chara.m_MouseLook.YSensitivity = 1f;
         }
    
+        if(chara.m_WalkSpeed > 0)
         Camera.main.GetComponent<CameraEffect>().Fade = (100 - happyMeter) / 100;
 
     }

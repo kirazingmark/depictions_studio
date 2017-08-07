@@ -28,10 +28,13 @@ public class Detection : MonoBehaviour
     [Range(0.0F, 1.0F)]
     public float Opacity = 1.0F;
 
+    CameraSwitcher pCamera;
+
     void Start()
     {
         gameObject.name = "Player";
         gameObject.tag = "Player";
+        pCamera = GameObject.FindGameObjectWithTag("Player").GetComponent<CameraSwitcher>();
 
         if (CrosshairPrefab == null) Debug.Log("<color=yellow><b>No CrosshairPrefab was found.</b></color>"); // Return an error if no crosshair was specified
 
@@ -49,7 +52,7 @@ public class Detection : MonoBehaviour
     void Update()
     {
         // Set origin of ray to 'center of screen' and direction of ray to 'cameraview'
-        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0F));
+        Ray ray = pCamera.Camera1.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0F));
 
         RaycastHit hit; // Variable reading information about the collider hit
 

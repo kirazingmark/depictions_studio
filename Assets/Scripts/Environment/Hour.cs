@@ -43,6 +43,6 @@ public class Hour : MonoBehaviour {
         }
         
         time.text = (hour%12==0?12:hour%12/*hour*/ ).ToString() + ":" + minute.ToString("00") + " " + amPM;
-        meter.text = "[DEBUGGING] Happiness Level: " + mood.happyMeter.ToString("f0");
+        meter.text = "MOOD: " + mood.happyMeter.ToString("f0");
 	}
 }
