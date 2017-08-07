@@ -70,6 +70,7 @@ public class paintGM : MonoBehaviour {
         {
             pCamera.Camera7.enabled = false;
             oneDay = false;
+            mood.happyMeter += 5.0f;
         }
 
         //drawing part
