@@ -26,7 +26,7 @@ public class Intro_GameManager : MonoBehaviour {
     IEnumerator DialogueManager() {
         yield return new WaitForSeconds(2);
         introAudioSource.Play();
-        yield return new WaitForSeconds(10); // This will need to be adjusted for the whole length of the track.
+        yield return new WaitForSeconds(20);
         PlayGame();
         yield return null;
     }

@@ -66,7 +66,12 @@ public class paintGM : MonoBehaviour {
         }
 
         // moving the canvas
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && mood.painting == false)
+        {
+            pCamera.Camera7.enabled = false;
+            oneDay = false;
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && mood.painting == true)
         {
             pCamera.Camera7.enabled = false;
             oneDay = false;
