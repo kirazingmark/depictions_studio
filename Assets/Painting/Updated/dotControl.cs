@@ -15,7 +15,7 @@ public class dotControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-        if(Input.GetKeyDown(KeyCode.Delete))
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
             Destroy(this.gameObject);
         }

@@ -10,6 +10,7 @@ public class Mood : MonoBehaviour {
     public float happyMeter;
     public float temp;
     public bool painting;
+    public float blinking;
 
     public FirstPersonController chara;
     public PickUpObject po;
@@ -26,6 +27,8 @@ public class Mood : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        blinking += Time.deltaTime;
 
         if (happyMeter >= 0 && !painting)
         {
@@ -56,6 +59,9 @@ public class Mood : MonoBehaviour {
    
         if(chara.m_WalkSpeed > 0)
         Camera.main.GetComponent<CameraEffect>().Fade = (100 - happyMeter) / 100;
-
+        if (happyMeter <= 20)
+        {
+            Camera.main.GetComponent<CameraEffect>().rate = Mathf.Clamp(Mathf.Abs(Mathf.Sin(blinking) * 0.35f + 0.65f), 0.3f, 1.0f);
+        }
     }
 }
