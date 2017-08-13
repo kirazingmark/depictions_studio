@@ -1,0 +1,180 @@
+fileFormatVersion: 2
+guid: 3ab0e859ed673074c8c7ddb7bec9cbd0
+timeCreated: 1502602600
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Box016
+    100002: Box017
+    100004: Box018
+    100006: Box019
+    100008: Box020
+    100010: Box021
+    100012: Cylinder003
+    100014: Cylinder006
+    100016: Cylinder007
+    100018: Cylinder008
+    100020: Cylinder009
+    100022: Cylinder010
+    100024: Dryer
+    100026: Easel frame
+    100028: Fridge
+    100030: Hamper
+    100032: Handle
+    100034: //RootNode
+    100036: Painting
+    100038: Washingmachine
+    100040: Washingmachine002
+    400000: Box016
+    400002: Box017
+    400004: Box018
+    400006: Box019
+    400008: Box020
+    400010: Box021
+    400012: Cylinder003
+    400014: Cylinder006
+    400016: Cylinder007
+    400018: Cylinder008
+    400020: Cylinder009
+    400022: Cylinder010
+    400024: Dryer
+    400026: Easel frame
+    400028: Fridge
+    400030: Hamper
+    400032: Handle
+    400034: //RootNode
+    400036: Painting
+    400038: Washingmachine
+    400040: Washingmachine002
+    2300000: Box016
+    2300002: Box017
+    2300004: Box018
+    2300006: Box019
+    2300008: Box020
+    2300010: Box021
+    2300012: Cylinder003
+    2300014: Cylinder006
+    2300016: Cylinder007
+    2300018: Cylinder008
+    2300020: Cylinder009
+    2300022: Cylinder010
+    2300024: Dryer
+    2300026: Easel frame
+    2300028: Fridge
+    2300030: Hamper
+    2300032: Handle
+    2300034: Painting
+    2300036: Washingmachine
+    2300038: Washingmachine002
+    3300000: Box016
+    3300002: Box017
+    3300004: Box018
+    3300006: Box019
+    3300008: Box020
+    3300010: Box021
+    3300012: Cylinder003
+    3300014: Cylinder006
+    3300016: Cylinder007
+    3300018: Cylinder008
+    3300020: Cylinder009
+    3300022: Cylinder010
+    3300024: Dryer
+    3300026: Easel frame
+    3300028: Fridge
+    3300030: Hamper
+    3300032: Handle
+    3300034: Painting
+    3300036: Washingmachine
+    3300038: Washingmachine002
+    4300000: Easel frame
+    4300002: Painting
+    4300004: Fridge
+    4300006: Box019
+    4300008: Box018
+    4300010: Box017
+    4300012: Box016
+    4300014: Handle
+    4300016: Washingmachine
+    4300018: Box020
+    4300020: Dryer
+    4300022: Box021
+    4300024: Cylinder006
+    4300026: Cylinder003
+    4300028: Cylinder007
+    4300030: Cylinder008
+    4300032: Cylinder009
+    4300034: Cylinder010
+    4300036: Washingmachine002
+    4300038: Hamper
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
