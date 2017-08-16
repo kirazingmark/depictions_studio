@@ -264,7 +264,19 @@ public class PickUpObject : MonoBehaviour {
                             oneDay = true;
                         }
                     }
+                    else if (c.tag == "LawnMower")
+                    {
+                        if (!oneDay)
+                            mood.happyMeter += 2; // Mood will come from Grass Cut, not just sitting on the Mower.
+                        pCamera.Camera8.enabled = true;
 
+                        if (pCamera.Camera8.enabled == true)
+                        {
+                            sitting = true;
+                            chara.m_WalkSpeed = 0;
+                            oneDay = true;
+                        }
+                    }
 
                 }
             }
@@ -279,6 +291,11 @@ public class PickUpObject : MonoBehaviour {
                 mood.happyMeter += 2; // Happens everytime, needs to be set to only once, or run off a cooldown timer.
                 pCamera.Camera3.enabled = false;
                 pCamera.Camera4.enabled = false;
+            }
+            else if (pCamera.Camera8.enabled == true)
+            {
+                // Sound cues go here.
+                pCamera.Camera8.enabled = false;
             }
             else
             {

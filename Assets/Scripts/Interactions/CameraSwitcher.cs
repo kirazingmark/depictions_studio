@@ -12,6 +12,7 @@ public class CameraSwitcher : MonoBehaviour {
     public Camera Camera5; // Desk Camera.
     public Camera Camera6; // Dining Table Camera.
     public Camera Camera7; // Painting Camera.
+    public Camera Camera8; // LawnMower Camera.
 
     // Use this for initialization
     void Start()
@@ -24,6 +25,7 @@ public class CameraSwitcher : MonoBehaviour {
         Camera5.enabled = false;
         Camera6.enabled = false;
         Camera7.enabled = false;
+        Camera8.enabled = false;
     }
 
     // Update is called once per frame
