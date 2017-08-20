@@ -57,13 +57,13 @@ public class paintGM : MonoBehaviour {
         Vector2 mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
 
         //deleting the whole scene
-        if (Input.GetKey(KeyCode.Q))
-        {
-            for (int y = 0; y < 512; y++)
-                for (int x = 0; x < 1024; x++)
-                    text2d.SetPixel(x, y, Color.white);
-            text2d.Apply();
-        }
+        //if (Input.GetKey(KeyCode.Q))
+        //{
+        //    for (int y = 0; y < 512; y++)
+        //        for (int x = 0; x < 1024; x++)
+        //            text2d.SetPixel(x, y, Color.white);
+        //    text2d.Apply();
+        //}
 
         // moving the canvas
         if (Input.GetKeyDown(KeyCode.Escape) && mood.painting == false)
@@ -146,9 +146,9 @@ public class paintGM : MonoBehaviour {
            
         else
         {
-            Cursor.visible = false;
+            //Cursor.visible = false;
             pCamera.Camera1.enabled = true;
-            Cursor.lockState = CursorLockMode.Locked;
+            //Cursor.lockState = CursorLockMode.Locked;
             chara.m_WalkSpeed = 1 + (mood.happyMeter / 100);
             whiteUselessDot.SetActive(true);
             mood.painting = false;

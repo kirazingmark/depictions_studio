@@ -34,6 +34,9 @@ public class PickUpObject : MonoBehaviour {
     CameraSwitcher pCamera;
     public FirstPersonController chara;
 
+    public bool isMowerActive = false;
+    public GameObject player;
+
     // Use this for initialization
     void Start () {
 
@@ -272,6 +275,8 @@ public class PickUpObject : MonoBehaviour {
 
                         if (pCamera.Camera8.enabled == true)
                         {
+                            Debug.Log("On Mower is true");
+                            isMowerActive = true;
                             sitting = true;
                             chara.m_WalkSpeed = 0;
                             oneDay = true;
@@ -295,6 +300,10 @@ public class PickUpObject : MonoBehaviour {
             else if (pCamera.Camera8.enabled == true)
             {
                 // Sound cues go here.
+                Debug.Log("On Mower is false");
+                isMowerActive = false;
+                //player.transform.Translate(1, 1, 1);
+                player.transform.position = new Vector3(-33, 2, 2);
                 pCamera.Camera8.enabled = false;
             }
             else
