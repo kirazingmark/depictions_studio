@@ -5,7 +5,7 @@ using UnityEngine;
 public class PickUpable : MonoBehaviour
 {
 
-    public enum ObjectType { Bad, Good, VeryGood, Alcohol, Trash, Clothes };
+    public enum ObjectType { Bad, Good, VeryGood, Alcohol, Trash, Clothes, Grass };
     public enum ObjectType2 { Food, Stuffs }
 
     public ObjectType ot;
@@ -35,6 +35,8 @@ public class PickUpable : MonoBehaviour
         else if (ot == ObjectType.Trash)
             point = 0f;
         else if (ot == ObjectType.Clothes)
+            point = 0f;
+        else if (ot == ObjectType.Grass)
             point = 0f;
         else
             point = 0f;
@@ -77,6 +79,14 @@ public class PickUpable : MonoBehaviour
             Debug.Log("hitting");
             Destroy(this.gameObject);
             playerMood.happyMeter += 2;
+            po.carriedObject = null;
+            po.isCarrying = false;
+        }
+        else if (target.gameObject.tag == "MowerDestroyer" && ot == ObjectType.Grass)
+        {
+            Debug.Log("grass cut");
+            Destroy(this.gameObject);
+            playerMood.happyMeter += 0.2f; // May need to be tweaked.
             po.carriedObject = null;
             po.isCarrying = false;
         }

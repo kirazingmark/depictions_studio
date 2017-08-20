@@ -270,8 +270,9 @@ public class PickUpObject : MonoBehaviour {
                     else if (c.tag == "LawnMower")
                     {
                         if (!oneDay)
-                            mood.happyMeter += 2; // Mood will come from Grass Cut, not just sitting on the Mower.
+                        mood.happyMeter += 0; // Mood will come from Grass Cut, not just sitting on the Mower.
                         pCamera.Camera8.enabled = true;
+                        player.transform.position = new Vector3(-100, -100, -100);
 
                         if (pCamera.Camera8.enabled == true)
                         {

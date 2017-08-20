@@ -15,7 +15,7 @@ public class BasicLawnMowerMovement : MonoBehaviour {
     {
         moveSpeed = 2.5f;
         sideMoveSpeed = 0.0f; // Disabled.
-        speed = 25.0f;
+        speed = 50.0f;
         po = GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpObject>();
         // Debug.Log(po.isMowerActive);
 
