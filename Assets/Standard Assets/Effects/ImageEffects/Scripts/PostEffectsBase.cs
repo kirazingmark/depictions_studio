@@ -83,7 +83,7 @@ namespace UnityStandardAssets.ImageEffects
 #if UNITY_EDITOR
                 DestroyImmediate (mat);
 #else
-                Destroy(mat);
+                DestroyImmediate(mat);
 #endif
             }
         }

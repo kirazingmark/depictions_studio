@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEditor;
+// using UnityEditor;
 using System.Text;
-using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
+// using UnityEditor.SceneManagement;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
@@ -69,7 +70,7 @@ public class DialogueParser : MonoBehaviour
             if (character)
             {
                 string file = "Assets/Scripts/Interactions/Chat/Data/Dialogue";
-                string sceneNum = EditorSceneManager.GetActiveScene().name;
+                string sceneNum = SceneManager.GetActiveScene().name;
                 sceneNum = Regex.Replace(sceneNum, "[^0-9]", "");
                 file += sceneNum;
                 file += ".txt";
@@ -81,7 +82,7 @@ public class DialogueParser : MonoBehaviour
             else
             {
                 string file2 = "Assets/Scripts/Interactions/Chat/Data/Dialogue2";
-                string sceneNum = EditorSceneManager.GetActiveScene().name;
+                string sceneNum = SceneManager.GetActiveScene().name;
                 sceneNum = Regex.Replace(sceneNum, "[^0-9]", "");
                 file2 += sceneNum;
                 file2 += ".txt";
