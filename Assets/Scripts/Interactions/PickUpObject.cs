@@ -22,6 +22,9 @@ public class PickUpObject : MonoBehaviour {
     public AudioSource toiletSource;
     public AudioClip toiletClip;
 
+    public AudioSource mowerSource;
+    public AudioClip mowerClip;
+
     public Font customFont;
 
     public string objectName;
@@ -281,6 +284,7 @@ public class PickUpObject : MonoBehaviour {
                             sitting = true;
                             chara.m_WalkSpeed = 0;
                             oneDay = true;
+                            mowerSource.Play();
                         }
                     }
 
@@ -306,6 +310,7 @@ public class PickUpObject : MonoBehaviour {
                 //player.transform.Translate(1, 1, 1);
                 player.transform.position = new Vector3(-33, 2, 2);
                 pCamera.Camera8.enabled = false;
+                mowerSource.Stop();
             }
             else
             {

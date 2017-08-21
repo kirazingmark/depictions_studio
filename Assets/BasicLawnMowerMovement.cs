@@ -18,7 +18,6 @@ public class BasicLawnMowerMovement : MonoBehaviour {
         speed = 50.0f;
         po = GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpObject>();
         // Debug.Log(po.isMowerActive);
-
     }
 
     // Update is called once per frame
