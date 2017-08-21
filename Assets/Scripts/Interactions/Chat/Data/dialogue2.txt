@@ -1,9 +1,16 @@
-Kyle;Hey bro;0
-Orien;You gay?;0
-Kyle;Oh nah bro;0
-Player;Restart:line,0;Continue:line,4
-Kyle;This is a test;-1
-Orien;Test test test test;0
-Kyle;We finish the test;0
+Georgia;Hi Ethan, just checking in. Haven't really spoken to you in a while, please email me back when you can. I miss you.;0
+Player;[Don't Respond and ignore message.]:line,2;Hey, sorry just been busy, miss you too.:line,4
+Georgia;Hey, noticed you still haven't messaged me back in a while. I'm starting to get worried. Please reply with anything when you're free. I know you have been really upset do you want to get together and talk?;-2
+Player;Sorry just don't feel like talking much lately.:line,14;Yeah sorry a lot has been going on, not sure if I'm ready to talk about things yet.:line,4
+Georgia;I am glad to hear from you! Sorry just been worried, I haven't seen you since the funeral. I know you have been really upset do you want to get together and talk?;5
+Georgia;Will we see you next week at Andrew's 30th?;0
+Player;[Say nothing.]:line,7;I don't know, I'm not sure if I'll be there...:line,8
+Georgia;I hope you can make it. The kids miss their uncle.;0
+Georgia;I won't push you, but everyone wants to see you. They all miss you.;1
+Player;I can't make it, some other time maybe...:line,10;I'll be there, looking forward to it.:line,12
+Georgia;I understand. Stay safe brother.;-5
 Player;Restart:line,0
-Orien;I have a cup of tea;0
+Georgia;That's great to hear! See you there. :);7
+Player;Restart:line,0
+Georgia;I....I understand. I know you must be hurting. Please take of yourself, we love you.;-2
+Player;Restart:line,0

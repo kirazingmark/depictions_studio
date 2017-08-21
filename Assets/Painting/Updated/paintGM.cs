@@ -28,6 +28,8 @@ public class paintGM : MonoBehaviour {
     bool oneDay;
     public PickUpObject po;
 
+    public GameObject player;
+
     Mood mood;
 
     public GameObject whiteUselessDot;
@@ -70,12 +72,14 @@ public class paintGM : MonoBehaviour {
         {
             pCamera.Camera7.enabled = false;
             oneDay = false;
+            player.transform.position = new Vector3(-100, -100, -100);
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && mood.painting == true)
         {
             pCamera.Camera7.enabled = false;
             oneDay = false;
             mood.happyMeter += 5.0f;
+            player.transform.position = new Vector3(-100, -100, -100);
         }
 
         //drawing part

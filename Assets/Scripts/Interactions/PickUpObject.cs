@@ -73,7 +73,7 @@ public class PickUpObject : MonoBehaviour {
 
     void PickUp()
     {
-		if(Input.GetKeyDown("f"))
+		if(Input.GetKeyDown("e"))
         {
             Debug.Log("tapped");
             int x = Screen.width / 2;
@@ -109,7 +109,7 @@ public class PickUpObject : MonoBehaviour {
 
     void checkDrop()
     {
-		if(Input.GetKeyDown(KeyCode.F))
+		if(Input.GetKeyDown(KeyCode.E))
         {
             dropObject();
         }
@@ -147,17 +147,17 @@ public class PickUpObject : MonoBehaviour {
                     if (p.tag == "Food")
                     {
                         enter = true;
-                        objectName = "<color=white><size=40>Consume - 'F'</size></color>";
+                        objectName = "<color=white><size=40>Consume - 'E'</size></color>";
                     }
                     else if (p.tag == "Trash")
                     {
                         enter = true;
-                        objectName = "<color=white><size=40>Pick Up - 'F'</size></color>";
+                        objectName = "<color=white><size=40>Pick Up - 'E'</size></color>";
                     }
                     else if (p.tag == "Clothes")
                     {
                         enter = true;
-                        objectName = "<color=white><size=40>Pick Up - 'F'</size></color>";
+                        objectName = "<color=white><size=40>Pick Up - 'E'</size></color>";
                     }
                     else
                     {
@@ -167,14 +167,20 @@ public class PickUpObject : MonoBehaviour {
                 else if (e != null)
                 {
                     enter = true;
-                    objectName = "<color=white><size=40>Paint - 'F'</size></color>";
+                    objectName = "<color=white><size=40>Paint - 'E'</size></color>";
 
                 }
-                else if (c != null)
+                else if (c != null && c.tag != "LawnMower")
                 {
                     enter = true;
-                    objectName = "<color=white><size=40>Sit Down - 'F'</size></color>";
+                    objectName = "<color=white><size=40>Sit Down - 'E'</size></color>";
                     
+                }
+                else if (c != null && c.tag == "LawnMower")
+                {
+                    enter = true;
+                    objectName = "<color=white><size=40>Ride Mower - 'E'</size></color>";
+
                 }
                 else
                     enter = false;
@@ -197,7 +203,7 @@ public class PickUpObject : MonoBehaviour {
     {
         
         //sitting down
-        if (Input.GetKeyDown("f") && !sitting)
+        if (Input.GetKeyDown("e") && !sitting)
         {
             pCamera.Camera1.enabled = false;
             if(pCamera.Camera1.enabled == false)
@@ -300,7 +306,7 @@ public class PickUpObject : MonoBehaviour {
             }
            
         }
-        else if(Input.GetKeyDown("f") && sitting)
+        else if(Input.GetKeyDown("e") && sitting)
         {
             if (pCamera.Camera3.enabled == true)
             {
@@ -335,12 +341,12 @@ public class PickUpObject : MonoBehaviour {
             }
             else if (pCamera.Camera2.enabled == true)
             {
-                player.transform.position = new Vector3(-39, 2, -3);  // Need to set.
+                player.transform.position = new Vector3(-39, 2, -3);
                 pCamera.Camera2.enabled = false;
             }
             else if (pCamera.Camera6.enabled == true)
             {
-                player.transform.position = new Vector3(-41, 2, 2);  // Need to set.
+                player.transform.position = new Vector3(-41, 2, 2);
                 pCamera.Camera6.enabled = false;
             }
             else

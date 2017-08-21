@@ -1,4 +1,4 @@
-Kyle;Hey what's up;0
+Kyle;Heyo Ethan, just checking in. Haven’t really spoken to you in a while, please email me back when you can. I miss you.;0
 Orien;Nothing much man;0
 Kyle;Oh that's cool;0
 Player;Restart:line,1;Continue:line,4

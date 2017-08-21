@@ -86,7 +86,7 @@ public class PickUpable : MonoBehaviour
         {
             Debug.Log("grass cut");
             Destroy(this.gameObject);
-            playerMood.happyMeter += 0.2f; // May need to be tweaked.
+            playerMood.happyMeter += 0.15f; // May need to be tweaked.
             po.carriedObject = null;
             po.isCarrying = false;
         }

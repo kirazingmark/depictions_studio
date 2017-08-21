@@ -7,6 +7,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogueParser : MonoBehaviour
 {
@@ -16,6 +17,11 @@ public class DialogueParser : MonoBehaviour
     public CameraSwitcher pCamera;
 
     public GameObject panel;
+
+    public GameObject player;
+
+    public Button georgiaButton;
+    public Button tomButton;
 
     struct DialogueLine
     {
@@ -49,6 +55,7 @@ public class DialogueParser : MonoBehaviour
         {
             pCamera.Camera5.enabled = false;
             pCamera.Camera1.enabled = true;
+            player.transform.position = new Vector3(-46, 2, 10);
         }
         if (pCamera.Camera5.enabled == true)
         {
