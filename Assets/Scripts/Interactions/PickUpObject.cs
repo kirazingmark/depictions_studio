@@ -219,7 +219,9 @@ public class PickUpObject : MonoBehaviour {
                     if (c.tag == "chair")
                     {
                         pCamera.Camera2.enabled = true;
-                        if(pCamera.Camera2.enabled == true)
+                        player.transform.position = new Vector3(-100, -100, -100);
+
+                        if (pCamera.Camera2.enabled == true)
                         {
                             sitting = true;
                             chara.m_WalkSpeed = 0;
@@ -228,6 +230,8 @@ public class PickUpObject : MonoBehaviour {
                     else if (c.tag == "chair2")
                     {
                         pCamera.Camera5.enabled = true;
+                        player.transform.position = new Vector3(-100, -100, -100);
+
                         if (pCamera.Camera5.enabled == true)
                         {
                             sitting = true;
@@ -238,6 +242,8 @@ public class PickUpObject : MonoBehaviour {
                     else if (c.tag == "chair3")
                     {
                         pCamera.Camera6.enabled = true;
+                        player.transform.position = new Vector3(-100, -100, -100);
+
                         if (pCamera.Camera6.enabled == true)
                         {
                             sitting = true;
@@ -249,7 +255,8 @@ public class PickUpObject : MonoBehaviour {
                         if (!oneDay)
                             mood.happyMeter += 2;
                         pCamera.Camera4.enabled = true;
-                        
+                        player.transform.position = new Vector3(-100, -100, -100);
+
                         if (pCamera.Camera4.enabled == true)
                         {
                             sitting = true;
@@ -262,6 +269,7 @@ public class PickUpObject : MonoBehaviour {
                         if (!oneDay)
                             mood.happyMeter += 2;
                         pCamera.Camera3.enabled = true;
+                        player.transform.position = new Vector3(-100, -100, -100);
 
                         if (pCamera.Camera3.enabled == true)
                         {
@@ -294,12 +302,20 @@ public class PickUpObject : MonoBehaviour {
         }
         else if(Input.GetKeyDown("f") && sitting)
         {
-            if (pCamera.Camera3.enabled == true || pCamera.Camera4.enabled == true)
+            if (pCamera.Camera3.enabled == true)
             {
                 Debug.Log("Bathroom Camera Triggered.");
                 toiletSource.Play();
                 mood.happyMeter += 2; // Happens everytime, needs to be set to only once, or run off a cooldown timer.
+                player.transform.position = new Vector3(-48, 2, 12); // Need to set.
                 pCamera.Camera3.enabled = false;
+            }
+            else if (pCamera.Camera4.enabled == true)
+            {
+                Debug.Log("Bathroom Camera Triggered.");
+                toiletSource.Play();
+                mood.happyMeter += 2; // Happens everytime, needs to be set to only once, or run off a cooldown timer.
+                player.transform.position = new Vector3(-48, 2, 4); // Need to set.
                 pCamera.Camera4.enabled = false;
             }
             else if (pCamera.Camera8.enabled == true)
@@ -312,14 +328,23 @@ public class PickUpObject : MonoBehaviour {
                 pCamera.Camera8.enabled = false;
                 mowerSource.Stop();
             }
+            else if (pCamera.Camera5.enabled == true)
+            {
+                player.transform.position = new Vector3(-46, 2, 10);
+                pCamera.Camera5.enabled = false;
+            }
+            else if (pCamera.Camera2.enabled == true)
+            {
+                player.transform.position = new Vector3(-39, 2, -3);  // Need to set.
+                pCamera.Camera2.enabled = false;
+            }
+            else if (pCamera.Camera6.enabled == true)
+            {
+                player.transform.position = new Vector3(-41, 2, 2);  // Need to set.
+                pCamera.Camera6.enabled = false;
+            }
             else
             {
-                pCamera.Camera2.enabled = false;
-                pCamera.Camera3.enabled = false;
-                pCamera.Camera4.enabled = false;
-                pCamera.Camera5.enabled = false;
-                pCamera.Camera6.enabled = false;
-                
                 //objectName = "<color=white><size=40>Stand Up - 'F'</size></color>";
 
                 sitting = false;
