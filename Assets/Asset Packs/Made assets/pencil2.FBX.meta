@@ -1,0 +1,175 @@
+fileFormatVersion: 2
+guid: d701c50d1716cfe4c87363068966aabc
+timeCreated: 1506151717
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Pencil_black01
+    100004: Pencil_blue_01
+    100006: Pencil_blue_02
+    100008: Pencil_blue_03
+    100010: Pencil_cyan
+    100012: Pencil_gray
+    100014: Pencil_green_01
+    100016: Pencil_green_02
+    100018: Pencil_margenta
+    100020: Pencil_orange_01
+    100022: Pencil_orange_02
+    100024: Pencil_red_01
+    100026: Pencil_red_02
+    100028: Pencil_red_03
+    100030: Pencil_violet_01
+    100032: Pencil_violet_02
+    100034: Pencil_white
+    100036: Pencil_yellow_01
+    100038: Pencil_yellow_100%
+    400000: //RootNode
+    400002: Pencil_black01
+    400004: Pencil_blue_01
+    400006: Pencil_blue_02
+    400008: Pencil_blue_03
+    400010: Pencil_cyan
+    400012: Pencil_gray
+    400014: Pencil_green_01
+    400016: Pencil_green_02
+    400018: Pencil_margenta
+    400020: Pencil_orange_01
+    400022: Pencil_orange_02
+    400024: Pencil_red_01
+    400026: Pencil_red_02
+    400028: Pencil_red_03
+    400030: Pencil_violet_01
+    400032: Pencil_violet_02
+    400034: Pencil_white
+    400036: Pencil_yellow_01
+    400038: Pencil_yellow_100%
+    2300000: Pencil_black01
+    2300002: Pencil_blue_01
+    2300004: Pencil_blue_02
+    2300006: Pencil_blue_03
+    2300008: Pencil_cyan
+    2300010: Pencil_gray
+    2300012: Pencil_green_01
+    2300014: Pencil_green_02
+    2300016: Pencil_margenta
+    2300018: Pencil_orange_01
+    2300020: Pencil_orange_02
+    2300022: Pencil_red_01
+    2300024: Pencil_red_02
+    2300026: Pencil_red_03
+    2300028: Pencil_violet_01
+    2300030: Pencil_violet_02
+    2300032: Pencil_white
+    2300034: Pencil_yellow_01
+    2300036: Pencil_yellow_100%
+    3300000: Pencil_black01
+    3300002: Pencil_blue_01
+    3300004: Pencil_blue_02
+    3300006: Pencil_blue_03
+    3300008: Pencil_cyan
+    3300010: Pencil_gray
+    3300012: Pencil_green_01
+    3300014: Pencil_green_02
+    3300016: Pencil_margenta
+    3300018: Pencil_orange_01
+    3300020: Pencil_orange_02
+    3300022: Pencil_red_01
+    3300024: Pencil_red_02
+    3300026: Pencil_red_03
+    3300028: Pencil_violet_01
+    3300030: Pencil_violet_02
+    3300032: Pencil_white
+    3300034: Pencil_yellow_01
+    3300036: Pencil_yellow_100%
+    4300000: Pencil_red_01
+    4300002: Pencil_red_02
+    4300004: Pencil_red_03
+    4300006: Pencil_orange_01
+    4300008: Pencil_orange_02
+    4300010: Pencil_yellow_01
+    4300012: Pencil_green_01
+    4300014: Pencil_green_02
+    4300016: Pencil_blue_01
+    4300018: Pencil_blue_02
+    4300020: Pencil_blue_03
+    4300022: Pencil_violet_01
+    4300024: Pencil_violet_02
+    4300026: Pencil_white
+    4300028: Pencil_gray
+    4300030: Pencil_yellow_100%
+    4300032: Pencil_margenta
+    4300034: Pencil_cyan
+    4300036: Pencil_black01
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
