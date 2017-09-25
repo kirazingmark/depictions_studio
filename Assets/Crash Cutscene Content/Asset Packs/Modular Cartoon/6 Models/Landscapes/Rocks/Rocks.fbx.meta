@@ -1,0 +1,213 @@
+fileFormatVersion: 2
+guid: 66eb013f3922e416493ff29e88920eda
+timeCreated: 1468603778
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Rock 1
+    100002: Rock 2
+    100004: Rock 3
+    100006: Rock 4
+    100008: Rock 5
+    100010: Rock 6
+    100012: Rock 7
+    100014: //RootNode
+    100016: Large Rock 1
+    100018: Large Rock 2
+    100020: Large Rock 3
+    100022: Large Rock 4
+    100024: Large Rock 5
+    100026: Large Rock 6
+    100028: Large Rock 7
+    100030: Small Rock 1
+    100032: Small Rock 2
+    100034: Small Rock 3
+    100036: Small Rock 4
+    100038: Small Rock 5
+    100040: Small Rock 6
+    100042: Small Rock 7
+    100044: Boulder 1
+    100046: Boulder 2
+    100048: Boulder 3
+    100050: Boulder 4
+    100052: Boulder 5
+    100054: Boulder 6
+    100056: Boulder 7
+    400000: Rock 1
+    400002: Rock 2
+    400004: Rock 3
+    400006: Rock 4
+    400008: Rock 5
+    400010: Rock 6
+    400012: Rock 7
+    400014: //RootNode
+    400016: Large Rock 1
+    400018: Large Rock 2
+    400020: Large Rock 3
+    400022: Large Rock 4
+    400024: Large Rock 5
+    400026: Large Rock 6
+    400028: Large Rock 7
+    400030: Small Rock 1
+    400032: Small Rock 2
+    400034: Small Rock 3
+    400036: Small Rock 4
+    400038: Small Rock 5
+    400040: Small Rock 6
+    400042: Small Rock 7
+    400044: Boulder 1
+    400046: Boulder 2
+    400048: Boulder 3
+    400050: Boulder 4
+    400052: Boulder 5
+    400054: Boulder 6
+    400056: Boulder 7
+    2300000: Rock 1
+    2300002: Rock 2
+    2300004: Rock 3
+    2300006: Rock 4
+    2300008: Rock 5
+    2300010: Rock 6
+    2300012: Rock 7
+    2300014: Large Rock 1
+    2300016: Large Rock 2
+    2300018: Large Rock 3
+    2300020: Large Rock 4
+    2300022: Large Rock 5
+    2300024: Large Rock 6
+    2300026: Large Rock 7
+    2300028: Small Rock 1
+    2300030: Small Rock 2
+    2300032: Small Rock 3
+    2300034: Small Rock 4
+    2300036: Small Rock 5
+    2300038: Small Rock 6
+    2300040: Small Rock 7
+    2300042: Boulder 1
+    2300044: Boulder 2
+    2300046: Boulder 3
+    2300048: Boulder 4
+    2300050: Boulder 5
+    2300052: Boulder 6
+    2300054: Boulder 7
+    3300000: Rock 1
+    3300002: Rock 2
+    3300004: Rock 3
+    3300006: Rock 4
+    3300008: Rock 5
+    3300010: Rock 6
+    3300012: Rock 7
+    3300014: Large Rock 1
+    3300016: Large Rock 2
+    3300018: Large Rock 3
+    3300020: Large Rock 4
+    3300022: Large Rock 5
+    3300024: Large Rock 6
+    3300026: Large Rock 7
+    3300028: Small Rock 1
+    3300030: Small Rock 2
+    3300032: Small Rock 3
+    3300034: Small Rock 4
+    3300036: Small Rock 5
+    3300038: Small Rock 6
+    3300040: Small Rock 7
+    3300042: Boulder 1
+    3300044: Boulder 2
+    3300046: Boulder 3
+    3300048: Boulder 4
+    3300050: Boulder 5
+    3300052: Boulder 6
+    3300054: Boulder 7
+    4300000: Rock 1
+    4300002: Rock 2
+    4300004: Rock 3
+    4300006: Rock 4
+    4300008: Rock 5
+    4300010: Rock 6
+    4300012: Rock 7
+    4300014: Small Rock 1
+    4300016: Small Rock 2
+    4300018: Small Rock 3
+    4300020: Small Rock 4
+    4300022: Small Rock 5
+    4300024: Small Rock 6
+    4300026: Small Rock 7
+    4300028: Large Rock 1
+    4300030: Large Rock 2
+    4300032: Large Rock 3
+    4300034: Large Rock 4
+    4300036: Large Rock 5
+    4300038: Large Rock 6
+    4300040: Large Rock 7
+    4300042: Boulder 7
+    4300044: Boulder 6
+    4300046: Boulder 5
+    4300048: Boulder 4
+    4300050: Boulder 3
+    4300052: Boulder 2
+    4300054: Boulder 1
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 2
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

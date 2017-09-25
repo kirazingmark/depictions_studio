@@ -1,0 +1,199 @@
+fileFormatVersion: 2
+guid: c9b243c08639b684cb769e0c507c9ca3
+timeCreated: 1506138102
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Box02
+    100002: Box06
+    100004: Box07
+    100006: Capsule01
+    100008: Capsule02
+    100010: Cone01
+    100012: Cone02
+    100014: Cone03
+    100016: Cone04
+    100018: Cylinder01
+    100020: Cylinder02
+    100022: Cylinder03
+    100024: edge of shades
+    100026: edge of shades01
+    100028: //RootNode
+    100030: jiont nose
+    100032: left ear silinder
+    100034: left frame
+    100036: left lens
+    100038: left lens 1
+    100040: left lens01
+    100042: nose connection
+    100044: nose plastic
+    100046: nose plasticright
+    100048: Sphere01
+    100050: Sphere02
+    100052: upper right jiont
+    100054: upper right jiont01
+    400000: Box02
+    400002: Box06
+    400004: Box07
+    400006: Capsule01
+    400008: Capsule02
+    400010: Cone01
+    400012: Cone02
+    400014: Cone03
+    400016: Cone04
+    400018: Cylinder01
+    400020: Cylinder02
+    400022: Cylinder03
+    400024: edge of shades
+    400026: edge of shades01
+    400028: //RootNode
+    400030: jiont nose
+    400032: left ear silinder
+    400034: left frame
+    400036: left lens
+    400038: left lens 1
+    400040: left lens01
+    400042: nose connection
+    400044: nose plastic
+    400046: nose plasticright
+    400048: Sphere01
+    400050: Sphere02
+    400052: upper right jiont
+    400054: upper right jiont01
+    2300000: Box02
+    2300002: Box06
+    2300004: Box07
+    2300006: Capsule01
+    2300008: Capsule02
+    2300010: Cone01
+    2300012: Cone02
+    2300014: Cone03
+    2300016: Cone04
+    2300018: Cylinder02
+    2300020: Cylinder03
+    2300022: left ear silinder
+    2300024: left frame
+    2300026: left lens
+    2300028: left lens01
+    2300030: nose connection
+    2300032: nose plastic
+    2300034: nose plasticright
+    2300036: Sphere01
+    2300038: Sphere02
+    2300040: upper right jiont
+    2300042: upper right jiont01
+    3300000: Box02
+    3300002: Box06
+    3300004: Box07
+    3300006: Capsule01
+    3300008: Capsule02
+    3300010: Cone01
+    3300012: Cone02
+    3300014: Cone03
+    3300016: Cone04
+    3300018: Cylinder02
+    3300020: Cylinder03
+    3300022: left ear silinder
+    3300024: left frame
+    3300026: left lens
+    3300028: left lens01
+    3300030: nose connection
+    3300032: nose plastic
+    3300034: nose plasticright
+    3300036: Sphere01
+    3300038: Sphere02
+    3300040: upper right jiont
+    3300042: upper right jiont01
+    4300000: left lens
+    4300002: nose plastic
+    4300004: Box06
+    4300006: Capsule01
+    4300008: nose connection
+    4300010: Cylinder02
+    4300012: Sphere02
+    4300014: Sphere01
+    4300016: Cone01
+    4300018: Cone02
+    4300020: upper right jiont
+    4300022: Box02
+    4300024: Cylinder03
+    4300026: upper right jiont01
+    4300028: Cone03
+    4300030: Cone04
+    4300032: Box07
+    4300034: left ear silinder
+    4300036: Capsule02
+    4300038: left lens01
+    4300040: left frame
+    4300042: nose plasticright
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

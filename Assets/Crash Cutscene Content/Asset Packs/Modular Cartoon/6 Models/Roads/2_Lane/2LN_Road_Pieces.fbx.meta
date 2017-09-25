@@ -1,0 +1,173 @@
+fileFormatVersion: 2
+guid: 45dd8442e7e244fc49ff772017fa8976
+timeCreated: 1468087666
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: 3Way_2LN
+    100004: 4Way_2LN
+    100006: Straight_2LN
+    100008: Turn_2LN
+    100010: Stub_2LN
+    100012: 1Meter_2LN
+    100014: 4Meter_2LN
+    100016: 10Meter_2LN
+    100018: LVL0T1_Straight_2LN
+    100020: LVL1_3Way_2LN
+    100022: LVL1_4Way_2LN
+    100024: LVL1_Straight_2LN
+    100026: LVL1_Turn_2LN
+    100028: LVL1T2_Straight_2LN
+    100030: LVL2_3Way_2LN
+    100032: LVL2_4Way_2LN
+    100034: LVL2_Straight_2LN
+    100036: LVL2_Turn_2LN
+    100038: LVL1_Straight_2LN_NoBase
+    100040: LVL2_Straight_2LN_NoBase
+    400000: //RootNode
+    400002: 3Way_2LN
+    400004: 4Way_2LN
+    400006: Straight_2LN
+    400008: Turn_2LN
+    400010: Stub_2LN
+    400012: 1Meter_2LN
+    400014: 4Meter_2LN
+    400016: 10Meter_2LN
+    400018: LVL0T1_Straight_2LN
+    400020: LVL1_3Way_2LN
+    400022: LVL1_4Way_2LN
+    400024: LVL1_Straight_2LN
+    400026: LVL1_Turn_2LN
+    400028: LVL1T2_Straight_2LN
+    400030: LVL2_3Way_2LN
+    400032: LVL2_4Way_2LN
+    400034: LVL2_Straight_2LN
+    400036: LVL2_Turn_2LN
+    400038: LVL1_Straight_2LN_NoBase
+    400040: LVL2_Straight_2LN_NoBase
+    2300000: 3Way_2LN
+    2300002: 4Way_2LN
+    2300004: Straight_2LN
+    2300006: Turn_2LN
+    2300008: Stub_2LN
+    2300010: 1Meter_2LN
+    2300012: 4Meter_2LN
+    2300014: 10Meter_2LN
+    2300016: LVL0T1_Straight_2LN
+    2300018: LVL1_3Way_2LN
+    2300020: LVL1_4Way_2LN
+    2300022: LVL1_Straight_2LN
+    2300024: LVL1_Turn_2LN
+    2300026: LVL1T2_Straight_2LN
+    2300028: LVL2_3Way_2LN
+    2300030: LVL2_4Way_2LN
+    2300032: LVL2_Straight_2LN
+    2300034: LVL2_Turn_2LN
+    2300036: LVL1_Straight_2LN_NoBase
+    2300038: LVL2_Straight_2LN_NoBase
+    3300000: 3Way_2LN
+    3300002: 4Way_2LN
+    3300004: Straight_2LN
+    3300006: Turn_2LN
+    3300008: Stub_2LN
+    3300010: 1Meter_2LN
+    3300012: 4Meter_2LN
+    3300014: 10Meter_2LN
+    3300016: LVL0T1_Straight_2LN
+    3300018: LVL1_3Way_2LN
+    3300020: LVL1_4Way_2LN
+    3300022: LVL1_Straight_2LN
+    3300024: LVL1_Turn_2LN
+    3300026: LVL1T2_Straight_2LN
+    3300028: LVL2_3Way_2LN
+    3300030: LVL2_4Way_2LN
+    3300032: LVL2_Straight_2LN
+    3300034: LVL2_Turn_2LN
+    3300036: LVL1_Straight_2LN_NoBase
+    3300038: LVL2_Straight_2LN_NoBase
+    4300000: 3Way_2LN
+    4300002: 4Way_2LN
+    4300004: Turn_2LN
+    4300006: Straight_2LN
+    4300008: Stub_2LN
+    4300010: 4Meter_2LN
+    4300012: 1Meter_2LN
+    4300014: 10Meter_2LN
+    4300016: LVL2_4Way_2LN
+    4300018: LVL1_4Way_2LN
+    4300020: LVL2_3Way_2LN
+    4300022: LVL1_3Way_2LN
+    4300024: LVL1T2_Straight_2LN
+    4300026: LVL2_Straight_2LN
+    4300028: LVL2_Turn_2LN
+    4300030: LVL1_Turn_2LN
+    4300032: LVL1_Straight_2LN
+    4300034: LVL0T1_Straight_2LN
+    4300036: LVL1_Straight_2LN_NoBase
+    4300038: LVL2_Straight_2LN_NoBase
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 2
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

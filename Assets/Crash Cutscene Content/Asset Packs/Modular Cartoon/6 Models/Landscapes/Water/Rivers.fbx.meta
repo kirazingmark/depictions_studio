@@ -1,0 +1,113 @@
+fileFormatVersion: 2
+guid: 2efee33f4e00f4dc38b9ec4275774773
+timeCreated: 1468807042
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: River Straight
+    100002: River Turn
+    100004: //RootNode
+    100006: Water
+    100008: Water.001
+    100010: Water Straight
+    100012: Water Turn
+    100014: River Slope
+    100016: Water Slope
+    400000: River Straight
+    400002: River Turn
+    400004: //RootNode
+    400006: Water
+    400008: Water.001
+    400010: Water Straight
+    400012: Water Turn
+    400014: River Slope
+    400016: Water Slope
+    2300000: River Straight
+    2300002: River Turn
+    2300004: Water
+    2300006: Water.001
+    2300008: Water Straight
+    2300010: Water Turn
+    2300012: River Slope
+    2300014: Water Slope
+    3300000: River Straight
+    3300002: River Turn
+    3300004: Water
+    3300006: Water.001
+    3300008: Water Straight
+    3300010: Water Turn
+    3300012: River Slope
+    3300014: Water Slope
+    4300000: River Turn
+    4300002: River Straight
+    4300004: Water.001
+    4300006: Water
+    4300008: Water Turn
+    4300010: Water Straight
+    4300012: River Slope
+    4300014: Water Slope
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 2
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
