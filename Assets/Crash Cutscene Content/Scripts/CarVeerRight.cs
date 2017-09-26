@@ -5,7 +5,7 @@ using UnityEngine;
 public class CarVeerRight : MonoBehaviour {
 
     public float spinSpeed = 0f;
-    public float tipSpeed = 0f;
+    public float flipSpeed = 0f;
 
     // Use this for initialization
     void Start () {
@@ -15,13 +15,14 @@ public class CarVeerRight : MonoBehaviour {
         //StartCoroutine(RotateLeft2(Vector3.down * 179f, 1.00f));
         // StartCoroutine(RotateLeft3(Vector3.down * 179f, 1.00f));
         StartCoroutine(CarSpin());
+        StartCoroutine(CarFlip());
     }
 	
 	// Update is called once per frame
 	void Update () {
 
         transform.Rotate(Vector3.back, spinSpeed * Time.deltaTime);
-        transform.Rotate(Vector3.up, tipSpeed * Time.deltaTime);
+        transform.Rotate(Vector3.up, flipSpeed * Time.deltaTime);
     }
 
     IEnumerator RotateLeft(Vector3 byAngles, float inTime)
@@ -49,6 +50,7 @@ public class CarVeerRight : MonoBehaviour {
             yield return null;
         }
     }
+
 
     //IEnumerator RotateLeft2(Vector3 byAngles, float inTime)
     //{
@@ -81,6 +83,15 @@ public class CarVeerRight : MonoBehaviour {
         yield return new WaitForSeconds(36);
 
         spinSpeed = 450.0f;
+
+        yield return null;
+    }
+
+    IEnumerator CarFlip()
+    {
+        yield return new WaitForSeconds(36);
+
+        flipSpeed = 400.0f;
 
         yield return null;
     }

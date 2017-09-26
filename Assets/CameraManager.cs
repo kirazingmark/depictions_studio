@@ -30,7 +30,7 @@ public class CameraManager : MonoBehaviour {
 
     IEnumerator Camera1ToCamera2()
     {
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(10);
         Camera2.enabled = true;
         Camera1.enabled = false;
         yield return null;
