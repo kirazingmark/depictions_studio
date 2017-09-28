@@ -52,6 +52,9 @@ public class PickUpObject : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        if (pCamera.Camera1.enabled == true)
+            chara.m_WalkSpeed = 1 + (mood.happyMeter / 100);
+
         if (isCarrying)
         {
             objectName = "";
@@ -96,13 +99,13 @@ public class PickUpObject : MonoBehaviour {
                     p.pickedUp = true;
                 }
 
-                Easel e = hit.collider.GetComponent<Easel>();
-                {
-                    if(e!= null)
-                    {
-                        pCamera.Camera7.enabled = true;
-                    }
-                }
+                //Easel e = hit.collider.GetComponent<Easel>();
+                //{
+                //    if(e!= null)
+                //    {
+                //        pCamera.Camera7.enabled = true;
+                //    }
+                //}
             }
         }
     }

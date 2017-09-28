@@ -1,0 +1,14 @@
+# Blender MTL File: 'canvas 01.blend'
+# Material Count: 1
+
+newmtl Material.001
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.365034 0.432454 0.698043
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd \home\sendercorp\Desktop\WORK 2009\TEXTURE READY\canvas.jpg
+map_Bump -bm 7.447334 \\home\\sendercorp\\Desktop\\WORK 2009\\TEXTURE READY\\canvas.jpg
