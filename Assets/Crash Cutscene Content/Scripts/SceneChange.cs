@@ -22,7 +22,7 @@ public class SceneChange : MonoBehaviour {
 
     IEnumerator ChangeScene()
     {
-        yield return new WaitForSeconds(45);
+        yield return new WaitForSeconds(59);
 
         MainMenu();
 
