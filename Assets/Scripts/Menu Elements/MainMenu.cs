@@ -28,6 +28,8 @@ public class MainMenu : MonoBehaviour {
 	}
 
     public void Start() {
+		        //Set Cursor to not be visible
+        Cursor.visible = true;
         
     }
 

@@ -67,20 +67,20 @@ public class paintGM : MonoBehaviour {
         //    text2d.Apply();
         //}
 
-        // moving the canvas
-        if (Input.GetKeyDown(KeyCode.Escape) && mood.painting == false)
-        {
-            pCamera.Camera7.enabled = false;
-            oneDay = false;
-            player.transform.position = new Vector3(-100, -100, -100);
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape) && mood.painting == true)
-        {
-            pCamera.Camera7.enabled = false;
-            oneDay = false;
-            mood.happyMeter += 5.0f;
-            player.transform.position = new Vector3(-100, -100, -100);
-        }
+        //moving the canvas
+        // if (Input.GetKeyDown(KeyCode.Escape) && mood.painting == false)
+        // {
+            // pCamera.Camera7.enabled = false;
+            // oneDay = false;
+            // player.transform.position = new Vector3(-100, -100, -100);
+        // }
+        // else if (Input.GetKeyDown(KeyCode.Escape) && mood.painting == true)
+        // {
+            // pCamera.Camera7.enabled = false;
+            // oneDay = false;
+            // mood.happyMeter += 5.0f;
+            // player.transform.position = new Vector3(-100, -100, -100);
+        // }
 
         //drawing part
 
@@ -96,7 +96,8 @@ public class paintGM : MonoBehaviour {
         //    startPaint = false;
         //    Camera.main.transform.position = chara.transform.position;
         //}
-        //if (startPaint)
+		
+        if (startPaint)
         if (pCamera.Camera7.enabled == true)
         {
             chara.m_WalkSpeed = 0;
