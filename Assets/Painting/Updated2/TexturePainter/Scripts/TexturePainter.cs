@@ -41,6 +41,8 @@ public class TexturePainter : MonoBehaviour {
             sceneCamera.enabled = false;
             canvasCam.enabled = false;
         }
+
+        
        
 		UpdateBrushCursor ();
 	}
