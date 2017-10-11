@@ -21,7 +21,7 @@ public class TexturePainter : MonoBehaviour {
     Painter_BrushMode mode; //Our painter mode (Paint brushes or decals)
 	float brushSize=1.0f; //The size of our brush
 	Color brushColor; //The selected color
-	int brushCounter=0,MAX_BRUSH_COUNT=1000; //To avoid having millions of brushes
+	int brushCounter=0,MAX_BRUSH_COUNT=100; //To avoid having millions of brushes
 	bool saving=false; //Flag to check if we are saving the texture
     
 	
@@ -112,14 +112,22 @@ public class TexturePainter : MonoBehaviour {
 		RenderTexture.active = canvasTexture;
 		Texture2D tex = new Texture2D(canvasTexture.width, canvasTexture.height, TextureFormat.RGB24, false);		
 		tex.ReadPixels (new Rect (0, 0, canvasTexture.width, canvasTexture.height), 0, 0);
-		tex.Apply ();
-		RenderTexture.active = null;
+        RenderTexture.active = null;
 		baseMaterial.mainTexture =tex;	//Put the painted texture as the base
 		foreach (Transform child in brushContainer.transform) {//Clear brushes
 			Destroy(child.gameObject);
 		}
-		//StartCoroutine ("SaveTextureToFile"); //Do you want to save the texture? This is your method!
-		Invoke ("ShowCursor", 0.1f);
+        for (int x = 256; x < tex.width; x++)
+        {
+            for (int y = 256; y < tex.height; y++)
+            {
+                tex.SetPixel(x, y, Color.white);
+            }
+        }
+        Debug.Log(tex.GetPixel(256, 256));
+        tex.Apply();
+        //StartCoroutine ("SaveTextureToFile"); //Do you want to save the texture? This is your method!
+        Invoke ("ShowCursor", 0.1f);
 	}
 	//Show again the user cursor (To avoid saving it to the texture)
 	void ShowCursor(){	

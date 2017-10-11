@@ -305,6 +305,23 @@ public class PickUpObject : MonoBehaviour {
                         }
                     }
 
+                    else if (c.tag == "canvasChair")
+                    {
+                        if (!oneDay)
+                            mood.happyMeter += 0; // Mood will come from Grass Cut, not just sitting on the Mower.
+                        pCamera.Camera7.enabled = true;
+                        //player.transform.position = new Vector3(-100, -100, -100);
+
+                        if (pCamera.Camera7.enabled == true)
+                        {
+                            Debug.Log("Painting");
+                            sitting = true;
+                            chara.m_WalkSpeed = 0;
+                            oneDay = true;
+                            
+                        }
+                    }
+
                 }
             }
            
@@ -327,16 +344,16 @@ public class PickUpObject : MonoBehaviour {
                 player.transform.position = new Vector3(-48, 2, 4); // Need to set.
                 pCamera.Camera4.enabled = false;
             }
-            else if (pCamera.Camera8.enabled == true)
-            {
-                // Sound cues go here.
-                Debug.Log("On Mower is false");
-                isMowerActive = false;
-                //player.transform.Translate(1, 1, 1);
-                player.transform.position = new Vector3(-33, 2, 2);
-                pCamera.Camera8.enabled = false;
-                mowerSource.Stop();
-            }
+            //else if (pCamera.Camera8.enabled == true)
+            //{
+            //    // Sound cues go here.
+            //    Debug.Log("On Mower is false");
+            //    isMowerActive = false;
+            //    //player.transform.Translate(1, 1, 1);
+            //    player.transform.position = new Vector3(-33, 2, 2);
+            //    pCamera.Camera8.enabled = false;
+            //    mowerSource.Stop();
+            //}
             else if (pCamera.Camera5.enabled == true)
             {
                 player.transform.position = new Vector3(-46, 2, 10);
@@ -351,6 +368,11 @@ public class PickUpObject : MonoBehaviour {
             {
                 player.transform.position = new Vector3(-41, 2, 2);
                 pCamera.Camera6.enabled = false;
+            }
+            else if (pCamera.Camera7.enabled == true)
+            {
+                player.transform.position = new Vector3(-18, -13, 11);
+                pCamera.Camera7.enabled = false;
             }
             else
             {
