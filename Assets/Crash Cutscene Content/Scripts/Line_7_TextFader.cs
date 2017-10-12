@@ -55,7 +55,7 @@ public class Line_7_TextFader : MonoBehaviour {
     {
         yield return new WaitForSeconds(41);
         StartCoroutine(FadeTextToFullAlpha(1f, GetComponent<Text>()));
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(4);
         StartCoroutine(FadeTextToZeroAlpha(1f, GetComponent<Text>()));
         yield return null;
     }

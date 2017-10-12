@@ -53,9 +53,9 @@ public class Line_9_TextFader : MonoBehaviour {
 
     IEnumerator FadeManager()
     {
-        yield return new WaitForSeconds(53);
+        yield return new WaitForSeconds(52);
         StartCoroutine(FadeTextToFullAlpha(1f, GetComponent<Text>()));
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(5);
         StartCoroutine(FadeTextToZeroAlpha(1f, GetComponent<Text>()));
         yield return null;
     }
