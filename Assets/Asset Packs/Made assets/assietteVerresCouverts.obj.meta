@@ -1,0 +1,199 @@
+fileFormatVersion: 2
+guid: c17c44f7acfd63849807a325a73b0d06
+timeCreated: 1508506606
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: assiette_creuse
+    100002: assiette_plate
+    100004: //RootNode
+    100006: coude_cuillere
+    100008: coude_fourchette
+    100010: coude_pt_cuillere
+    100012: cuillere
+    100014: fond_assiette
+    100016: lame_couteau
+    100018: manche_couteau
+    100020: manche_cuillere
+    100022: manche_fourchette
+    100024: manche_pt_cuillere
+    100026: pic1
+    100028: pic2
+    100030: pic3
+    100032: pic4
+    100034: pt_cuillere
+    100036: sweethome3d_grand_verre
+    100038: sweethome3d_grand_verre_pied
+    100040: sweethome3d_grand_verre_talon
+    100042: sweethome3d_pied_verre
+    100044: sweethome3d_talon_verre
+    100046: sweethome3d_verre
+    400000: assiette_creuse
+    400002: assiette_plate
+    400004: //RootNode
+    400006: coude_cuillere
+    400008: coude_fourchette
+    400010: coude_pt_cuillere
+    400012: cuillere
+    400014: fond_assiette
+    400016: lame_couteau
+    400018: manche_couteau
+    400020: manche_cuillere
+    400022: manche_fourchette
+    400024: manche_pt_cuillere
+    400026: pic1
+    400028: pic2
+    400030: pic3
+    400032: pic4
+    400034: pt_cuillere
+    400036: sweethome3d_grand_verre
+    400038: sweethome3d_grand_verre_pied
+    400040: sweethome3d_grand_verre_talon
+    400042: sweethome3d_pied_verre
+    400044: sweethome3d_talon_verre
+    400046: sweethome3d_verre
+    2300000: assiette_creuse
+    2300002: assiette_plate
+    2300004: coude_cuillere
+    2300006: coude_fourchette
+    2300008: coude_pt_cuillere
+    2300010: cuillere
+    2300012: fond_assiette
+    2300014: lame_couteau
+    2300016: manche_couteau
+    2300018: manche_cuillere
+    2300020: manche_fourchette
+    2300022: manche_pt_cuillere
+    2300024: pic1
+    2300026: pic2
+    2300028: pic3
+    2300030: pic4
+    2300032: pt_cuillere
+    2300034: sweethome3d_grand_verre
+    2300036: sweethome3d_grand_verre_pied
+    2300038: sweethome3d_grand_verre_talon
+    2300040: sweethome3d_pied_verre
+    2300042: sweethome3d_talon_verre
+    2300044: sweethome3d_verre
+    3300000: assiette_creuse
+    3300002: assiette_plate
+    3300004: coude_cuillere
+    3300006: coude_fourchette
+    3300008: coude_pt_cuillere
+    3300010: cuillere
+    3300012: fond_assiette
+    3300014: lame_couteau
+    3300016: manche_couteau
+    3300018: manche_cuillere
+    3300020: manche_fourchette
+    3300022: manche_pt_cuillere
+    3300024: pic1
+    3300026: pic2
+    3300028: pic3
+    3300030: pic4
+    3300032: pt_cuillere
+    3300034: sweethome3d_grand_verre
+    3300036: sweethome3d_grand_verre_pied
+    3300038: sweethome3d_grand_verre_talon
+    3300040: sweethome3d_pied_verre
+    3300042: sweethome3d_talon_verre
+    3300044: sweethome3d_verre
+    4300000: assiette_creuse
+    4300002: assiette_plate
+    4300004: coude_cuillere
+    4300006: coude_fourchette
+    4300008: coude_pt_cuillere
+    4300010: cuillere
+    4300012: fond_assiette
+    4300014: lame_couteau
+    4300016: manche_couteau
+    4300018: manche_cuillere
+    4300020: manche_fourchette
+    4300022: manche_pt_cuillere
+    4300024: pic1
+    4300026: pic2
+    4300028: pic3
+    4300030: pic4
+    4300032: pt_cuillere
+    4300034: sweethome3d_grand_verre
+    4300036: sweethome3d_grand_verre_pied
+    4300038: sweethome3d_grand_verre_talon
+    4300040: sweethome3d_pied_verre
+    4300042: sweethome3d_talon_verre
+    4300044: sweethome3d_verre
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

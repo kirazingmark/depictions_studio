@@ -1,0 +1,114 @@
+fileFormatVersion: 2
+guid: 8c37b386414d3c44ea2f8c0d3077d45c
+timeCreated: 1508507517
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: bec_verseur
+    100002: bouilloir
+    100004: //RootNode
+    100006: couvercle
+    100008: manche
+    100010: sweethome3d_window_pane_mesureur_droit
+    100012: sweethome3d_window_pane_mesureur_gauche
+    400000: bec_verseur
+    400002: bouilloir
+    400004: //RootNode
+    400006: couvercle
+    400008: manche
+    400010: sweethome3d_window_pane_mesureur_droit
+    400012: sweethome3d_window_pane_mesureur_gauche
+    2300000: bec_verseur
+    2300002: bouilloir
+    2300004: couvercle
+    2300006: manche
+    2300008: sweethome3d_window_pane_mesureur_droit
+    2300010: sweethome3d_window_pane_mesureur_gauche
+    3300000: bec_verseur
+    3300002: bouilloir
+    3300004: couvercle
+    3300006: manche
+    3300008: sweethome3d_window_pane_mesureur_droit
+    3300010: sweethome3d_window_pane_mesureur_gauche
+    4300000: bec_verseur
+    4300002: bouilloir
+    4300004: couvercle
+    4300006: manche
+    4300008: sweethome3d_window_pane_mesureur_droit
+    4300010: sweethome3d_window_pane_mesureur_gauche
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
