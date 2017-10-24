@@ -11,7 +11,7 @@ using System.Collections;
 
 public enum Painter_BrushMode{PAINT,DECAL};
 public class TexturePainter : MonoBehaviour {
-	public GameObject brushCursor,brushContainer; //The cursor that overlaps the model and our container for the brushes painted
+	public GameObject brushCursor,brushContainer,stencil; //The cursor that overlaps the model and our container for the brushes painted
 	public Camera sceneCamera,canvasCam;  //The camera that looks at the model, and the camera that looks at the canvas.
 	public Sprite cursorPaint,cursorDecal; // Cursor for the differen functions 
 	public RenderTexture canvasTexture; // Render Texture that looks at our Base Texture and the painted brushes
@@ -19,13 +19,15 @@ public class TexturePainter : MonoBehaviour {
     public CameraSwitcher pcamera; // camera switcher
 
     Painter_BrushMode mode; //Our painter mode (Paint brushes or decals)
-	float brushSize=1.0f; //The size of our brush
+	float brushSize=0.3f; //The size of our brush
 	Color brushColor; //The selected color
 	int brushCounter=0,MAX_BRUSH_COUNT=100; //To avoid having millions of brushes
+    int eraser = 0;
 	bool saving=false; //Flag to check if we are saving the texture
-    
-	
-	void Update () {
+    bool stencilOn = true; //for the stencil to be truned on / off
+
+
+    void Update () {
 		brushColor = ColorSelector.GetColor (); //Updates our painted color with the selected color
         if(pcamera.Camera7.enabled == true)
         {
@@ -112,19 +114,23 @@ public class TexturePainter : MonoBehaviour {
 		RenderTexture.active = canvasTexture;
 		Texture2D tex = new Texture2D(canvasTexture.width, canvasTexture.height, TextureFormat.RGB24, false);		
 		tex.ReadPixels (new Rect (0, 0, canvasTexture.width, canvasTexture.height), 0, 0);
+        
         RenderTexture.active = null;
 		baseMaterial.mainTexture =tex;	//Put the painted texture as the base
 		foreach (Transform child in brushContainer.transform) {//Clear brushes
 			Destroy(child.gameObject);
 		}
-        for (int x = 256; x < tex.width; x++)
+
+        if (eraser == 1)
         {
-            for (int y = 256; y < tex.height; y++)
-            {
-                tex.SetPixel(x, y, Color.white);
-            }
+            for (int x = 0; x < tex.width; x++)
+                for (int y = 0; y < tex.height; y++)
+                    tex.SetPixel(x, y, Color.white);
+
+            eraser = 0;
+            tex.Apply();
         }
-        Debug.Log(tex.GetPixel(256, 256));
+
         tex.Apply();
         //StartCoroutine ("SaveTextureToFile"); //Do you want to save the texture? This is your method!
         Invoke ("ShowCursor", 0.1f);
@@ -133,6 +139,28 @@ public class TexturePainter : MonoBehaviour {
 	void ShowCursor(){	
 		saving = false;
 	}
+
+    public void RestartCanvas()
+    {
+        eraser = 1;
+        Invoke("SaveTexture", 0.1f);
+    }
+
+    public void RemoveStencil()
+    {
+        if(stencilOn)
+        {
+            stencil.SetActive(false);
+            stencilOn = false;
+        }
+        else if(!stencilOn)
+        {
+            stencil.SetActive(true);
+            stencilOn = true; ;
+        }
+
+    }
+
 
 	////////////////// PUBLIC METHODS //////////////////
 
