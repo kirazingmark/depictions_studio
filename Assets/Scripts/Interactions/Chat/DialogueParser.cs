@@ -56,7 +56,7 @@ public class DialogueParser : MonoBehaviour
         {
             pCamera.Camera5.enabled = false;
             pCamera.Camera1.enabled = true;
-            player.transform.position = new Vector3(-46, 2, 10);
+            //player.transform.position = new Vector3(-46, 2, 10);
         }
         if (pCamera.Camera5.enabled == true)
         {

@@ -130,7 +130,7 @@ public class PickUpObject : MonoBehaviour {
     {
         if(pCamera.Camera1.enabled == false)
         {
-
+            
         }
         else
         {
@@ -139,7 +139,7 @@ public class PickUpObject : MonoBehaviour {
 
             Ray ray = mainCamera.ScreenPointToRay(new Vector3(x, y));
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 2))
+            if (Physics.Raycast(ray, out hit))
             {
                 
                 PickUpable p = hit.collider.GetComponent<PickUpable>();
@@ -164,7 +164,7 @@ public class PickUpObject : MonoBehaviour {
                     }
                     else
                     {
-
+                        objectName = "";
                     }
                 }
                 else if (e != null)
@@ -186,7 +186,11 @@ public class PickUpObject : MonoBehaviour {
 
                 }
                 else
+                {
                     enter = false;
+                    objectName = "";
+                }
+                    
             }
         }
         
@@ -213,6 +217,7 @@ public class PickUpObject : MonoBehaviour {
             {
                 sitting = true;
                 chara.m_WalkSpeed = 0;
+                objectName = "";
             }
             int x = Screen.width / 2;
             int y = Screen.height / 2;
@@ -369,11 +374,11 @@ public class PickUpObject : MonoBehaviour {
                 player.transform.position = new Vector3(-41, 2, 2);
                 pCamera.Camera6.enabled = false;
             }
-            else if (pCamera.Camera7.enabled == true)
-            {
-                player.transform.position = new Vector3(-18, -13, 11);
-                pCamera.Camera7.enabled = false;
-            }
+            //else if (pCamera.Camera7.enabled == true)
+            //{
+            //    player.transform.position = new Vector3(-18, -13, 11);
+            //    pCamera.Camera7.enabled = false;
+            //}
             else
             {
                 //objectName = "<color=white><size=40>Stand Up - 'F'</size></color>";
