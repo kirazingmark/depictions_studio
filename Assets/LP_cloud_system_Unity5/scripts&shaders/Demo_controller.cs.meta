@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dcee58fb9e034954c827a2d295c34e6e
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - cloud_system1: {fileID: 100002, guid: 0c4aace4dc55b3f42ab8f2913448d05f, type: 2}
+  - cloud_system2: {fileID: 100002, guid: f41d95cdb190fe24ca221d5f606d85ab, type: 2}
+  - cloud_system3: {fileID: 100002, guid: 7b4f2c4a4559a0641bedaf1536b094b0, type: 2}
+  - cloud_system4: {fileID: 100002, guid: d1ae4d480a38a6147acc9d3a678b8348, type: 2}
+  - cloud_system5: {fileID: 100002, guid: 73595c6b8ccb8e04595e4e748de06548, type: 2}
+  - cloud_system6: {fileID: 100002, guid: ce7188d927cd9ca4cb01462911a9566a, type: 2}
+  - cloud_system7: {fileID: 100002, guid: 9e5c6b298dc9b0e4398aa54312ee218f, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

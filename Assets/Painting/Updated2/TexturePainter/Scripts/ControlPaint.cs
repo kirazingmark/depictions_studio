@@ -10,6 +10,7 @@ public class ControlPaint : MonoBehaviour {
     public Button exitButton;
     public Button deleteButoton;
     public Button removeButton;
+    public Button sliderButton;
     public Slider value;
 
     // Use this for initialization
@@ -25,6 +26,7 @@ public class ControlPaint : MonoBehaviour {
             exitButton.gameObject.SetActive(true);
             deleteButoton.gameObject.SetActive(true);
             removeButton.gameObject.SetActive(true);
+            sliderButton.gameObject.SetActive(true);
             value.gameObject.SetActive(true);
         }
         else
@@ -32,6 +34,7 @@ public class ControlPaint : MonoBehaviour {
             exitButton.gameObject.SetActive(false);
             deleteButoton.gameObject.SetActive(false);
             removeButton.gameObject.SetActive(false);
+            sliderButton.gameObject.SetActive(false);
             value.gameObject.SetActive(false);
         }
     }

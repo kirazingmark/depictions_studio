@@ -3,7 +3,6 @@ guid: 75336875275eb514981e873225ef8654
 timeCreated: 1506616927
 licenseType: Pro
 VideoClipImporter:
-  externalObjects: {}
   serializedVersion: 2
   useLegacyImporter: 0
   quality: 0.5
@@ -22,8 +21,6 @@ VideoClipImporter:
   sourceHasAlpha: 0
   flipVertical: 0
   flipHorizontal: 0
-  pixelAspectRatioNumerator: 1
-  pixelAspectRatioDenominator: 1
   importAudio: 0
   sourceAudioChannelCount: 
   sourceAudioSampleRate: 
