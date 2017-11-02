@@ -16,6 +16,10 @@ public class Detection : MonoBehaviour
     [HideInInspector] public GameObject TextPrefabInstance; // A copy of the text prefab to prevent data corruption
     [HideInInspector] public bool TextActive;
 
+    public GameObject TextPrefab_Weed; // A text element to display when the player is in reach of the door
+    [HideInInspector] public GameObject TextPrefabInstance_Weed; // A copy of the text prefab to prevent data corruption
+    [HideInInspector] public bool TextActive_Weed;
+
     [Tooltip("The image or text that is shown in the middle of the the screen.")]
     public GameObject CrosshairPrefab;
     [HideInInspector] public GameObject CrosshairPrefabInstance; // A copy of the crosshair prefab to prevent data corruption
@@ -85,6 +89,32 @@ public class Detection : MonoBehaviour
                 }
             }
 
+            else if (hit.collider.tag == "Weed")
+            {
+                InReach = true;
+
+                // Display the UI element when the player is in reach of the weed
+                if (TextActive_Weed == false && TextPrefab_Weed != null)
+                {
+                    TextPrefabInstance_Weed = Instantiate(TextPrefab_Weed);
+                    TextActive_Weed = true;
+                    //TextPrefabInstance.transform.SetParent(transform, true); // Make the player the parent object of the text element
+                    TextPrefabInstance_Weed.transform.Rotate(0, 90, 0);
+                }
+
+                // Give the object that was hit the name 'Weed'
+                GameObject Door = hit.transform.gameObject;
+
+                // Get access to the 'Door' script attached to the object that was hit
+                Door dooropening = Door.GetComponent<Door>();
+
+                if (Input.GetKey(Character))
+                {
+                    // Open/close the door by running the 'Open' function found in the 'Door' script
+                    StartCoroutine(hit.collider.GetComponent<Door>().RemoveWeed());
+                }
+            }
+
             else
             {
                 InReach = false;
@@ -93,7 +123,14 @@ public class Detection : MonoBehaviour
                 if (TextActive == true)
                 {
                     DestroyImmediate(TextPrefabInstance);
+                    DestroyImmediate(TextPrefabInstance_Weed);
                     TextActive = false;
+                }
+                else if (TextActive_Weed == true)
+                {
+                    DestroyImmediate(TextPrefabInstance);
+                    DestroyImmediate(TextPrefabInstance_Weed);
+                    TextActive_Weed = false;
                 }
             }
         }
@@ -106,7 +143,14 @@ public class Detection : MonoBehaviour
             if (TextActive == true)
             {
                 DestroyImmediate(TextPrefabInstance);
+                DestroyImmediate(TextPrefabInstance_Weed);
                 TextActive = false;
+            }
+            else if (TextActive_Weed == true)
+            {
+                DestroyImmediate(TextPrefabInstance);
+                DestroyImmediate(TextPrefabInstance_Weed);
+                TextActive_Weed = false;
             }
         }
 
