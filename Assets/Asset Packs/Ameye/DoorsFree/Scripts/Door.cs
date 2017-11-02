@@ -50,6 +50,7 @@ public class Door : MonoBehaviour
     AudioSource audioPlayBack;
 
     public GameObject Weed;
+    public GameObject door;
 
     void Start()
     {
@@ -58,7 +59,8 @@ public class Door : MonoBehaviour
         audioPlayBack = GetComponent<AudioSource>();
 
         // Give the object the name "Door" for future reference
-        //gameObject.tag = "Door";
+        Weed.gameObject.tag = "Weed";
+        door.gameObject.tag = "Door";
 
         RotationOffset = transform.rotation;
 
