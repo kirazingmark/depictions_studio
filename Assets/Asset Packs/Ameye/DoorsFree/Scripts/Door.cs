@@ -49,13 +49,16 @@ public class Door : MonoBehaviour
     public AudioClip openDoor;
     AudioSource audioPlayBack;
 
+    public GameObject Weed;
+
     void Start()
     {
+        Weed.SetActive(true);
 
         audioPlayBack = GetComponent<AudioSource>();
 
         // Give the object the name "Door" for future reference
-        gameObject.tag = "Door";
+        //gameObject.tag = "Door";
 
         RotationOffset = transform.rotation;
 
@@ -216,5 +219,12 @@ public class Door : MonoBehaviour
                 else TimesRotated++;
             }
         }
+    }
+
+    // MOVE FUNCTION
+    public IEnumerator RemoveWeed()
+    {
+        Weed.SetActive(false);
+        return null;
     }
 }
