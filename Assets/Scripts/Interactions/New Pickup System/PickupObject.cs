@@ -22,7 +22,7 @@ public class PickupObject : MonoBehaviour {
     void Start () {
 		mainCamera = GameObject.FindWithTag("MainCamera");
         FirstPersonController = GameObject.FindWithTag("Player");
-        pCamera = GameObject.FindWithTag("Player").GetComponent<CameraSwitcher>();
+        pCamera = GameObject.FindGameObjectWithTag("Player").GetComponent<CameraSwitcher>();
     }
 	
 	// Update is called once per frame
@@ -67,7 +67,7 @@ public class PickupObject : MonoBehaviour {
 			RaycastHit hit;
 			if(Physics.Raycast(ray, out hit, rayDistance)) {
 				Pickupable p = hit.collider.GetComponent<Pickupable>();
-                Chair c = hit.collider.GetComponent<Chair>();
+                
                 if (p != null && Vector3.Distance(p.gameObject.transform.position, mainCamera.transform.position) < 3) {
 					carrying = true;
 					carriedObject = p.gameObject;
@@ -75,13 +75,15 @@ public class PickupObject : MonoBehaviour {
                     previousUp = mainCamera.transform.eulerAngles.y;
                     startYRotation = carriedObject.transform.eulerAngles.y;
                 }
-                if(c!= null && Vector3.Distance(c.gameObject.transform.position, mainCamera.transform.position) < 3)
+
+                Chair c = hit.collider.GetComponent<Chair>();
+                if(c!= null)
                 {
-                    Camera.main.enabled = false;
+                    Debug.Log("running");
+                    pCamera.Camera1.enabled = false;
                     pCamera.Camera7.enabled = true;
                 }
-
-			}
+            }
 		}
 	}
 
