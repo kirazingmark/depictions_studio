@@ -8,6 +8,7 @@ public class PickupObject : MonoBehaviour {
 	GameObject carriedObject;
     GameObject FirstPersonController;
     bool carrying;
+    CameraSwitcher pCamera;
     public float distance;
 	public float smooth;
     public float rayDistance = 3.0f; // Set in the Inspector as well.
@@ -21,6 +22,7 @@ public class PickupObject : MonoBehaviour {
     void Start () {
 		mainCamera = GameObject.FindWithTag("MainCamera");
         FirstPersonController = GameObject.FindWithTag("Player");
+        pCamera = GameObject.FindWithTag("Player").GetComponent<CameraSwitcher>();
     }
 	
 	// Update is called once per frame
@@ -65,6 +67,7 @@ public class PickupObject : MonoBehaviour {
 			RaycastHit hit;
 			if(Physics.Raycast(ray, out hit, rayDistance)) {
 				Pickupable p = hit.collider.GetComponent<Pickupable>();
+                Chair c = hit.collider.GetComponent<Chair>();
                 if (p != null && Vector3.Distance(p.gameObject.transform.position, mainCamera.transform.position) < 3) {
 					carrying = true;
 					carriedObject = p.gameObject;
@@ -72,6 +75,12 @@ public class PickupObject : MonoBehaviour {
                     previousUp = mainCamera.transform.eulerAngles.y;
                     startYRotation = carriedObject.transform.eulerAngles.y;
                 }
+                if(c!= null && Vector3.Distance(c.gameObject.transform.position, mainCamera.transform.position) < 3)
+                {
+                    Camera.main.enabled = false;
+                    pCamera.Camera7.enabled = true;
+                }
+
 			}
 		}
 	}
