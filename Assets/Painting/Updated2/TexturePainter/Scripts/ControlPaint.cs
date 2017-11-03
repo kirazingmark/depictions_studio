@@ -10,8 +10,11 @@ public class ControlPaint : MonoBehaviour {
     public Button exitButton;
     public Button deleteButoton;
     public Button removeButton;
-    public Button sliderButton;
-    public Slider value;
+    public Button stencil1;
+    public Button stencil2;
+    public Button brush1;
+    public Button brush2;
+    //public Slider value;
 
     // Use this for initialization
     void Start () {
@@ -26,16 +29,22 @@ public class ControlPaint : MonoBehaviour {
             exitButton.gameObject.SetActive(true);
             deleteButoton.gameObject.SetActive(true);
             removeButton.gameObject.SetActive(true);
-            sliderButton.gameObject.SetActive(true);
-            value.gameObject.SetActive(true);
+            brush1.gameObject.SetActive(true);
+            brush2.gameObject.SetActive(true);
+            //value.gameObject.SetActive(true);
+            stencil1.gameObject.SetActive(true);
+            stencil2.gameObject.SetActive(true);
         }
         else
         {
             exitButton.gameObject.SetActive(false);
             deleteButoton.gameObject.SetActive(false);
             removeButton.gameObject.SetActive(false);
-            sliderButton.gameObject.SetActive(false);
-            value.gameObject.SetActive(false);
+            brush1.gameObject.SetActive(false);
+            brush2.gameObject.SetActive(false);
+            //value.gameObject.SetActive(false);
+            stencil1.gameObject.SetActive(false);
+            stencil2.gameObject.SetActive(false);
         }
     }
 

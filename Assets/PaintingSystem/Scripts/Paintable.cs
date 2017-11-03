@@ -108,7 +108,8 @@ public class Paintable : MonoBehaviour
                 Ray mouseRay = pCamera.Camera7.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(mouseRay, out hitInfo, RaycastDistance))
                 {
-                    Debug.Log(hitInfo.transform.gameObject.tag);
+                    Debug.Log(hitInfo.collider.gameObject);
+
                     // did we hit the canvas?
                     if (hitInfo.transform.gameObject == gameObject)
                     {
@@ -194,13 +195,14 @@ public class Paintable : MonoBehaviour
 
 	void PerformPainting(Vector3 surfaceNormal, Vector2 uvCoordinate)
 	{
-		// ignore if the normal is not the correct one
-		if (Vector3.Dot(surfaceNormal, transform.forward) < 0.99f)
+        // ignore if the normal is not the correct one
+        if (Vector3.Dot(surfaceNormal, transform.forward) < 0.99f)
 			return;
 
 		// no brush?
 		if (ActiveBrush == null)
 			return;
+
 
 		// rescale the UV coordinate
 		Vector2 rescaledUV = new Vector2(uvCoordinate.x * TextureUVs[0].width, uvCoordinate.y * TextureUVs[0].height) + TextureUVs[0].min;
