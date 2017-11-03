@@ -16,7 +16,8 @@ public class Paintable : MonoBehaviour
 	public Color CanvasDefaultColor = Color.white;
 	public Color StencilColour = Color.white;
 
-    public CameraSwitcher pCamera;
+    CameraSwitcher pCamera;
+    ColorSelector colSelect;
 
 	protected Texture2D ActiveCanvasTexture;
 	protected Texture2D CanvasShadowTexture;
@@ -91,6 +92,7 @@ public class Paintable : MonoBehaviour
 
         //getting the camera 
         pCamera = GameObject.FindGameObjectWithTag("Player").GetComponent<CameraSwitcher>();
+        colSelect = GameObject.FindGameObjectWithTag("colorWheel").GetComponent<ColorSelector>();
 	}
 	
 	// Update is called once per frame
@@ -99,7 +101,7 @@ public class Paintable : MonoBehaviour
         // is the painting part started?
         if(pCamera.Camera7.enabled)
         {
-            
+            BrushColour = colSelect.selectedColor;
             // is the mouse down?
             if (Input.GetMouseButton(0))
             {
