@@ -101,7 +101,7 @@ public class Paintable : MonoBehaviour
         // is the painting part started?
         if(pCamera.Camera7.enabled)
         {
-            BrushColour = colSelect.selectedColor;
+            BrushColour = colSelect.finalColor;
             // is the mouse down?
             if (Input.GetMouseButton(0))
             {

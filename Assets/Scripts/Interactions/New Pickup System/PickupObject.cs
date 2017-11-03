@@ -7,7 +7,7 @@ public class PickupObject : MonoBehaviour {
     GameObject mainCamera;
 	GameObject carriedObject;
     GameObject FirstPersonController;
-    bool carrying;
+    public bool carrying;
     CameraSwitcher pCamera;
     public float distance;
 	public float smooth;
@@ -68,7 +68,7 @@ public class PickupObject : MonoBehaviour {
 			if(Physics.Raycast(ray, out hit, rayDistance)) {
 				Pickupable p = hit.collider.GetComponent<Pickupable>();
                 
-                if (p != null && Vector3.Distance(p.gameObject.transform.position, mainCamera.transform.position) < 3) {
+                if (p != null /*&& Vector3.Distance(p.gameObject.transform.position, mainCamera.transform.position) < 3*/) {
 					carrying = true;
 					carriedObject = p.gameObject;
 					p.gameObject.GetComponent<Rigidbody>().useGravity = false;
@@ -96,7 +96,7 @@ public class PickupObject : MonoBehaviour {
 	void dropObject() {
 		carrying = false;
 		carriedObject.gameObject.GetComponent<Rigidbody>().useGravity = true;
-        carriedObject.gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, -1, 0); // If Physics issue can be resolved, this can be removed.
+        //carriedObject.gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, -1, 0); // If Physics issue can be resolved, this can be removed.
         carriedObject = null;
     }
 }

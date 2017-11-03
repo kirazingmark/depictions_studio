@@ -13,7 +13,7 @@ public class Mood : MonoBehaviour {
     public float blinking;
 
     public FirstPersonController chara;
-    public PickUpObject po;
+    public PickupObject po;
     // Use this for initialization
     void Start () {
 
@@ -21,7 +21,7 @@ public class Mood : MonoBehaviour {
         painting = false;
 
         chara = GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>();
-        po = GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpObject>();
+        po = GameObject.FindGameObjectWithTag("Player").GetComponent<PickupObject>();
 
     }
 	
