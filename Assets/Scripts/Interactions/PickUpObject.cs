@@ -22,12 +22,16 @@ public class PickUpObject : MonoBehaviour {
     public GameObject Ethan_Note3;
     public GameObject Ethan_Note4;
     public GameObject Ethan_Note5;
+    public GameObject Ethan_Note6; // Note 5 was cut into 2 parts due to length.
     public GameObject Sophie_Note1;
     public GameObject Sophie_Note2;
     public GameObject Sophie_Note3;
 
     // Note Door Lock GameObjects.
-    public GameObject Note1_DoorLock;
+    public GameObject Note1_DoorLock; // Bedroom Door.
+    public GameObject Note2_3_4_DoorLock1; // Babies Room.
+    public GameObject Note5_6_DoorLock1; // Front Door.
+    public GameObject Note5_6_DoorLock2; // Side Door Left.
 
     // Note AudioClip Elements.
     public AudioClip note_Ethan1;
@@ -35,6 +39,7 @@ public class PickUpObject : MonoBehaviour {
     public AudioClip note_Ethan3;
     public AudioClip note_Ethan4;
     public AudioClip note_Ethan5;
+    public AudioClip note_Ethan6;
     public AudioClip note_Sophie1;
     public AudioClip note_Sophie2;
     public AudioClip note_Sophie3;
@@ -46,6 +51,7 @@ public class PickUpObject : MonoBehaviour {
     public bool note_Ethan3_Played = false;
     public bool note_Ethan4_Played = false;
     public bool note_Ethan5_Played = false;
+    public bool note_Ethan6_Played = false;
     public bool note_Sophie1_Played = false;
     public bool note_Sophie2_Played = false;
     public bool note_Sophie3_Played = false;
@@ -92,16 +98,21 @@ public class PickUpObject : MonoBehaviour {
         Ethan_Note3.SetActive(false);
         Ethan_Note4.SetActive(false);
         Ethan_Note5.SetActive(false);
+        Ethan_Note6.SetActive(false);
         Sophie_Note1.SetActive(false);
         Sophie_Note2.SetActive(false);
         Sophie_Note3.SetActive(false);
         
         // Note Door Lock GameObjects being set to TRUE by default.
         Note1_DoorLock.SetActive(true);
+        Note2_3_4_DoorLock1.SetActive(true);
+        Note5_6_DoorLock1.SetActive(true);
+        Note5_6_DoorLock2.SetActive(true);
+
         // REMAINING DOOR LOCKS TO BE ADDED HERE.
     }
 
-    // MOVE FUNCTION
+    // ETHAN BEDROOM NOTE FUNCTION.
     public IEnumerator EthanNote1_Function()
     {
         Debug.Log("Ethan 1 Function Called!");
@@ -126,6 +137,173 @@ public class PickUpObject : MonoBehaviour {
 
         // Change Note 1 Flag.
         note_Ethan1_Played = true;
+    }
+
+    // ETHAN KITCHEN NOTE FUNCTION.
+    public IEnumerator EthanNote2_Function()
+    {
+        Debug.Log("Ethan 2 Function Called!");
+
+        // Enable UI Elements here.
+        ReadingPanel.SetActive(true);
+        Ethan_Note2.SetActive(true);
+
+        audioPlayBack.clip = note_Ethan2;
+        audioPlayBack.PlayOneShot(note_Ethan2, 1.0f);
+
+        yield return new WaitForSeconds(audioPlayBack.clip.length);
+
+        // Disable UI Elements here.
+        ReadingPanel.SetActive(false);
+        Ethan_Note2.SetActive(false);
+
+        // Change Note 1 Flag.
+        note_Ethan2_Played = true;
+
+        // Check to see if conditions to unlock Babies Room have been met.
+        if(note_Ethan2_Played == true && note_Ethan3_Played == true && note_Ethan4_Played == true)
+        {
+            Note2_3_4_DoorLock1.SetActive(false);
+            audioPlayBack.clip = doorUnlock;
+            audioPlayBack.Play();
+        }
+        else
+        {
+        }
+    }
+
+    // ETHAN DINNING ROOM NOTE FUNCTION.
+    public IEnumerator EthanNote3_Function()
+    {
+        Debug.Log("Ethan 3 Function Called!");
+
+        // Enable UI Elements here.
+        ReadingPanel.SetActive(true);
+        Ethan_Note3.SetActive(true);
+
+        audioPlayBack.clip = note_Ethan3;
+        audioPlayBack.PlayOneShot(note_Ethan3, 1.0f);
+
+        yield return new WaitForSeconds(audioPlayBack.clip.length);
+
+        // Disable UI Elements here.
+        ReadingPanel.SetActive(false);
+        Ethan_Note3.SetActive(false);
+
+        // Change Note 1 Flag.
+        note_Ethan3_Played = true;
+
+        // Check to see if conditions to unlock Babies Room have been met.
+        if (note_Ethan2_Played == true && note_Ethan3_Played == true && note_Ethan4_Played == true)
+        {
+            Note2_3_4_DoorLock1.SetActive(false);
+            audioPlayBack.clip = doorUnlock;
+            audioPlayBack.Play();
+        }
+        else
+        {
+        }
+    }
+
+    // ETHAN LOUNGE NOTE FUNCTION.
+    public IEnumerator EthanNote4_Function()
+    {
+        Debug.Log("Ethan 4 Function Called!");
+
+        // Enable UI Elements here.
+        ReadingPanel.SetActive(true);
+        Ethan_Note4.SetActive(true);
+
+        audioPlayBack.clip = note_Ethan4;
+        audioPlayBack.PlayOneShot(note_Ethan4, 1.0f);
+
+        yield return new WaitForSeconds(audioPlayBack.clip.length);
+
+        // Disable UI Elements here.
+        ReadingPanel.SetActive(false);
+        Ethan_Note4.SetActive(false);
+
+        // Change Note 1 Flag.
+        note_Ethan4_Played = true;
+
+        // Check to see if conditions to unlock Babies Room have been met.
+        if (note_Ethan2_Played == true && note_Ethan3_Played == true && note_Ethan4_Played == true)
+        {
+            Note2_3_4_DoorLock1.SetActive(false);
+            audioPlayBack.clip = doorUnlock;
+            audioPlayBack.Play();
+        }
+        else
+        {
+        }
+    }
+
+    // ETHAN BABIES ROOM FUNCTION 1.
+    public IEnumerator EthanNote5_Function()
+    {
+        Debug.Log("Ethan 5 Function Called!");
+
+        // Enable UI Elements here.
+        ReadingPanel.SetActive(true);
+        Ethan_Note5.SetActive(true);
+
+        audioPlayBack.clip = note_Ethan5;
+        audioPlayBack.PlayOneShot(note_Ethan5, 1.0f);
+
+        yield return new WaitForSeconds(audioPlayBack.clip.length);
+
+        // Disable UI Elements here.
+        ReadingPanel.SetActive(false);
+        Ethan_Note5.SetActive(false);
+
+        // Change Note 1 Flag.
+        note_Ethan5_Played = true;
+
+        // Check to see if conditions to unlock Exterior Doors have been met.
+        if (note_Ethan5_Played == true && note_Ethan6_Played == true)
+        {
+            Note5_6_DoorLock1.SetActive(false);
+            Note5_6_DoorLock2.SetActive(false);
+            audioPlayBack.clip = doorUnlock;
+            audioPlayBack.Play();
+        }
+        else
+        {
+        }
+    }
+
+    // ETHAN BABIES ROOM FUNCTION 2.
+    public IEnumerator EthanNote6_Function()
+    {
+        Debug.Log("Ethan 6 Function Called!");
+
+        // Enable UI Elements here.
+        ReadingPanel.SetActive(true);
+        Ethan_Note6.SetActive(true);
+
+        audioPlayBack.clip = note_Ethan6;
+        audioPlayBack.PlayOneShot(note_Ethan6, 1.0f);
+
+        yield return new WaitForSeconds(audioPlayBack.clip.length);
+
+        // Disable UI Elements here.
+        ReadingPanel.SetActive(false);
+        Ethan_Note6.SetActive(false);
+
+        // Change Note 1 Flag.
+        note_Ethan6_Played = true;
+
+        // Check to see if conditions to unlock Exterior Doors have been met.
+        if (note_Ethan5_Played == true && note_Ethan6_Played == true)
+        {
+            Note5_6_DoorLock1.SetActive(false);
+            Note5_6_DoorLock2.SetActive(false);
+            audioPlayBack.clip = doorUnlock;
+            audioPlayBack.Play();
+        }
+        else
+        {
+        }
     }
 
     // Update is called once per frame
@@ -352,11 +530,6 @@ public class PickUpObject : MonoBehaviour {
                         }
                     }
 
-
-
-
-
-
                     else if (c.tag == "ReadableNoteEthan1")
                     {
                         Debug.Log("Ethan's First Note Found!");
@@ -370,11 +543,71 @@ public class PickUpObject : MonoBehaviour {
                             Debug.Log("Ethan's First Note Already Played!");
                         }
                     }
+                    else if (c.tag == "ReadableNoteEthan2")
+                    {
+                        Debug.Log("Ethan's Second Note Found!");
 
+                        if (note_Ethan2_Played == false)
+                        {
+                            StartCoroutine(EthanNote2_Function());
+                        }
+                        else if (note_Ethan2_Played == true)
+                        {
+                            Debug.Log("Ethan's Second Note Already Played!");
+                        }
+                    }
+                    else if (c.tag == "ReadableNoteEthan3")
+                    {
+                        Debug.Log("Ethan's Third Note Found!");
 
+                        if (note_Ethan3_Played == false)
+                        {
+                            StartCoroutine(EthanNote3_Function());
+                        }
+                        else if (note_Ethan3_Played == true)
+                        {
+                            Debug.Log("Ethan's Third Note Already Played!");
+                        }
+                    }
+                    else if (c.tag == "ReadableNoteEthan4")
+                    {
+                        Debug.Log("Ethan's Forth Note Found!");
 
+                        if (note_Ethan4_Played == false)
+                        {
+                            StartCoroutine(EthanNote4_Function());
+                        }
+                        else if (note_Ethan4_Played == true)
+                        {
+                            Debug.Log("Ethan's Forth Note Already Played!");
+                        }
+                    }
+                    else if (c.tag == "ReadableNoteEthan5")
+                    {
+                        Debug.Log("Ethan's Fifth Note Found!");
 
+                        if (note_Ethan5_Played == false)
+                        {
+                            StartCoroutine(EthanNote5_Function());
+                        }
+                        else if (note_Ethan5_Played == true)
+                        {
+                            Debug.Log("Ethan's Fifth Note Already Played!");
+                        }
+                    }
+                    else if (c.tag == "ReadableNoteEthan6")
+                    {
+                        Debug.Log("Ethan's Sixth Note Found!");
 
+                        if (note_Ethan6_Played == false)
+                        {
+                            StartCoroutine(EthanNote6_Function());
+                        }
+                        else if (note_Ethan6_Played == true)
+                        {
+                            Debug.Log("Ethan's Sixth Note Already Played!");
+                        }
+                    }
 
                     else if (c.tag == "toilet")
                     {
