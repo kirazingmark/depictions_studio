@@ -27,6 +27,17 @@ public class PickUpObject : MonoBehaviour {
     public GameObject Sophie_Note2;
     public GameObject Sophie_Note3;
 
+    // In-Scene Interactive Notes.
+    public GameObject EthanNote1;
+    public GameObject EthanNote2;
+    public GameObject EthanNote3;
+    public GameObject EthanNote4;
+    public GameObject EthanNote5;
+    public GameObject EthanNote6;
+    public GameObject SophieNote1;
+    public GameObject SophieNote2;
+    public GameObject SophieNote3;
+
     // Note Door Lock GameObjects.
     public GameObject Note1_DoorLock; // Bedroom Door.
     public GameObject Note2_3_4_DoorLock1; // Babies Room.
@@ -55,6 +66,17 @@ public class PickUpObject : MonoBehaviour {
     public bool note_Sophie1_Played = false;
     public bool note_Sophie2_Played = false;
     public bool note_Sophie3_Played = false;
+
+    // Note Active Flags.
+    public bool isEthanNote1Active;
+    public bool isEthanNote2Active;
+    public bool isEthanNote3Active;
+    public bool isEthanNote4Active;
+    public bool isEthanNote5Active;
+    public bool isEthanNote6Active;
+    public bool isSophieNote1Active;
+    public bool isSophieNote2Active;
+    public bool isSophieNote3Active;
 
     public AudioClip pickup;
     public AudioClip drop;
@@ -102,14 +124,23 @@ public class PickUpObject : MonoBehaviour {
         Sophie_Note1.SetActive(false);
         Sophie_Note2.SetActive(false);
         Sophie_Note3.SetActive(false);
+
+        // Note Active Flags.
+        isEthanNote1Active = true;
+        isEthanNote2Active = true;
+        isEthanNote3Active = false;
+        isEthanNote4Active = false;
+        isEthanNote5Active = false;
+        isEthanNote6Active = false;
+        isSophieNote1Active = false;
+        isSophieNote2Active = false;
+        isSophieNote3Active = false;
         
         // Note Door Lock GameObjects being set to TRUE by default.
         Note1_DoorLock.SetActive(true);
         Note2_3_4_DoorLock1.SetActive(true);
         Note5_6_DoorLock1.SetActive(true);
         Note5_6_DoorLock2.SetActive(true);
-
-        // REMAINING DOOR LOCKS TO BE ADDED HERE.
     }
 
     // ETHAN BEDROOM NOTE FUNCTION.
