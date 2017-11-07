@@ -125,6 +125,17 @@ public class PickUpObject : MonoBehaviour {
         Sophie_Note2.SetActive(false);
         Sophie_Note3.SetActive(false);
 
+        // Note In-Scene Interactive elements being set.
+        EthanNote1.SetActive(true);
+        EthanNote2.SetActive(true);
+        EthanNote3.SetActive(false);
+        EthanNote4.SetActive(false);
+        EthanNote5.SetActive(false);
+        EthanNote6.SetActive(false);
+        SophieNote1.SetActive(false);
+        SophieNote2.SetActive(false);
+        SophieNote3.SetActive(false);
+
         // Note Active Flags.
         isEthanNote1Active = true;
         isEthanNote2Active = true;
@@ -168,6 +179,7 @@ public class PickUpObject : MonoBehaviour {
 
         // Change Ethan Note 1 Flag.
         note_Ethan1_Played = true;
+        EthanNote2.SetActive(true);
     }
 
     // ETHAN KITCHEN NOTE FUNCTION.
@@ -191,8 +203,12 @@ public class PickUpObject : MonoBehaviour {
         // Change Ethan Note 2 Flag.
         note_Ethan2_Played = true;
 
+        // Change Next Note Visibility Flag.
+        isEthanNote3Active = true;
+        EthanNote3.SetActive(true);
+
         // Check to see if conditions to unlock Babies Room have been met.
-        if(note_Ethan2_Played == true && note_Ethan3_Played == true && note_Ethan4_Played == true)
+        if (note_Ethan2_Played == true && note_Ethan3_Played == true && note_Ethan4_Played == true)
         {
             Note2_3_4_DoorLock1.SetActive(false);
             audioPlayBack.clip = doorUnlock;
@@ -223,6 +239,10 @@ public class PickUpObject : MonoBehaviour {
 
         // Change Ethan Note 3 Flag.
         note_Ethan3_Played = true;
+
+        // Change Next Note Visibility Flag.
+        isEthanNote4Active = true;
+        EthanNote4.SetActive(true);
 
         // Check to see if conditions to unlock Babies Room have been met.
         if (note_Ethan2_Played == true && note_Ethan3_Played == true && note_Ethan4_Played == true)
@@ -257,6 +277,10 @@ public class PickUpObject : MonoBehaviour {
         // Change Ethan Note 4 Flag.
         note_Ethan4_Played = true;
 
+        // Change Next Note Visibility Flag.
+        isEthanNote5Active = true;
+        EthanNote5.SetActive(true);
+
         // Check to see if conditions to unlock Babies Room have been met.
         if (note_Ethan2_Played == true && note_Ethan3_Played == true && note_Ethan4_Played == true)
         {
@@ -289,6 +313,10 @@ public class PickUpObject : MonoBehaviour {
 
         // Change Ethan Note 5 Flag.
         note_Ethan5_Played = true;
+
+        // Change Next Note Visibility Flag.
+        isEthanNote6Active = true;
+        EthanNote6.SetActive(true);
 
         // Check to see if conditions to unlock Exterior Doors have been met.
         if (note_Ethan5_Played == true && note_Ethan6_Played == true)
@@ -324,6 +352,11 @@ public class PickUpObject : MonoBehaviour {
         // Change Ethan Note 6 Flag.
         note_Ethan6_Played = true;
 
+
+        // Change Next Note Visibility Flag.
+        isSophieNote1Active = true;
+        SophieNote1.SetActive(true);
+
         // Check to see if conditions to unlock Exterior Doors have been met.
         if (note_Ethan5_Played == true && note_Ethan6_Played == true)
         {
@@ -357,6 +390,10 @@ public class PickUpObject : MonoBehaviour {
 
         // Change Sophie Note 1 Flag.
         note_Sophie1_Played = true;
+
+        // Change Next Note Visibility Flag.
+        isSophieNote2Active = true;
+        SophieNote2.SetActive(true);
     }
 
     // SOPHIE POND NOTE FUNCTION.
@@ -379,6 +416,10 @@ public class PickUpObject : MonoBehaviour {
 
         // Change Sophie Note 2 Flag.
         note_Sophie2_Played = true;
+
+        // Change Next Note Visibility Flag.
+        isSophieNote3Active = true;
+        SophieNote3.SetActive(true);
     }
 
     // SOPHIE TREE NOTE FUNCTION.
