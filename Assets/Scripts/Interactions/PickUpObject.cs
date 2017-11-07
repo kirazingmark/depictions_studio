@@ -135,7 +135,7 @@ public class PickUpObject : MonoBehaviour {
         ReadingPanel.SetActive(false);
         Ethan_Note1.SetActive(false);
 
-        // Change Note 1 Flag.
+        // Change Ethan Note 1 Flag.
         note_Ethan1_Played = true;
     }
 
@@ -157,7 +157,7 @@ public class PickUpObject : MonoBehaviour {
         ReadingPanel.SetActive(false);
         Ethan_Note2.SetActive(false);
 
-        // Change Note 1 Flag.
+        // Change Ethan Note 2 Flag.
         note_Ethan2_Played = true;
 
         // Check to see if conditions to unlock Babies Room have been met.
@@ -190,7 +190,7 @@ public class PickUpObject : MonoBehaviour {
         ReadingPanel.SetActive(false);
         Ethan_Note3.SetActive(false);
 
-        // Change Note 1 Flag.
+        // Change Ethan Note 3 Flag.
         note_Ethan3_Played = true;
 
         // Check to see if conditions to unlock Babies Room have been met.
@@ -223,7 +223,7 @@ public class PickUpObject : MonoBehaviour {
         ReadingPanel.SetActive(false);
         Ethan_Note4.SetActive(false);
 
-        // Change Note 1 Flag.
+        // Change Ethan Note 4 Flag.
         note_Ethan4_Played = true;
 
         // Check to see if conditions to unlock Babies Room have been met.
@@ -256,7 +256,7 @@ public class PickUpObject : MonoBehaviour {
         ReadingPanel.SetActive(false);
         Ethan_Note5.SetActive(false);
 
-        // Change Note 1 Flag.
+        // Change Ethan Note 5 Flag.
         note_Ethan5_Played = true;
 
         // Check to see if conditions to unlock Exterior Doors have been met.
@@ -290,7 +290,7 @@ public class PickUpObject : MonoBehaviour {
         ReadingPanel.SetActive(false);
         Ethan_Note6.SetActive(false);
 
-        // Change Note 1 Flag.
+        // Change Ethan Note 6 Flag.
         note_Ethan6_Played = true;
 
         // Check to see if conditions to unlock Exterior Doors have been met.
@@ -304,6 +304,72 @@ public class PickUpObject : MonoBehaviour {
         else
         {
         }
+    }
+
+    // SOPHIE STUDIO NOTE FUNCTION.
+    public IEnumerator SophieNote1_Function()
+    {
+        Debug.Log("Sophie 1 Function Called!");
+
+        // Enable UI Elements here.
+        ReadingPanel.SetActive(true);
+        Sophie_Note1.SetActive(true);
+
+        audioPlayBack.clip = note_Ethan1;
+        audioPlayBack.PlayOneShot(note_Sophie1, 1.0f);
+
+        yield return new WaitForSeconds(audioPlayBack.clip.length);
+
+        // Disable UI Elements here.
+        ReadingPanel.SetActive(false);
+        Sophie_Note1.SetActive(false);
+
+        // Change Sophie Note 1 Flag.
+        note_Sophie1_Played = true;
+    }
+
+    // SOPHIE POND NOTE FUNCTION.
+    public IEnumerator SophieNote2_Function()
+    {
+        Debug.Log("Sophie 2 Function Called!");
+
+        // Enable UI Elements here.
+        ReadingPanel.SetActive(true);
+        Sophie_Note2.SetActive(true);
+
+        audioPlayBack.clip = note_Sophie2;
+        audioPlayBack.PlayOneShot(note_Sophie2, 1.0f);
+
+        yield return new WaitForSeconds(audioPlayBack.clip.length);
+
+        // Disable UI Elements here.
+        ReadingPanel.SetActive(false);
+        Sophie_Note2.SetActive(false);
+
+        // Change Sophie Note 2 Flag.
+        note_Sophie2_Played = true;
+    }
+
+    // SOPHIE TREE NOTE FUNCTION.
+    public IEnumerator SophieNote3_Function()
+    {
+        Debug.Log("Sophie 3 Function Called!");
+
+        // Enable UI Elements here.
+        ReadingPanel.SetActive(true);
+        Sophie_Note3.SetActive(true);
+
+        audioPlayBack.clip = note_Ethan1;
+        audioPlayBack.PlayOneShot(note_Sophie3, 1.0f);
+
+        yield return new WaitForSeconds(audioPlayBack.clip.length);
+
+        // Disable UI Elements here.
+        ReadingPanel.SetActive(false);
+        Sophie_Note3.SetActive(false);
+
+        // Change Sophie Note 3 Flag.
+        note_Sophie3_Played = true;
     }
 
     // Update is called once per frame
@@ -606,6 +672,45 @@ public class PickUpObject : MonoBehaviour {
                         else if (note_Ethan6_Played == true)
                         {
                             Debug.Log("Ethan's Sixth Note Already Played!");
+                        }
+                    }
+                    else if (c.tag == "ReadableNoteSophie1")
+                    {
+                        Debug.Log("Sophie's First Note Found!");
+
+                        if (note_Sophie1_Played == false)
+                        {
+                            StartCoroutine(SophieNote1_Function());
+                        }
+                        else if (note_Sophie1_Played == true)
+                        {
+                            Debug.Log("Sophie's First Note Already Played!");
+                        }
+                    }
+                    else if (c.tag == "ReadableNoteSophie2")
+                    {
+                        Debug.Log("Sophie's Second Note Found!");
+
+                        if (note_Sophie2_Played == false)
+                        {
+                            StartCoroutine(SophieNote2_Function());
+                        }
+                        else if (note_Sophie2_Played == true)
+                        {
+                            Debug.Log("Sophie's Second Note Already Played!");
+                        }
+                    }
+                    else if (c.tag == "ReadableNoteSophie3")
+                    {
+                        Debug.Log("Sophie's Third Note Found!");
+
+                        if (note_Sophie3_Played == false)
+                        {
+                            StartCoroutine(SophieNote3_Function());
+                        }
+                        else if (note_Sophie3_Played == true)
+                        {
+                            Debug.Log("Sophie's Third Note Already Played!");
                         }
                     }
 
