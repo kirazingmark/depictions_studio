@@ -67,6 +67,17 @@ public class PickUpObject : MonoBehaviour {
     public bool note_Sophie2_Played = false;
     public bool note_Sophie3_Played = false;
 
+    // Note IEnumerator Currently Running.
+    public bool Ethan_Note1_CurrentlyRunning;
+    public bool Ethan_Note2_CurrentlyRunning;
+    public bool Ethan_Note3_CurrentlyRunning;
+    public bool Ethan_Note4_CurrentlyRunning;
+    public bool Ethan_Note5_CurrentlyRunning;
+    public bool Ethan_Note6_CurrentlyRunning;
+    public bool Sophie_Note1_CurrentlyRunning;
+    public bool Sophie_Note2_CurrentlyRunning;
+    public bool Sophie_Note3_CurrentlyRunning;
+
     // Note Active Flags.
     public bool isEthanNote1Active;
     public bool isEthanNote2Active;
@@ -146,7 +157,18 @@ public class PickUpObject : MonoBehaviour {
         isSophieNote1Active = false;
         isSophieNote2Active = false;
         isSophieNote3Active = false;
-        
+
+        // Note IEnumerator Currently Running.
+        Ethan_Note1_CurrentlyRunning = false;
+        Ethan_Note2_CurrentlyRunning = false;
+        Ethan_Note3_CurrentlyRunning = false;
+        Ethan_Note4_CurrentlyRunning = false;
+        Ethan_Note5_CurrentlyRunning = false;
+        Ethan_Note6_CurrentlyRunning = false;
+        Sophie_Note1_CurrentlyRunning = false;
+        Sophie_Note2_CurrentlyRunning = false;
+        Sophie_Note3_CurrentlyRunning = false;
+
         // Note Door Lock GameObjects being set to TRUE by default.
         Note1_DoorLock.SetActive(true);
         Note2_3_4_DoorLock1.SetActive(true);
@@ -159,12 +181,16 @@ public class PickUpObject : MonoBehaviour {
     {
         Debug.Log("Ethan 1 Function Called!");
 
+        Ethan_Note1_CurrentlyRunning = true;
+
         // Enable UI Elements here.
         ReadingPanel.SetActive(true);
         Ethan_Note1.SetActive(true);
 
         audioPlayBack.clip = note_Ethan1;
         audioPlayBack.PlayOneShot(note_Ethan1, 1.0f);
+
+        //Time.timeScale = 0.0f;
 
         yield return new WaitForSeconds(audioPlayBack.clip.length);
         audioPlayBack.clip = doorUnlock;
@@ -177,15 +203,21 @@ public class PickUpObject : MonoBehaviour {
         ReadingPanel.SetActive(false);
         Ethan_Note1.SetActive(false);
 
+        //Time.timeScale = 1.0f;
+
         // Change Ethan Note 1 Flag.
         note_Ethan1_Played = true;
         EthanNote2.SetActive(true);
+
+        Ethan_Note1_CurrentlyRunning = false;
     }
 
     // ETHAN KITCHEN NOTE FUNCTION.
     public IEnumerator EthanNote2_Function()
     {
         Debug.Log("Ethan 2 Function Called!");
+
+        Ethan_Note2_CurrentlyRunning = true;
 
         // Enable UI Elements here.
         ReadingPanel.SetActive(true);
@@ -217,12 +249,16 @@ public class PickUpObject : MonoBehaviour {
         else
         {
         }
+
+        Ethan_Note2_CurrentlyRunning = false;
     }
 
     // ETHAN DINNING ROOM NOTE FUNCTION.
     public IEnumerator EthanNote3_Function()
     {
         Debug.Log("Ethan 3 Function Called!");
+
+        Ethan_Note3_CurrentlyRunning = true;
 
         // Enable UI Elements here.
         ReadingPanel.SetActive(true);
@@ -254,12 +290,16 @@ public class PickUpObject : MonoBehaviour {
         else
         {
         }
+
+        Ethan_Note3_CurrentlyRunning = false;
     }
 
     // ETHAN LOUNGE NOTE FUNCTION.
     public IEnumerator EthanNote4_Function()
     {
         Debug.Log("Ethan 4 Function Called!");
+
+        Ethan_Note4_CurrentlyRunning = true;
 
         // Enable UI Elements here.
         ReadingPanel.SetActive(true);
@@ -291,12 +331,16 @@ public class PickUpObject : MonoBehaviour {
         else
         {
         }
+
+        Ethan_Note4_CurrentlyRunning = false;
     }
 
     // ETHAN BABIES ROOM FUNCTION 1.
     public IEnumerator EthanNote5_Function()
     {
         Debug.Log("Ethan 5 Function Called!");
+
+        Ethan_Note5_CurrentlyRunning = true;
 
         // Enable UI Elements here.
         ReadingPanel.SetActive(true);
@@ -329,12 +373,16 @@ public class PickUpObject : MonoBehaviour {
         else
         {
         }
+
+        Ethan_Note5_CurrentlyRunning = false;
     }
 
     // ETHAN BABIES ROOM FUNCTION 2.
     public IEnumerator EthanNote6_Function()
     {
         Debug.Log("Ethan 6 Function Called!");
+
+        Ethan_Note6_CurrentlyRunning = true;
 
         // Enable UI Elements here.
         ReadingPanel.SetActive(true);
@@ -368,12 +416,16 @@ public class PickUpObject : MonoBehaviour {
         else
         {
         }
+
+        Ethan_Note6_CurrentlyRunning = false;
     }
 
     // SOPHIE STUDIO NOTE FUNCTION.
     public IEnumerator SophieNote1_Function()
     {
         Debug.Log("Sophie 1 Function Called!");
+
+        Sophie_Note1_CurrentlyRunning = true;
 
         // Enable UI Elements here.
         ReadingPanel.SetActive(true);
@@ -394,12 +446,16 @@ public class PickUpObject : MonoBehaviour {
         // Change Next Note Visibility Flag.
         isSophieNote2Active = true;
         SophieNote2.SetActive(true);
+
+        Sophie_Note1_CurrentlyRunning = false;
     }
 
     // SOPHIE POND NOTE FUNCTION.
     public IEnumerator SophieNote2_Function()
     {
         Debug.Log("Sophie 2 Function Called!");
+
+        Sophie_Note2_CurrentlyRunning = true;
 
         // Enable UI Elements here.
         ReadingPanel.SetActive(true);
@@ -420,12 +476,16 @@ public class PickUpObject : MonoBehaviour {
         // Change Next Note Visibility Flag.
         isSophieNote3Active = true;
         SophieNote3.SetActive(true);
+
+        Sophie_Note2_CurrentlyRunning = false;
     }
 
     // SOPHIE TREE NOTE FUNCTION.
     public IEnumerator SophieNote3_Function()
     {
         Debug.Log("Sophie 3 Function Called!");
+
+        Sophie_Note3_CurrentlyRunning = true;
 
         // Enable UI Elements here.
         ReadingPanel.SetActive(true);
@@ -442,6 +502,8 @@ public class PickUpObject : MonoBehaviour {
 
         // Change Sophie Note 3 Flag.
         note_Sophie3_Played = true;
+
+        Sophie_Note3_CurrentlyRunning = false;
     }
 
     // Update is called once per frame
@@ -672,7 +734,7 @@ public class PickUpObject : MonoBehaviour {
                     {
                         Debug.Log("Ethan's First Note Found!");
 
-                        if (note_Ethan1_Played == false)
+                        if (note_Ethan1_Played == false && Ethan_Note1_CurrentlyRunning == false)
                         {
                             StartCoroutine(EthanNote1_Function());
                         }
@@ -685,7 +747,7 @@ public class PickUpObject : MonoBehaviour {
                     {
                         Debug.Log("Ethan's Second Note Found!");
 
-                        if (note_Ethan2_Played == false)
+                        if (note_Ethan2_Played == false && Ethan_Note2_CurrentlyRunning == false)
                         {
                             StartCoroutine(EthanNote2_Function());
                         }
@@ -698,7 +760,7 @@ public class PickUpObject : MonoBehaviour {
                     {
                         Debug.Log("Ethan's Third Note Found!");
 
-                        if (note_Ethan3_Played == false)
+                        if (note_Ethan3_Played == false && Ethan_Note3_CurrentlyRunning == false)
                         {
                             StartCoroutine(EthanNote3_Function());
                         }
@@ -711,7 +773,7 @@ public class PickUpObject : MonoBehaviour {
                     {
                         Debug.Log("Ethan's Forth Note Found!");
 
-                        if (note_Ethan4_Played == false)
+                        if (note_Ethan4_Played == false && Ethan_Note4_CurrentlyRunning == false)
                         {
                             StartCoroutine(EthanNote4_Function());
                         }
@@ -724,7 +786,7 @@ public class PickUpObject : MonoBehaviour {
                     {
                         Debug.Log("Ethan's Fifth Note Found!");
 
-                        if (note_Ethan5_Played == false)
+                        if (note_Ethan5_Played == false && Ethan_Note5_CurrentlyRunning == false)
                         {
                             StartCoroutine(EthanNote5_Function());
                         }
@@ -737,7 +799,7 @@ public class PickUpObject : MonoBehaviour {
                     {
                         Debug.Log("Ethan's Sixth Note Found!");
 
-                        if (note_Ethan6_Played == false)
+                        if (note_Ethan6_Played == false && Ethan_Note6_CurrentlyRunning == false)
                         {
                             StartCoroutine(EthanNote6_Function());
                         }
@@ -750,7 +812,7 @@ public class PickUpObject : MonoBehaviour {
                     {
                         Debug.Log("Sophie's First Note Found!");
 
-                        if (note_Sophie1_Played == false)
+                        if (note_Sophie1_Played == false && Sophie_Note1_CurrentlyRunning == false)
                         {
                             StartCoroutine(SophieNote1_Function());
                         }
@@ -763,7 +825,7 @@ public class PickUpObject : MonoBehaviour {
                     {
                         Debug.Log("Sophie's Second Note Found!");
 
-                        if (note_Sophie2_Played == false)
+                        if (note_Sophie2_Played == false && Sophie_Note2_CurrentlyRunning == false)
                         {
                             StartCoroutine(SophieNote2_Function());
                         }
@@ -776,7 +838,7 @@ public class PickUpObject : MonoBehaviour {
                     {
                         Debug.Log("Sophie's Third Note Found!");
 
-                        if (note_Sophie3_Played == false)
+                        if (note_Sophie3_Played == false && Sophie_Note3_CurrentlyRunning == false)
                         {
                             StartCoroutine(SophieNote3_Function());
                         }
