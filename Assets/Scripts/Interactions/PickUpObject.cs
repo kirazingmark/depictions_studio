@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System;
 using UnityEngine.UI; // For Notes UI Elements.
 using UnityStandardAssets.Characters.FirstPerson;
@@ -14,6 +15,7 @@ public class PickUpObject : MonoBehaviour {
     public float distance;
     public float smooth;
     public float timer = 5;
+    public string sceneName; // Used for restarting the Scene - temporary only.
 
     // Note Sprite UI Elements.
     public GameObject ReadingPanel;
@@ -37,6 +39,14 @@ public class PickUpObject : MonoBehaviour {
     public GameObject SophieNote1;
     public GameObject SophieNote2;
     public GameObject SophieNote3;
+
+    // In-Scene Note Illuminators.
+    public GameObject Note1Illuminator;
+    public GameObject Note2Illuminator;
+    public GameObject Note3Illuminator;
+    public GameObject Note4Illuminator;
+    public GameObject Note5Illuminator;
+    public GameObject Note6Illuminator;
 
     // Note Door Lock GameObjects.
     public GameObject Note1_DoorLock; // Bedroom Door.
@@ -89,6 +99,13 @@ public class PickUpObject : MonoBehaviour {
     public bool isSophieNote2Active;
     public bool isSophieNote3Active;
 
+    // Temorary Door GameObjects due to issues with the Detection & Door Scripts.
+    public GameObject Door_Bedroom;
+    public GameObject Door_BabiesRoom;
+    public GameObject Door_FrontDoor;
+    public GameObject Door_SideDoorLeft;
+    public GameObject Door_SideDoorRight;
+
     public AudioClip pickup;
     public AudioClip drop;
     public AudioClip teleportFire;
@@ -124,6 +141,13 @@ public class PickUpObject : MonoBehaviour {
         pCamera = GameObject.FindGameObjectWithTag("Player").GetComponent<CameraSwitcher>();
         chara = GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>();
 
+        // Set Temporary Door GameObjects to true by default.
+        Door_Bedroom.SetActive(true);
+        Door_BabiesRoom.SetActive(true);
+        Door_FrontDoor.SetActive(true);
+        Door_SideDoorLeft.SetActive(true);
+        Door_SideDoorRight.SetActive(true);
+
         // Note UI Elements being set to FALSE by default.
         ReadingPanel.SetActive(false);
         Ethan_Note1.SetActive(false);
@@ -146,6 +170,14 @@ public class PickUpObject : MonoBehaviour {
         SophieNote1.SetActive(false);
         SophieNote2.SetActive(false);
         SophieNote3.SetActive(false);
+
+        // Note In-Scene Illuminator elements being set.
+        Note1Illuminator.SetActive(true);
+        Note2Illuminator.SetActive(true);
+        Note3Illuminator.SetActive(false);
+        Note4Illuminator.SetActive(false);
+        Note5Illuminator.SetActive(false);
+        Note6Illuminator.SetActive(false);
 
         // Note Active Flags.
         isEthanNote1Active = true;
@@ -193,15 +225,18 @@ public class PickUpObject : MonoBehaviour {
         //Time.timeScale = 0.0f;
 
         yield return new WaitForSeconds(audioPlayBack.clip.length);
+        //Time.timeScale = 1.0f;
         audioPlayBack.clip = doorUnlock;
         audioPlayBack.Play();
 
         // Disable Note 1 Door Lock GameObject.
         Note1_DoorLock.SetActive(false);
+        Door_Bedroom.SetActive(false);
 
         // Disable UI Elements here.
         ReadingPanel.SetActive(false);
         Ethan_Note1.SetActive(false);
+        Note1Illuminator.SetActive(false);
 
         //Time.timeScale = 1.0f;
 
@@ -238,6 +273,8 @@ public class PickUpObject : MonoBehaviour {
         // Change Next Note Visibility Flag.
         isEthanNote3Active = true;
         EthanNote3.SetActive(true);
+        Note2Illuminator.SetActive(false);
+        Note3Illuminator.SetActive(true);
 
         // Check to see if conditions to unlock Babies Room have been met.
         if (note_Ethan2_Played == true && note_Ethan3_Played == true && note_Ethan4_Played == true)
@@ -279,6 +316,8 @@ public class PickUpObject : MonoBehaviour {
         // Change Next Note Visibility Flag.
         isEthanNote4Active = true;
         EthanNote4.SetActive(true);
+        Note3Illuminator.SetActive(false);
+        Note4Illuminator.SetActive(true);
 
         // Check to see if conditions to unlock Babies Room have been met.
         if (note_Ethan2_Played == true && note_Ethan3_Played == true && note_Ethan4_Played == true)
@@ -320,11 +359,14 @@ public class PickUpObject : MonoBehaviour {
         // Change Next Note Visibility Flag.
         isEthanNote5Active = true;
         EthanNote5.SetActive(true);
+        Note4Illuminator.SetActive(false);
+        Note5Illuminator.SetActive(true);
 
         // Check to see if conditions to unlock Babies Room have been met.
         if (note_Ethan2_Played == true && note_Ethan3_Played == true && note_Ethan4_Played == true)
         {
             Note2_3_4_DoorLock1.SetActive(false);
+            Door_BabiesRoom.SetActive(false);
             audioPlayBack.clip = doorUnlock;
             audioPlayBack.Play();
         }
@@ -361,6 +403,8 @@ public class PickUpObject : MonoBehaviour {
         // Change Next Note Visibility Flag.
         isEthanNote6Active = true;
         EthanNote6.SetActive(true);
+        Note5Illuminator.SetActive(false);
+        Note6Illuminator.SetActive(true);
 
         // Check to see if conditions to unlock Exterior Doors have been met.
         if (note_Ethan5_Played == true && note_Ethan6_Played == true)
@@ -396,6 +440,7 @@ public class PickUpObject : MonoBehaviour {
         // Disable UI Elements here.
         ReadingPanel.SetActive(false);
         Ethan_Note6.SetActive(false);
+        Note6Illuminator.SetActive(false);
 
         // Change Ethan Note 6 Flag.
         note_Ethan6_Played = true;
@@ -410,6 +455,9 @@ public class PickUpObject : MonoBehaviour {
         {
             Note5_6_DoorLock1.SetActive(false);
             Note5_6_DoorLock2.SetActive(false);
+            Door_FrontDoor.SetActive(false);
+            Door_SideDoorLeft.SetActive(false);
+            Door_SideDoorRight.SetActive(false);
             audioPlayBack.clip = doorUnlock;
             audioPlayBack.Play();
         }
@@ -524,6 +572,20 @@ public class PickUpObject : MonoBehaviour {
             TrackObjectName();
             ChangeCamera();
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(sceneName);
+        }
+
+        //if (Ethan_Note1_CurrentlyRunning == true)
+        //{
+        //    Time.timeScale = 0.0f;
+        //}
+        //else
+        //{
+        //    Time.timeScale = 1.0f;
+        //}
     }
 
     void carry(GameObject objects)

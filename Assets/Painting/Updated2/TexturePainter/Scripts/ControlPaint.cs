@@ -14,7 +14,12 @@ public class ControlPaint : MonoBehaviour {
     public Button stencil2;
     public Button brush1;
     public Button brush2;
+    public GameObject ScreenCentre;
     //public Slider value;
+
+    public Texture2D cursorTexture;
+    public CursorMode cursorMode = CursorMode.Auto;
+    public Vector2 hotSpot = Vector2.zero;
 
     // Use this for initialization
     void Start () {
@@ -34,6 +39,8 @@ public class ControlPaint : MonoBehaviour {
             //value.gameObject.SetActive(true);
             stencil1.gameObject.SetActive(true);
             stencil2.gameObject.SetActive(true);
+            ScreenCentre.SetActive(false);
+            Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
         }
         else
         {
@@ -45,6 +52,8 @@ public class ControlPaint : MonoBehaviour {
             //value.gameObject.SetActive(false);
             stencil1.gameObject.SetActive(false);
             stencil2.gameObject.SetActive(false);
+            ScreenCentre.SetActive(true);
+            Cursor.SetCursor(null, Vector2.zero, cursorMode);
         }
     }
 
