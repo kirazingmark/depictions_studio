@@ -7,13 +7,7 @@ public class ControlPaint : MonoBehaviour {
 
     CameraSwitcher pCamera;
     public TexturePainter tPainter;
-    public Button exitButton;
-    public Button deleteButoton;
-    public Button removeButton;
-    public Button stencil1;
-    public Button stencil2;
-    public Button brush1;
-    public Button brush2;
+    public List<Button> paintingButton = new List<Button>();
     public GameObject ScreenCentre;
     //public Slider value;
 
@@ -31,27 +25,22 @@ public class ControlPaint : MonoBehaviour {
     {
         if (pCamera.Camera7.enabled == true)
         {
-            exitButton.gameObject.SetActive(true);
-            deleteButoton.gameObject.SetActive(true);
-            removeButton.gameObject.SetActive(true);
-            brush1.gameObject.SetActive(true);
-            brush2.gameObject.SetActive(true);
-            //value.gameObject.SetActive(true);
-            stencil1.gameObject.SetActive(true);
-            stencil2.gameObject.SetActive(true);
+           
+            foreach(Button but in paintingButton)
+            {
+                but.gameObject.SetActive(true);
+            }
+            
             ScreenCentre.SetActive(false);
             Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
         }
         else
         {
-            exitButton.gameObject.SetActive(false);
-            deleteButoton.gameObject.SetActive(false);
-            removeButton.gameObject.SetActive(false);
-            brush1.gameObject.SetActive(false);
-            brush2.gameObject.SetActive(false);
-            //value.gameObject.SetActive(false);
-            stencil1.gameObject.SetActive(false);
-            stencil2.gameObject.SetActive(false);
+           
+            foreach (Button but in paintingButton)
+            {
+                but.gameObject.SetActive(false);
+            }
             ScreenCentre.SetActive(true);
             Cursor.SetCursor(null, Vector2.zero, cursorMode);
         }
@@ -62,13 +51,4 @@ public class ControlPaint : MonoBehaviour {
         pCamera.Camera7.enabled = false;
     }
 
-    public void delete()
-    {
-        tPainter.RestartCanvas();
-    }
-
-    public void remove()
-    {
-        tPainter.RemoveStencil();
-    }
 }

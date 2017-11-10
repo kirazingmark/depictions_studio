@@ -13,7 +13,7 @@ public class Mood : MonoBehaviour {
     public float blinking;
 
     public FirstPersonController chara;
-    public PickupObject po;
+    public PickUpObject po;
     // Use this for initialization
     void Start () {
 
@@ -21,7 +21,7 @@ public class Mood : MonoBehaviour {
         painting = false;
 
         chara = GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>();
-        po = GameObject.FindGameObjectWithTag("Player").GetComponent<PickupObject>();
+        po = GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpObject>();
 
     }
 	
@@ -30,13 +30,14 @@ public class Mood : MonoBehaviour {
 
         blinking += Time.deltaTime;
 
-        if (happyMeter >= 0 && !painting)
+        if (/*happyMeter >= 0 ||*/ po.reading == true)
         {
-            happyMeter -= Time.deltaTime/(determine * 3.0f);
+           
+            chara.m_WalkSpeed = 0;
         }
         else 
         {
-           
+            happyMeter -= Time.deltaTime / (determine * 3.0f);
         }
 
         // This needs to be fixed, Happiness can still rise above 100.

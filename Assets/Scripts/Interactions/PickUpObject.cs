@@ -16,6 +16,7 @@ public class PickUpObject : MonoBehaviour {
     public float smooth;
     public float timer = 5;
     public string sceneName; // Used for restarting the Scene - temporary only.
+    public bool reading;
 
     // Note Sprite UI Elements.
     public GameObject ReadingPanel;
@@ -222,6 +223,8 @@ public class PickUpObject : MonoBehaviour {
         audioPlayBack.clip = note_Ethan1;
         audioPlayBack.PlayOneShot(note_Ethan1, 1.0f);
 
+        reading = true;
+        
         //Time.timeScale = 0.0f;
 
         yield return new WaitForSeconds(audioPlayBack.clip.length);
@@ -231,12 +234,14 @@ public class PickUpObject : MonoBehaviour {
 
         // Disable Note 1 Door Lock GameObject.
         Note1_DoorLock.SetActive(false);
-        Door_Bedroom.SetActive(false);
+        //Door_Bedroom.SetActive(false);
 
         // Disable UI Elements here.
         ReadingPanel.SetActive(false);
         Ethan_Note1.SetActive(false);
         Note1Illuminator.SetActive(false);
+
+        reading = false;
 
         //Time.timeScale = 1.0f;
 
@@ -258,6 +263,8 @@ public class PickUpObject : MonoBehaviour {
         ReadingPanel.SetActive(true);
         Ethan_Note2.SetActive(true);
 
+        reading = true;
+
         audioPlayBack.clip = note_Ethan2;
         audioPlayBack.PlayOneShot(note_Ethan2, 1.0f);
 
@@ -266,6 +273,8 @@ public class PickUpObject : MonoBehaviour {
         // Disable UI Elements here.
         ReadingPanel.SetActive(false);
         Ethan_Note2.SetActive(false);
+
+        reading = false;
 
         // Change Ethan Note 2 Flag.
         note_Ethan2_Played = true;
@@ -301,14 +310,20 @@ public class PickUpObject : MonoBehaviour {
         ReadingPanel.SetActive(true);
         Ethan_Note3.SetActive(true);
 
+        reading = true;
+
         audioPlayBack.clip = note_Ethan3;
         audioPlayBack.PlayOneShot(note_Ethan3, 1.0f);
+
+        
 
         yield return new WaitForSeconds(audioPlayBack.clip.length);
 
         // Disable UI Elements here.
         ReadingPanel.SetActive(false);
         Ethan_Note3.SetActive(false);
+
+        reading = false;
 
         // Change Ethan Note 3 Flag.
         note_Ethan3_Played = true;
@@ -344,8 +359,12 @@ public class PickUpObject : MonoBehaviour {
         ReadingPanel.SetActive(true);
         Ethan_Note4.SetActive(true);
 
+        reading = true;
+
         audioPlayBack.clip = note_Ethan4;
         audioPlayBack.PlayOneShot(note_Ethan4, 1.0f);
+
+        
 
         yield return new WaitForSeconds(audioPlayBack.clip.length);
 
@@ -361,6 +380,8 @@ public class PickUpObject : MonoBehaviour {
         EthanNote5.SetActive(true);
         Note4Illuminator.SetActive(false);
         Note5Illuminator.SetActive(true);
+
+        reading = false;
 
         // Check to see if conditions to unlock Babies Room have been met.
         if (note_Ethan2_Played == true && note_Ethan3_Played == true && note_Ethan4_Played == true)
@@ -388,8 +409,12 @@ public class PickUpObject : MonoBehaviour {
         ReadingPanel.SetActive(true);
         Ethan_Note5.SetActive(true);
 
+        reading = true;
+
         audioPlayBack.clip = note_Ethan5;
         audioPlayBack.PlayOneShot(note_Ethan5, 1.0f);
+
+        
 
         yield return new WaitForSeconds(audioPlayBack.clip.length);
 
@@ -405,6 +430,8 @@ public class PickUpObject : MonoBehaviour {
         EthanNote6.SetActive(true);
         Note5Illuminator.SetActive(false);
         Note6Illuminator.SetActive(true);
+
+        reading = false;
 
         // Check to see if conditions to unlock Exterior Doors have been met.
         if (note_Ethan5_Played == true && note_Ethan6_Played == true)
@@ -432,8 +459,12 @@ public class PickUpObject : MonoBehaviour {
         ReadingPanel.SetActive(true);
         Ethan_Note6.SetActive(true);
 
+        reading = true;
+
         audioPlayBack.clip = note_Ethan6;
         audioPlayBack.PlayOneShot(note_Ethan6, 1.0f);
+
+        
 
         yield return new WaitForSeconds(audioPlayBack.clip.length);
 
@@ -441,6 +472,8 @@ public class PickUpObject : MonoBehaviour {
         ReadingPanel.SetActive(false);
         Ethan_Note6.SetActive(false);
         Note6Illuminator.SetActive(false);
+
+        reading = false;
 
         // Change Ethan Note 6 Flag.
         note_Ethan6_Played = true;
@@ -479,14 +512,20 @@ public class PickUpObject : MonoBehaviour {
         ReadingPanel.SetActive(true);
         Sophie_Note1.SetActive(true);
 
+        reading = true;
+
         audioPlayBack.clip = note_Ethan1;
         audioPlayBack.PlayOneShot(note_Sophie1, 1.0f);
+
+        
 
         yield return new WaitForSeconds(audioPlayBack.clip.length);
 
         // Disable UI Elements here.
         ReadingPanel.SetActive(false);
         Sophie_Note1.SetActive(false);
+
+        reading = false;
 
         // Change Sophie Note 1 Flag.
         note_Sophie1_Played = true;
@@ -509,14 +548,20 @@ public class PickUpObject : MonoBehaviour {
         ReadingPanel.SetActive(true);
         Sophie_Note2.SetActive(true);
 
+        reading = true;
+
         audioPlayBack.clip = note_Sophie2;
         audioPlayBack.PlayOneShot(note_Sophie2, 1.0f);
+
+        
 
         yield return new WaitForSeconds(audioPlayBack.clip.length);
 
         // Disable UI Elements here.
         ReadingPanel.SetActive(false);
         Sophie_Note2.SetActive(false);
+
+        reading = false;
 
         // Change Sophie Note 2 Flag.
         note_Sophie2_Played = true;
@@ -539,14 +584,20 @@ public class PickUpObject : MonoBehaviour {
         ReadingPanel.SetActive(true);
         Sophie_Note3.SetActive(true);
 
+        reading = true;
+
         audioPlayBack.clip = note_Ethan1;
         audioPlayBack.PlayOneShot(note_Sophie3, 1.0f);
+
+        
 
         yield return new WaitForSeconds(audioPlayBack.clip.length);
 
         // Disable UI Elements here.
         ReadingPanel.SetActive(false);
         Sophie_Note3.SetActive(false);
+
+        reading = false;
 
         // Change Sophie Note 3 Flag.
         note_Sophie3_Played = true;
@@ -573,10 +624,10 @@ public class PickUpObject : MonoBehaviour {
             ChangeCamera();
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene(sceneName);
-        }
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    SceneManager.LoadScene(sceneName);
+        //}
 
         //if (Ethan_Note1_CurrentlyRunning == true)
         //{

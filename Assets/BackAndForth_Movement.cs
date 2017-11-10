@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,6 +14,15 @@ public class BackAndForth_Movement : MonoBehaviour {
     void Update () {
         _Time = _Time + Time.deltaTime;
         float phase = Mathf.Sin(_Time / _Period);
-        transform.localRotation = Quaternion.Euler( new Vector3(phase * _Angle, 0,0));
+        Debug.Log(phase);
+
+        try {
+            transform.localRotation = Quaternion.Euler(new Vector3(phase * _Angle, phase + 0.01f, phase + 0.01f));
+        }
+        catch (Exception e)
+        {
+            Debug.LogException(e, this);
+        }
+        
     }
 }
