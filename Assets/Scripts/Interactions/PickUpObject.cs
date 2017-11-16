@@ -110,6 +110,7 @@ public class PickUpObject : MonoBehaviour {
     public GameObject Door_FrontDoor;
     public GameObject Door_SideDoorLeft;
     public GameObject Door_SideDoorRight;
+    public GameObject Door_Studio;
 
     public AudioClip pickup;
     public AudioClip drop;
@@ -152,6 +153,7 @@ public class PickUpObject : MonoBehaviour {
         Door_FrontDoor.SetActive(true);
         Door_SideDoorLeft.SetActive(true);
         Door_SideDoorRight.SetActive(true);
+        Door_Studio.SetActive(true);
 
         // Note UI Elements being set to FALSE by default.
         ReadingPanel.SetActive(false);
@@ -216,7 +218,7 @@ public class PickUpObject : MonoBehaviour {
     IEnumerator MoveNoteUpwards()
     {
         //yield return new WaitForSeconds(58);
-        if (noteMaximised == true && noteCurrentlyMoving == false)
+        if (noteMaximised == true && noteCurrentlyMoving == false && reading == true)
         {
 
             noteCurrentlyMoving = true;
@@ -224,34 +226,134 @@ public class PickUpObject : MonoBehaviour {
             float elapsedTime = 0f;
             while (elapsedTime < noteMoveDuration)
             {
-                Ethan_Note1.transform.Translate(Vector3.down * Time.deltaTime * 300);
-                Ethan_Note1.transform.Translate(Vector3.left * Time.deltaTime * 700);
-                //Ethan_Note1.transform.transform.Rotate(Vector3.forward * Time.deltaTime * 50);
-                elapsedTime += Time.deltaTime;
+                if (isEthanNote1Active == true)
+                {
+                    Ethan_Note1.transform.Translate(Vector3.down * Time.deltaTime * 300);
+                    Ethan_Note1.transform.Translate(Vector3.left * Time.deltaTime * 700);
+                    elapsedTime += Time.deltaTime;
+                }
+                else if (isEthanNote2Active == true)
+                {
+                    Ethan_Note2.transform.Translate(Vector3.down * Time.deltaTime * 300);
+                    Ethan_Note2.transform.Translate(Vector3.left * Time.deltaTime * 700);
+                    elapsedTime += Time.deltaTime;
+                }
+                else if (isEthanNote3Active == true)
+                {
+                    Ethan_Note3.transform.Translate(Vector3.down * Time.deltaTime * 300);
+                    Ethan_Note3.transform.Translate(Vector3.left * Time.deltaTime * 700);
+                    elapsedTime += Time.deltaTime;
+                }
+                else if(isEthanNote4Active == true)
+                {
+                    Ethan_Note4.transform.Translate(Vector3.down * Time.deltaTime * 300);
+                    Ethan_Note4.transform.Translate(Vector3.left * Time.deltaTime * 700);
+                    elapsedTime += Time.deltaTime;
+                }
+                else if (isEthanNote5Active == true)
+                {
+                    Ethan_Note5.transform.Translate(Vector3.down * Time.deltaTime * 300);
+                    Ethan_Note5.transform.Translate(Vector3.left * Time.deltaTime * 700);
+                    elapsedTime += Time.deltaTime;
+                }
+                else if (isEthanNote6Active == true)
+                {
+                    Ethan_Note6.transform.Translate(Vector3.down * Time.deltaTime * 300);
+                    Ethan_Note6.transform.Translate(Vector3.left * Time.deltaTime * 700);
+                    elapsedTime += Time.deltaTime;
+                }
+                else if (isSophieNote1Active == true)
+                {
+                    Sophie_Note1.transform.Translate(Vector3.down * Time.deltaTime * 300);
+                    Sophie_Note1.transform.Translate(Vector3.left * Time.deltaTime * 700);
+                    elapsedTime += Time.deltaTime;
+                }
+                else if (isSophieNote2Active == true)
+                {
+                    Sophie_Note2.transform.Translate(Vector3.down * Time.deltaTime * 300);
+                    Sophie_Note2.transform.Translate(Vector3.left * Time.deltaTime * 700);
+                    elapsedTime += Time.deltaTime;
+                }
+                else if (isSophieNote3Active == true)
+                {
+                    Sophie_Note3.transform.Translate(Vector3.down * Time.deltaTime * 300);
+                    Sophie_Note3.transform.Translate(Vector3.left * Time.deltaTime * 700);
+                    elapsedTime += Time.deltaTime;
+                }
 
                 yield return null;
             }
 
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(0.5f);
             noteCurrentlyMoving = false;
             noteMaximised = false;
         }
-        else if (noteMaximised == false && noteCurrentlyMoving == false)
+        else if (noteMaximised == false && noteCurrentlyMoving == false && reading == true)
         {
             noteCurrentlyMoving = true;
 
             float elapsedTime = 0f;
             while (elapsedTime < noteMoveDuration)
             {
-                Ethan_Note1.transform.Translate(Vector3.up * Time.deltaTime * 300);
-                Ethan_Note1.transform.Translate(Vector3.right * Time.deltaTime * 700);
-                //Ethan_Note1.transform.transform.Rotate(Vector3.back * Time.deltaTime * 50);
-                elapsedTime += Time.deltaTime;
+                if (isEthanNote1Active == true)
+                {
+                    Ethan_Note1.transform.Translate(Vector3.up * Time.deltaTime * 300);
+                    Ethan_Note1.transform.Translate(Vector3.right * Time.deltaTime * 700);
+                    elapsedTime += Time.deltaTime;
+                }
+                else if (isEthanNote2Active == true)
+                {
+                    Ethan_Note2.transform.Translate(Vector3.up * Time.deltaTime * 300);
+                    Ethan_Note2.transform.Translate(Vector3.right * Time.deltaTime * 700);
+                    elapsedTime += Time.deltaTime;
+                }
+                else if (isEthanNote3Active == true)
+                {
+                    Ethan_Note3.transform.Translate(Vector3.up * Time.deltaTime * 300);
+                    Ethan_Note3.transform.Translate(Vector3.right * Time.deltaTime * 700);
+                    elapsedTime += Time.deltaTime;
+                }
+                else if (isEthanNote4Active == true)
+                {
+                    Ethan_Note4.transform.Translate(Vector3.up * Time.deltaTime * 300);
+                    Ethan_Note4.transform.Translate(Vector3.right * Time.deltaTime * 700);
+                    elapsedTime += Time.deltaTime;
+                }
+                else if (isEthanNote5Active == true)
+                {
+                    Ethan_Note5.transform.Translate(Vector3.up * Time.deltaTime * 300);
+                    Ethan_Note5.transform.Translate(Vector3.right * Time.deltaTime * 700);
+                    elapsedTime += Time.deltaTime;
+                }
+                else if (isEthanNote6Active == true)
+                {
+                    Ethan_Note6.transform.Translate(Vector3.up * Time.deltaTime * 300);
+                    Ethan_Note6.transform.Translate(Vector3.right * Time.deltaTime * 700);
+                    elapsedTime += Time.deltaTime;
+                }
+                else if (isSophieNote1Active == true)
+                {
+                    Sophie_Note1.transform.Translate(Vector3.up * Time.deltaTime * 300);
+                    Sophie_Note1.transform.Translate(Vector3.right * Time.deltaTime * 700);
+                    elapsedTime += Time.deltaTime;
+                }
+                else if (isSophieNote2Active == true)
+                {
+                    Sophie_Note2.transform.Translate(Vector3.up * Time.deltaTime * 300);
+                    Sophie_Note2.transform.Translate(Vector3.right * Time.deltaTime * 700);
+                    elapsedTime += Time.deltaTime;
+                }
+                else if (isSophieNote3Active == true)
+                {
+                    Sophie_Note3.transform.Translate(Vector3.up * Time.deltaTime * 300);
+                    Sophie_Note3.transform.Translate(Vector3.right * Time.deltaTime * 700);
+                    elapsedTime += Time.deltaTime;
+                }
 
                 yield return null;
             }
 
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(0.5f);
             noteCurrentlyMoving = false;
             noteMaximised = true;
         }
@@ -260,6 +362,8 @@ public class PickUpObject : MonoBehaviour {
     // ETHAN BEDROOM NOTE FUNCTION.
     public IEnumerator EthanNote1_Function()
     {
+        noteMaximised = true;
+        isEthanNote1Active = true;
         Debug.Log("Ethan 1 Function Called!");
 
         Ethan_Note1_CurrentlyRunning = true;
@@ -282,7 +386,7 @@ public class PickUpObject : MonoBehaviour {
 
         // Disable Note 1 Door Lock GameObject.
         Note1_DoorLock.SetActive(false);
-        //Door_Bedroom.SetActive(false);
+        Door_Bedroom.SetActive(false);
 
         // Disable UI Elements here.
         ReadingPanel.SetActive(false);
@@ -298,11 +402,14 @@ public class PickUpObject : MonoBehaviour {
         EthanNote2.SetActive(true);
 
         Ethan_Note1_CurrentlyRunning = false;
+        isEthanNote1Active = false;
     }
 
     // ETHAN KITCHEN NOTE FUNCTION.
     public IEnumerator EthanNote2_Function()
     {
+        noteMaximised = true;
+        isEthanNote2Active = true;
         Debug.Log("Ethan 2 Function Called!");
 
         Ethan_Note2_CurrentlyRunning = true;
@@ -345,11 +452,14 @@ public class PickUpObject : MonoBehaviour {
         }
 
         Ethan_Note2_CurrentlyRunning = false;
+        isEthanNote2Active = false;
     }
 
     // ETHAN DINNING ROOM NOTE FUNCTION.
     public IEnumerator EthanNote3_Function()
     {
+        noteMaximised = true;
+        isEthanNote3Active = true;
         Debug.Log("Ethan 3 Function Called!");
 
         Ethan_Note3_CurrentlyRunning = true;
@@ -394,11 +504,14 @@ public class PickUpObject : MonoBehaviour {
         }
 
         Ethan_Note3_CurrentlyRunning = false;
+        isEthanNote3Active = false;
     }
 
     // ETHAN LOUNGE NOTE FUNCTION.
     public IEnumerator EthanNote4_Function()
     {
+        noteMaximised = true;
+        isEthanNote4Active = true;
         Debug.Log("Ethan 4 Function Called!");
 
         Ethan_Note4_CurrentlyRunning = true;
@@ -444,11 +557,14 @@ public class PickUpObject : MonoBehaviour {
         }
 
         Ethan_Note4_CurrentlyRunning = false;
+        isEthanNote4Active = false;
     }
 
     // ETHAN BABIES ROOM FUNCTION 1.
     public IEnumerator EthanNote5_Function()
     {
+        noteMaximised = true;
+        isEthanNote5Active = true;
         Debug.Log("Ethan 5 Function Called!");
 
         Ethan_Note5_CurrentlyRunning = true;
@@ -494,11 +610,14 @@ public class PickUpObject : MonoBehaviour {
         }
 
         Ethan_Note5_CurrentlyRunning = false;
+        isEthanNote5Active = false;
     }
 
     // ETHAN BABIES ROOM FUNCTION 2.
     public IEnumerator EthanNote6_Function()
     {
+        noteMaximised = true;
+        isEthanNote6Active = true;
         Debug.Log("Ethan 6 Function Called!");
 
         Ethan_Note6_CurrentlyRunning = true;
@@ -539,6 +658,7 @@ public class PickUpObject : MonoBehaviour {
             Door_FrontDoor.SetActive(false);
             Door_SideDoorLeft.SetActive(false);
             Door_SideDoorRight.SetActive(false);
+            Door_Studio.SetActive(false);
             audioPlayBack.clip = doorUnlock;
             audioPlayBack.Play();
         }
@@ -547,11 +667,14 @@ public class PickUpObject : MonoBehaviour {
         }
 
         Ethan_Note6_CurrentlyRunning = false;
+        isEthanNote6Active = true;
     }
 
     // SOPHIE STUDIO NOTE FUNCTION.
     public IEnumerator SophieNote1_Function()
     {
+        noteMaximised = true;
+        isSophieNote1Active = true;
         Debug.Log("Sophie 1 Function Called!");
 
         Sophie_Note1_CurrentlyRunning = true;
@@ -583,11 +706,14 @@ public class PickUpObject : MonoBehaviour {
         SophieNote2.SetActive(true);
 
         Sophie_Note1_CurrentlyRunning = false;
+        isSophieNote1Active = false;
     }
 
     // SOPHIE POND NOTE FUNCTION.
     public IEnumerator SophieNote2_Function()
     {
+        noteMaximised = true;
+        isSophieNote2Active = true;
         Debug.Log("Sophie 2 Function Called!");
 
         Sophie_Note2_CurrentlyRunning = true;
@@ -619,11 +745,14 @@ public class PickUpObject : MonoBehaviour {
         SophieNote3.SetActive(true);
 
         Sophie_Note2_CurrentlyRunning = false;
+        isSophieNote2Active = false;
     }
 
     // SOPHIE TREE NOTE FUNCTION.
     public IEnumerator SophieNote3_Function()
     {
+        noteMaximised = true;
+        isSophieNote3Active = true;
         Debug.Log("Sophie 3 Function Called!");
 
         Sophie_Note3_CurrentlyRunning = true;
@@ -651,6 +780,7 @@ public class PickUpObject : MonoBehaviour {
         note_Sophie3_Played = true;
 
         Sophie_Note3_CurrentlyRunning = false;
+        isSophieNote3Active = false;
     }
 
     // Update is called once per frame
