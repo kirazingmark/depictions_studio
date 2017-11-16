@@ -17,6 +17,10 @@ public class PickUpObject : MonoBehaviour {
     public float timer = 5;
     public string sceneName; // Used for restarting the Scene - temporary only.
     public bool reading;
+    public float noteMoveSpeed = 100.0f;
+    public float noteMoveDuration = 0.75f;
+    public bool noteCurrentlyMoving = false;
+    public bool noteMaximised = true;
 
     // Note Sprite UI Elements.
     public GameObject ReadingPanel;
@@ -207,6 +211,50 @@ public class PickUpObject : MonoBehaviour {
         Note2_3_4_DoorLock1.SetActive(true);
         Note5_6_DoorLock1.SetActive(true);
         Note5_6_DoorLock2.SetActive(true);
+    }
+
+    IEnumerator MoveNoteUpwards()
+    {
+        //yield return new WaitForSeconds(58);
+        if (noteMaximised == true && noteCurrentlyMoving == false)
+        {
+
+            noteCurrentlyMoving = true;
+
+            float elapsedTime = 0f;
+            while (elapsedTime < noteMoveDuration)
+            {
+                Ethan_Note1.transform.Translate(Vector3.down * Time.deltaTime * 300);
+                Ethan_Note1.transform.Translate(Vector3.left * Time.deltaTime * 700);
+                //Ethan_Note1.transform.transform.Rotate(Vector3.forward * Time.deltaTime * 50);
+                elapsedTime += Time.deltaTime;
+
+                yield return null;
+            }
+
+            yield return new WaitForSeconds(1.0f);
+            noteCurrentlyMoving = false;
+            noteMaximised = false;
+        }
+        else if (noteMaximised == false && noteCurrentlyMoving == false)
+        {
+            noteCurrentlyMoving = true;
+
+            float elapsedTime = 0f;
+            while (elapsedTime < noteMoveDuration)
+            {
+                Ethan_Note1.transform.Translate(Vector3.up * Time.deltaTime * 300);
+                Ethan_Note1.transform.Translate(Vector3.right * Time.deltaTime * 700);
+                //Ethan_Note1.transform.transform.Rotate(Vector3.back * Time.deltaTime * 50);
+                elapsedTime += Time.deltaTime;
+
+                yield return null;
+            }
+
+            yield return new WaitForSeconds(1.0f);
+            noteCurrentlyMoving = false;
+            noteMaximised = true;
+        }
     }
 
     // ETHAN BEDROOM NOTE FUNCTION.
@@ -622,6 +670,16 @@ public class PickUpObject : MonoBehaviour {
             PickUp();
             TrackObjectName();
             ChangeCamera();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(sceneName);
+        }
+
+        if (Input.GetKeyDown("n"))
+        {
+            StartCoroutine(MoveNoteUpwards());
         }
 
         //if (Input.GetKeyDown(KeyCode.Escape))

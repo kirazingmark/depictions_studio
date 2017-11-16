@@ -33,7 +33,7 @@ public class Mood : MonoBehaviour {
         if (/*happyMeter >= 0 ||*/ po.reading == true)
         {
            
-            chara.m_WalkSpeed = 0;
+            //chara.m_WalkSpeed = 0;
         }
         else 
         {
