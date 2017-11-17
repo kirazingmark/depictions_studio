@@ -802,20 +802,15 @@ public class PickUpObject : MonoBehaviour {
             ChangeCamera();
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene(sceneName);
-        }
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    SceneManager.LoadScene(sceneName);
+        //}
 
         if (Input.GetKeyDown("n"))
         {
             StartCoroutine(MoveNoteUpwards());
         }
-
-        //if (Input.GetKeyDown(KeyCode.Escape))
-        //{
-        //    SceneManager.LoadScene(sceneName);
-        //}
 
         //if (Ethan_Note1_CurrentlyRunning == true)
         //{

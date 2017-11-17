@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
 
@@ -63,6 +64,11 @@ public class Mood : MonoBehaviour {
         if (happyMeter <= 20)
         {
             Camera.main.GetComponent<CameraEffect>().rate = Mathf.Clamp(Mathf.Abs(Mathf.Sin(blinking) * 0.35f + 0.65f), 0.3f, 1.0f);
+        }
+        if (happyMeter <= 0)
+        {
+            happyMeter = 0;
+            SceneManager.LoadScene(po.sceneName);
         }
     }
 }
