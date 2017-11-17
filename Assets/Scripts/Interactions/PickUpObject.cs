@@ -807,7 +807,7 @@ public class PickUpObject : MonoBehaviour {
         //    SceneManager.LoadScene(sceneName);
         //}
 
-        if (Input.GetKeyDown("n"))
+        if (Input.GetKeyDown("q"))
         {
             StartCoroutine(MoveNoteUpwards());
         }

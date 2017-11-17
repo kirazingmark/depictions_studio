@@ -32,7 +32,7 @@ public class ControlPaint : MonoBehaviour {
             {
                 but.gameObject.SetActive(true);
             }
-            scale.gameObject.SetActive(true);
+            
             ScreenCentre.SetActive(false);
             Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
         }
@@ -43,7 +43,7 @@ public class ControlPaint : MonoBehaviour {
             {
                 but.gameObject.SetActive(false);
             }
-            scale.gameObject.SetActive(false);
+           
             ScreenCentre.SetActive(true);
             Cursor.SetCursor(null, Vector2.zero, cursorMode);
         }

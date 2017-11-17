@@ -51,12 +51,26 @@ public class Mood : MonoBehaviour {
         {
             //Debug.Log("pie");
             chara.m_MouseLook.XSensitivity = 1 + (happyMeter/100);
-            chara.m_MouseLook.YSensitivity = 1 + (happyMeter / 100);
+            if (chara.m_IsInverted)
+            {
+                chara.m_MouseLook.YSensitivity = -2 + (happyMeter / 100);
+                if(chara.m_MouseLook.YSensitivity>=-1f)
+                   chara.m_MouseLook.YSensitivity = -1f;
+            }
+                
+            else
+            {
+                chara.m_MouseLook.YSensitivity = 1 + (happyMeter / 100);
+                if (chara.m_MouseLook.YSensitivity <= 1f)
+                    chara.m_MouseLook.YSensitivity = 1f;
+            }
+
             chara.m_WalkSpeed = 1 + (happyMeter / 100);
             if (chara.m_MouseLook.XSensitivity <= 1f)
                 chara.m_MouseLook.XSensitivity = 1f;
-            if (chara.m_MouseLook.YSensitivity <= 1f)
-                chara.m_MouseLook.YSensitivity = 1f;
+            
+            //if (chara.m_MouseLook.YSensitivity <= 1f)
+            //    chara.m_MouseLook.YSensitivity = 1f;
         }
    
         if(chara.m_WalkSpeed > 0)
