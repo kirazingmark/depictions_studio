@@ -6,10 +6,10 @@ using UnityEngine;
 public class ControlPaint : MonoBehaviour {
 
     CameraSwitcher pCamera;
-    public TexturePainter tPainter;
+    public Paintable paint;
     public List<Button> paintingButton = new List<Button>();
     public GameObject ScreenCentre;
-    //public Slider value;
+    public Slider scale;
 
     public Texture2D cursorTexture;
     public CursorMode cursorMode = CursorMode.Auto;
@@ -23,6 +23,8 @@ public class ControlPaint : MonoBehaviour {
 
     void Update()
     {
+        paint.BrushScale = scale.value;
+
         if (pCamera.Camera7.enabled == true)
         {
            
@@ -30,7 +32,7 @@ public class ControlPaint : MonoBehaviour {
             {
                 but.gameObject.SetActive(true);
             }
-            
+            scale.gameObject.SetActive(true);
             ScreenCentre.SetActive(false);
             Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
         }
@@ -41,6 +43,7 @@ public class ControlPaint : MonoBehaviour {
             {
                 but.gameObject.SetActive(false);
             }
+            scale.gameObject.SetActive(false);
             ScreenCentre.SetActive(true);
             Cursor.SetCursor(null, Vector2.zero, cursorMode);
         }
