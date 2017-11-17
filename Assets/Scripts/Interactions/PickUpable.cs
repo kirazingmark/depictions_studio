@@ -22,7 +22,7 @@ public class PickUpable : MonoBehaviour
     void Start()
     {
         po = GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpObject>();
-        rb = GetComponent<Rigidbody>();
+        rb = this.gameObject.GetComponent<Rigidbody>();
         playerMood = GameObject.FindGameObjectWithTag("Player").GetComponent<Mood>();
         if (ot == ObjectType.Bad)
             point = -5f;
