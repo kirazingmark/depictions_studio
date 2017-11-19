@@ -1,1 +1,0 @@
-Model ripped by Roxas358, no credit needed.

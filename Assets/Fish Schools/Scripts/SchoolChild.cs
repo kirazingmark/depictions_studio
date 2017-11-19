@@ -96,7 +96,7 @@ public class SchoolChild:MonoBehaviour{
 	}
 	
 	public void LocateRequiredChildren(){
-		if(_model == null) _model = _cacheTransform.Find("Model");
+		if(_model == null) _model = _cacheTransform.FindChild("Model");
 		if(_scanner == null){
 			_scanner = new GameObject().transform;
 			_scanner.parent = this.transform;
