@@ -1,0 +1,248 @@
+fileFormatVersion: 2
+guid: decf2fb712ad29347bc4c97f62ac14be
+timeCreated: 1511082984
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: ChamferBox48
+    100004: ChamferBox49
+    100006: Cylinder33
+    100008: Cylinder45
+    100010: Cylinder46
+    100012: Cylinder47
+    100014: Cylinder48
+    100016: Cylinder52
+    100018: Cylinder53
+    100020: Line62
+    100022: Line63
+    100024: Line64
+    100026: Line74
+    100028: Line75
+    100030: Loft30
+    100032: Loft31
+    100034: Loft32
+    100036: Sphere01
+    100038: Sphere02
+    100040: Sphere03
+    100042: Sphere04
+    100044: Sphere05
+    100046: Sphere06
+    100048: Sphere07
+    100050: Sphere08
+    100052: Sphere09
+    100054: Sphere10
+    400000: //RootNode
+    400002: ChamferBox48
+    400004: ChamferBox49
+    400006: Cylinder33
+    400008: Cylinder45
+    400010: Cylinder46
+    400012: Cylinder47
+    400014: Cylinder48
+    400016: Cylinder52
+    400018: Cylinder53
+    400020: Line62
+    400022: Line63
+    400024: Line64
+    400026: Line74
+    400028: Line75
+    400030: Loft30
+    400032: Loft31
+    400034: Loft32
+    400036: Sphere01
+    400038: Sphere02
+    400040: Sphere03
+    400042: Sphere04
+    400044: Sphere05
+    400046: Sphere06
+    400048: Sphere07
+    400050: Sphere08
+    400052: Sphere09
+    400054: Sphere10
+    2300000: ChamferBox48
+    2300002: ChamferBox49
+    2300004: Cylinder33
+    2300006: Cylinder45
+    2300008: Cylinder46
+    2300010: Cylinder47
+    2300012: Cylinder48
+    2300014: Cylinder52
+    2300016: Cylinder53
+    2300018: Line62
+    2300020: Line63
+    2300022: Line64
+    2300024: Line74
+    2300026: Line75
+    2300028: Loft30
+    2300030: Loft31
+    2300032: Loft32
+    2300034: Sphere01
+    2300036: Sphere02
+    2300038: Sphere03
+    2300040: Sphere04
+    2300042: Sphere05
+    2300044: Sphere06
+    2300046: Sphere07
+    2300048: Sphere08
+    2300050: Sphere09
+    2300052: Sphere10
+    3300000: ChamferBox48
+    3300002: ChamferBox49
+    3300004: Cylinder33
+    3300006: Cylinder45
+    3300008: Cylinder46
+    3300010: Cylinder47
+    3300012: Cylinder48
+    3300014: Cylinder52
+    3300016: Cylinder53
+    3300018: Line62
+    3300020: Line63
+    3300022: Line64
+    3300024: Line74
+    3300026: Line75
+    3300028: Loft30
+    3300030: Loft31
+    3300032: Loft32
+    3300034: Sphere01
+    3300036: Sphere02
+    3300038: Sphere03
+    3300040: Sphere04
+    3300042: Sphere05
+    3300044: Sphere06
+    3300046: Sphere07
+    3300048: Sphere08
+    3300050: Sphere09
+    3300052: Sphere10
+    4300000: Cylinder45
+    4300002: Cylinder46
+    4300004: Cylinder47
+    4300006: Cylinder48
+    4300008: Sphere09
+    4300010: Line64
+    4300012: Cylinder53
+    4300014: Line62
+    4300016: Line63
+    4300018: Line74
+    4300020: Line75
+    4300022: Sphere01
+    4300024: Sphere02
+    4300026: Sphere03
+    4300028: Sphere04
+    4300030: Loft31
+    4300032: Loft32
+    4300034: ChamferBox48
+    4300036: ChamferBox49
+    4300038: Sphere05
+    4300040: Sphere06
+    4300042: Sphere07
+    4300044: Sphere08
+    4300046: Cylinder33
+    4300048: Sphere10
+    4300050: Loft30
+    4300052: Cylinder52
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default
+    second: {fileID: 2100000, guid: dcc91a9646b30c44d9b605547f80f53d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default
+    second: {fileID: 2100000, guid: d5bc0c2112cea0547a89b7abf57505f8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 06 - Default
+    second: {fileID: 2100000, guid: 12638a1a0e1ccd24d944776e8f663b61, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 07 - Default
+    second: {fileID: 2100000, guid: 50bf1da632f54284599679fac745e506, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #2'
+    second: {fileID: 2100000, guid: e661c062f0d331a4696adde3e98389da, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
