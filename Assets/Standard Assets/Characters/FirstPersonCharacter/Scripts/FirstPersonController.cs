@@ -67,22 +67,22 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             RotateView();
             // the jump state needs to read here to make sure it is not missed
-            if (!m_Jump)
-            {
-                m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
-            }
+            //if (!m_Jump)
+            //{
+            //    m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
+            //}
 
-            if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
-            {
-                StartCoroutine(m_JumpBob.DoBobCycle());
-                PlayLandingSound();
-                m_MoveDir.y = 0f;
-                m_Jumping = false;
-            }
-            if (!m_CharacterController.isGrounded && !m_Jumping && m_PreviouslyGrounded)
-            {
-                m_MoveDir.y = 0f;
-            }
+            //if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
+            //{
+            //    StartCoroutine(m_JumpBob.DoBobCycle());
+            //    PlayLandingSound();
+            //    m_MoveDir.y = 0f;
+            //    m_Jumping = false;
+            //}
+            //if (!m_CharacterController.isGrounded && !m_Jumping && m_PreviouslyGrounded)
+            //{
+            //    m_MoveDir.y = 0f;
+            //}
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
 
@@ -102,12 +102,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
 
-        private void PlayLandingSound()
-        {
-            m_AudioSource.clip = m_LandSound;
-            m_AudioSource.Play();
-            m_NextStep = m_StepCycle + .5f;
-        }
+        //private void PlayLandingSound()
+        //{
+        //    m_AudioSource.clip = m_LandSound;
+        //    m_AudioSource.Play();
+        //    m_NextStep = m_StepCycle + .5f;
+        //}
 
 
         private void FixedUpdate()
@@ -134,7 +134,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 if (m_Jump)
                 {
                     m_MoveDir.y = m_JumpSpeed;
-                    PlayJumpSound();
+                    //PlayJumpSound();
                     m_Jump = false;
                     m_Jumping = true;
                 }
@@ -145,54 +145,54 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             m_CollisionFlags = m_CharacterController.Move(m_MoveDir*Time.fixedDeltaTime);
 
-            ProgressStepCycle(speed);
+            //ProgressStepCycle(speed);
             UpdateCameraPosition(speed);
 
             m_MouseLook.UpdateCursorLock();
         }
 
 
-        private void PlayJumpSound()
-        {
-            m_AudioSource.clip = m_JumpSound;
-            m_AudioSource.Play();
-        }
+        //private void PlayJumpSound()
+        //{
+        //    m_AudioSource.clip = m_JumpSound;
+        //    m_AudioSource.Play();
+        //}
 
 
-        private void ProgressStepCycle(float speed)
-        {
-            if (m_CharacterController.velocity.sqrMagnitude > 0 && (m_Input.x != 0 || m_Input.y != 0))
-            {
-                m_StepCycle += (m_CharacterController.velocity.magnitude + (speed*(m_IsWalking ? 1f : m_RunstepLenghten)))*
-                             Time.fixedDeltaTime;
-            }
+        //private void ProgressStepCycle(float speed)
+        //{
+        //    if (m_CharacterController.velocity.sqrMagnitude > 0 && (m_Input.x != 0 || m_Input.y != 0))
+        //    {
+        //        m_StepCycle += (m_CharacterController.velocity.magnitude + (speed*(m_IsWalking ? 1f : m_RunstepLenghten)))*
+        //                     Time.fixedDeltaTime;
+        //    }
 
-            if (!(m_StepCycle > m_NextStep))
-            {
-                return;
-            }
+        //    if (!(m_StepCycle > m_NextStep))
+        //    {
+        //        return;
+        //    }
 
-            m_NextStep = m_StepCycle + m_StepInterval;
+        //    m_NextStep = m_StepCycle + m_StepInterval;
 
-            PlayFootStepAudio();
-        }
+        //    //PlayFootStepAudio();
+        //}
 
 
-        private void PlayFootStepAudio()
-        {
-            if (!m_CharacterController.isGrounded)
-            {
-                return;
-            }
-            // pick & play a random footstep sound from the array,
-            // excluding sound at index 0
-            int n = Random.Range(1, m_FootstepSounds.Length);
-            m_AudioSource.clip = m_FootstepSounds[n];
-            m_AudioSource.PlayOneShot(m_AudioSource.clip);
-            // move picked sound to index 0 so it's not picked next time
-            m_FootstepSounds[n] = m_FootstepSounds[0];
-            m_FootstepSounds[0] = m_AudioSource.clip;
-        }
+        //private void PlayFootStepAudio()
+        //{
+        //    if (!m_CharacterController.isGrounded)
+        //    {
+        //        return;
+        //    }
+        //    // pick & play a random footstep sound from the array,
+        //    // excluding sound at index 0
+        //    int n = Random.Range(1, m_FootstepSounds.Length);
+        //    m_AudioSource.clip = m_FootstepSounds[n];
+        //    m_AudioSource.PlayOneShot(m_AudioSource.clip);
+        //    // move picked sound to index 0 so it's not picked next time
+        //    m_FootstepSounds[n] = m_FootstepSounds[0];
+        //    m_FootstepSounds[0] = m_AudioSource.clip;
+        //}
 
 
         private void UpdateCameraPosition(float speed)
