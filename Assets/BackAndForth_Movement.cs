@@ -14,7 +14,7 @@ public class BackAndForth_Movement : MonoBehaviour {
     void Update () {
         _Time = _Time + Time.deltaTime;
         float phase = Mathf.Sin(_Time / _Period);
-        Debug.Log(phase);
+
 
         try {
             transform.localRotation = Quaternion.Euler(new Vector3(phase * _Angle, phase + 0.01f, phase + 0.01f));

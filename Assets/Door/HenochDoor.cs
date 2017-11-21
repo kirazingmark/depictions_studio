@@ -25,7 +25,7 @@ public class HenochDoor : MonoBehaviour
         int x = Screen.width / 2;
         int y = Screen.height / 2;
 
-        Ray ext = pCamera.Camera1.ScreenPointToRay(new Vector3(x, y));
+        Ray ext = Camera.main.ScreenPointToRay(new Vector3(x, y));
         RaycastHit hit;
         if (Physics.Raycast(ext, out hit))
         {
@@ -34,7 +34,7 @@ public class HenochDoor : MonoBehaviour
                 Debug.Log(hit.collider.gameObject.tag);
                 if (Input.GetKeyDown(KeyCode.E) && isOpen == false)
                 {
-                    anim.Play("Open");
+                    anim.Play("Close");
                     isOpen = true;
                 }
 
@@ -46,7 +46,7 @@ public class HenochDoor : MonoBehaviour
         }
         if (timer <= 0)
         {
-            anim.Play("Close");
+            anim.Play("Open");
             isOpen = false;
             timer = 5.0f;
         }
