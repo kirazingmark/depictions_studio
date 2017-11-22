@@ -7,16 +7,19 @@ public class HenochDoor : MonoBehaviour
 
     private bool isOpen = false;
     private float timer = 5.0f;
+    public List<string> animations = new List<string>();
     Animation anim;
     CameraSwitcher pCamera;
 
     // Use this for initialization
     void Start()
     {
-
         anim = this.gameObject.GetComponent<Animation>();
         pCamera = GameObject.FindGameObjectWithTag("Player").GetComponent<CameraSwitcher>();
-
+        foreach (AnimationState state in anim)
+        {
+            animations.Add(state.name);
+        }
     }
 
     // Update is called once per frame
@@ -34,7 +37,7 @@ public class HenochDoor : MonoBehaviour
                 Debug.Log(hit.collider.gameObject.tag);
                 if (Input.GetKeyDown(KeyCode.E) && isOpen == false)
                 {
-                    anim.Play("Close");
+                    anim.Play(animations[0]);
                     isOpen = true;
                 }
 
@@ -46,7 +49,7 @@ public class HenochDoor : MonoBehaviour
         }
         if (timer <= 0)
         {
-            anim.Play("Open");
+            anim.Play(animations[1]);
             isOpen = false;
             timer = 5.0f;
         }
