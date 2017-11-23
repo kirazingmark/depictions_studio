@@ -18,7 +18,7 @@ public class PickUpObject : MonoBehaviour {
     public string sceneName; // Used for restarting the Scene - temporary only.
     public bool reading;
     public float noteMoveSpeed = 100.0f;
-    public float noteMoveDuration = 0.75f;
+    public float noteMoveDuration = 1.00f;
     public bool noteCurrentlyMoving = false;
     public bool noteMaximised = true;
 
@@ -228,56 +228,56 @@ public class PickUpObject : MonoBehaviour {
             {
                 if (isEthanNote1Active == true)
                 {
-                    Ethan_Note1.transform.Translate(Vector3.down * Time.deltaTime * 300);
-                    Ethan_Note1.transform.Translate(Vector3.left * Time.deltaTime * 700);
+                    Ethan_Note1.transform.Translate(Vector3.down * Time.deltaTime * 650);
+                    //Ethan_Note1.transform.Translate(Vector3.left * Time.deltaTime * 700);
                     elapsedTime += Time.deltaTime;
                 }
                 else if (isEthanNote2Active == true)
                 {
-                    Ethan_Note2.transform.Translate(Vector3.down * Time.deltaTime * 300);
-                    Ethan_Note2.transform.Translate(Vector3.left * Time.deltaTime * 700);
+                    Ethan_Note2.transform.Translate(Vector3.down * Time.deltaTime * 650);
+                    //Ethan_Note2.transform.Translate(Vector3.left * Time.deltaTime * 700);
                     elapsedTime += Time.deltaTime;
                 }
                 else if (isEthanNote3Active == true)
                 {
-                    Ethan_Note3.transform.Translate(Vector3.down * Time.deltaTime * 300);
-                    Ethan_Note3.transform.Translate(Vector3.left * Time.deltaTime * 700);
+                    Ethan_Note3.transform.Translate(Vector3.down * Time.deltaTime * 650);
+                    //Ethan_Note3.transform.Translate(Vector3.left * Time.deltaTime * 700);
                     elapsedTime += Time.deltaTime;
                 }
                 else if(isEthanNote4Active == true)
                 {
-                    Ethan_Note4.transform.Translate(Vector3.down * Time.deltaTime * 300);
-                    Ethan_Note4.transform.Translate(Vector3.left * Time.deltaTime * 700);
+                    Ethan_Note4.transform.Translate(Vector3.down * Time.deltaTime * 650);
+                    //Ethan_Note4.transform.Translate(Vector3.left * Time.deltaTime * 700);
                     elapsedTime += Time.deltaTime;
                 }
                 else if (isEthanNote5Active == true)
                 {
-                    Ethan_Note5.transform.Translate(Vector3.down * Time.deltaTime * 300);
-                    Ethan_Note5.transform.Translate(Vector3.left * Time.deltaTime * 700);
+                    Ethan_Note5.transform.Translate(Vector3.down * Time.deltaTime * 650);
+                    //Ethan_Note5.transform.Translate(Vector3.left * Time.deltaTime * 700);
                     elapsedTime += Time.deltaTime;
                 }
                 else if (isEthanNote6Active == true)
                 {
-                    Ethan_Note6.transform.Translate(Vector3.down * Time.deltaTime * 300);
-                    Ethan_Note6.transform.Translate(Vector3.left * Time.deltaTime * 700);
+                    Ethan_Note6.transform.Translate(Vector3.down * Time.deltaTime * 650);
+                    //Ethan_Note6.transform.Translate(Vector3.left * Time.deltaTime * 700);
                     elapsedTime += Time.deltaTime;
                 }
                 else if (isSophieNote1Active == true)
                 {
-                    Sophie_Note1.transform.Translate(Vector3.down * Time.deltaTime * 300);
-                    Sophie_Note1.transform.Translate(Vector3.left * Time.deltaTime * 700);
+                    Sophie_Note1.transform.Translate(Vector3.down * Time.deltaTime * 650);
+                    //Sophie_Note1.transform.Translate(Vector3.left * Time.deltaTime * 700);
                     elapsedTime += Time.deltaTime;
                 }
                 else if (isSophieNote2Active == true)
                 {
-                    Sophie_Note2.transform.Translate(Vector3.down * Time.deltaTime * 300);
-                    Sophie_Note2.transform.Translate(Vector3.left * Time.deltaTime * 700);
+                    Sophie_Note2.transform.Translate(Vector3.down * Time.deltaTime * 650);
+                    //Sophie_Note2.transform.Translate(Vector3.left * Time.deltaTime * 700);
                     elapsedTime += Time.deltaTime;
                 }
                 else if (isSophieNote3Active == true)
                 {
-                    Sophie_Note3.transform.Translate(Vector3.down * Time.deltaTime * 300);
-                    Sophie_Note3.transform.Translate(Vector3.left * Time.deltaTime * 700);
+                    Sophie_Note3.transform.Translate(Vector3.down * Time.deltaTime * 650);
+                    //Sophie_Note3.transform.Translate(Vector3.left * Time.deltaTime * 700);
                     elapsedTime += Time.deltaTime;
                 }
 
@@ -297,56 +297,56 @@ public class PickUpObject : MonoBehaviour {
             {
                 if (isEthanNote1Active == true)
                 {
-                    Ethan_Note1.transform.Translate(Vector3.up * Time.deltaTime * 300);
-                    Ethan_Note1.transform.Translate(Vector3.right * Time.deltaTime * 700);
+                    Ethan_Note1.transform.Translate(Vector3.up * Time.deltaTime * 650);
+                    //Ethan_Note1.transform.Translate(Vector3.right * Time.deltaTime * 700);
                     elapsedTime += Time.deltaTime;
                 }
                 else if (isEthanNote2Active == true)
                 {
-                    Ethan_Note2.transform.Translate(Vector3.up * Time.deltaTime * 300);
-                    Ethan_Note2.transform.Translate(Vector3.right * Time.deltaTime * 700);
+                    Ethan_Note2.transform.Translate(Vector3.up * Time.deltaTime * 650);
+                    //Ethan_Note2.transform.Translate(Vector3.right * Time.deltaTime * 700);
                     elapsedTime += Time.deltaTime;
                 }
                 else if (isEthanNote3Active == true)
                 {
-                    Ethan_Note3.transform.Translate(Vector3.up * Time.deltaTime * 300);
-                    Ethan_Note3.transform.Translate(Vector3.right * Time.deltaTime * 700);
+                    Ethan_Note3.transform.Translate(Vector3.up * Time.deltaTime * 650);
+                    //Ethan_Note3.transform.Translate(Vector3.right * Time.deltaTime * 700);
                     elapsedTime += Time.deltaTime;
                 }
                 else if (isEthanNote4Active == true)
                 {
-                    Ethan_Note4.transform.Translate(Vector3.up * Time.deltaTime * 300);
-                    Ethan_Note4.transform.Translate(Vector3.right * Time.deltaTime * 700);
+                    Ethan_Note4.transform.Translate(Vector3.up * Time.deltaTime * 650);
+                    //Ethan_Note4.transform.Translate(Vector3.right * Time.deltaTime * 700);
                     elapsedTime += Time.deltaTime;
                 }
                 else if (isEthanNote5Active == true)
                 {
-                    Ethan_Note5.transform.Translate(Vector3.up * Time.deltaTime * 300);
-                    Ethan_Note5.transform.Translate(Vector3.right * Time.deltaTime * 700);
+                    Ethan_Note5.transform.Translate(Vector3.up * Time.deltaTime * 650);
+                    //Ethan_Note5.transform.Translate(Vector3.right * Time.deltaTime * 700);
                     elapsedTime += Time.deltaTime;
                 }
                 else if (isEthanNote6Active == true)
                 {
-                    Ethan_Note6.transform.Translate(Vector3.up * Time.deltaTime * 300);
-                    Ethan_Note6.transform.Translate(Vector3.right * Time.deltaTime * 700);
+                    Ethan_Note6.transform.Translate(Vector3.up * Time.deltaTime * 650);
+                    //Ethan_Note6.transform.Translate(Vector3.right * Time.deltaTime * 700);
                     elapsedTime += Time.deltaTime;
                 }
                 else if (isSophieNote1Active == true)
                 {
-                    Sophie_Note1.transform.Translate(Vector3.up * Time.deltaTime * 300);
-                    Sophie_Note1.transform.Translate(Vector3.right * Time.deltaTime * 700);
+                    Sophie_Note1.transform.Translate(Vector3.up * Time.deltaTime * 650);
+                    //Sophie_Note1.transform.Translate(Vector3.right * Time.deltaTime * 700);
                     elapsedTime += Time.deltaTime;
                 }
                 else if (isSophieNote2Active == true)
                 {
-                    Sophie_Note2.transform.Translate(Vector3.up * Time.deltaTime * 300);
-                    Sophie_Note2.transform.Translate(Vector3.right * Time.deltaTime * 700);
+                    Sophie_Note2.transform.Translate(Vector3.up * Time.deltaTime * 650);
+                    //Sophie_Note2.transform.Translate(Vector3.right * Time.deltaTime * 700);
                     elapsedTime += Time.deltaTime;
                 }
                 else if (isSophieNote3Active == true)
                 {
-                    Sophie_Note3.transform.Translate(Vector3.up * Time.deltaTime * 300);
-                    Sophie_Note3.transform.Translate(Vector3.right * Time.deltaTime * 700);
+                    Sophie_Note3.transform.Translate(Vector3.up * Time.deltaTime * 650);
+                    //Sophie_Note3.transform.Translate(Vector3.right * Time.deltaTime * 700);
                     elapsedTime += Time.deltaTime;
                 }
 
