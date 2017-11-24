@@ -9,6 +9,8 @@ public class MainMenu : MonoBehaviour {
 
 	public string playMenuLevel;
 
+    public string playCreditsLevel;
+
 
 
 	//Play Game Function.
@@ -19,8 +21,17 @@ public class MainMenu : MonoBehaviour {
 
 	}
 
-	//Quit game function.
-	public void QuitGame() {
+    //Play Credits Function.
+    public void PlayCredits()
+    {
+        //Need this function to open up a different scene
+
+        SceneManager.LoadScene(playCreditsLevel);
+
+    }
+
+    //Quit game function.
+    public void QuitGame() {
 		
 		Application.Quit ();
 
@@ -36,7 +47,5 @@ public class MainMenu : MonoBehaviour {
 	public void MainMenus() {
 
 		SceneManager.LoadScene ("MainMenu");
-
-
 	}
 }
