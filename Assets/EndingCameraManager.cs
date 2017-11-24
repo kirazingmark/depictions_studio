@@ -17,6 +17,7 @@ public class EndingCameraManager : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        Cursor.visible = false;
 
         Time.timeScale = 0.75f;
 
