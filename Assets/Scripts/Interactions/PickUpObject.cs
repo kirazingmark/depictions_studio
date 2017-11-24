@@ -8,6 +8,8 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 public class PickUpObject : MonoBehaviour {
 
+    public string playEndingLevel;
+
     public Camera mainCamera;
     public GameObject carriedObject;
     public bool isCarrying;
@@ -49,6 +51,9 @@ public class PickUpObject : MonoBehaviour {
     public GameObject Note3Illuminator;
     public GameObject Note4Illuminator;
     public GameObject Note5Illuminator;
+    public GameObject Note6Illuminator;
+    public GameObject Note7Illuminator;
+    public GameObject Note8Illuminator;
 
     // Note Door Lock GameObjects.
     public GameObject Note1_DoorLock; // Bedroom Door.
@@ -567,6 +572,7 @@ public class PickUpObject : MonoBehaviour {
 
         // Change Next Note Visibility Flag.
         Note5Illuminator.SetActive(false);
+        Note6Illuminator.SetActive(true);
         isSophieNote1Active = true;
         SophieNote1.SetActive(true);
 
@@ -631,6 +637,8 @@ public class PickUpObject : MonoBehaviour {
         // Change Next Note Visibility Flag.
         isSophieNote2Active = true;
         SophieNote2.SetActive(true);
+        Note6Illuminator.SetActive(false);
+        Note7Illuminator.SetActive(true);
 
         Sophie_Note1_CurrentlyRunning = false;
         isSophieNote1Active = false;
@@ -666,6 +674,8 @@ public class PickUpObject : MonoBehaviour {
 
         // Change Sophie Note 2 Flag.
         note_Sophie2_Played = true;
+        Note7Illuminator.SetActive(false);
+        Note8Illuminator.SetActive(true);
 
         // Change Next Note Visibility Flag.
         isSophieNote3Active = true;
@@ -712,6 +722,12 @@ public class PickUpObject : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+
+        if (note_Sophie1_Played == true && note_Sophie2_Played == true && note_Sophie3_Played == true)
+        {
+
+            EndingCutscene();
+        }
 
         if (pCamera.Camera1.enabled == true)
             chara.m_WalkSpeed = 1 + (mood.happyMeter / 100);
@@ -883,6 +899,12 @@ public class PickUpObject : MonoBehaviour {
             }
         }
         
+    }
+
+    public void EndingCutscene()
+    {
+
+        SceneManager.LoadScene(playEndingLevel);
     }
 
     void OnGUI()
