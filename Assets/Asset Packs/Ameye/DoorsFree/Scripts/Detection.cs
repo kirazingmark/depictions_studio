@@ -85,7 +85,7 @@ public class Detection : MonoBehaviour
                 if (Input.GetKey(Character))
                 {
                     // Open/close the door by running the 'Open' function found in the 'Door' script
-                    //if (dooropening.RotationPending == false) StartCoroutine(hit.collider.GetComponent<Door>().Move());
+                    if (dooropening.RotationPending == false) StartCoroutine(hit.collider.GetComponent<Door>().Move());
                 }
             }
 
