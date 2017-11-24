@@ -10,6 +10,7 @@ public class HenochDoor : MonoBehaviour
     public List<string> animations = new List<string>();
     Animation anim;
     CameraSwitcher pCamera;
+    GameObject currDoor;
 
     // Use this for initialization
     void Start()
@@ -30,14 +31,16 @@ public class HenochDoor : MonoBehaviour
 
         Ray ext = Camera.main.ScreenPointToRay(new Vector3(x, y));
         RaycastHit hit;
-        if (Physics.Raycast(ext, out hit))
+        if (Physics.Raycast(ext, out hit,10.0f))
         {
-            if (hit.collider.gameObject.tag == "Door")
+            if (hit.collider.gameObject == gameObject)
             {
-                Debug.Log(hit.collider.gameObject.tag);
+                currDoor = hit.collider.gameObject;
+                //Debug.Log(hit.collider.gameObject.tag);
                 if (Input.GetKeyDown(KeyCode.E) && isOpen == false)
                 {
-                    anim.Play(animations[0]);
+                    currDoor.GetComponentInParent<Animation>().Play(animations[0]);
+                    Debug.Log(animations[0]);
                     isOpen = true;
                 }
 
@@ -49,7 +52,7 @@ public class HenochDoor : MonoBehaviour
         }
         if (timer <= 0)
         {
-            anim.Play(animations[1]);
+            currDoor.GetComponentInParent<Animation>().Play(animations[1]);
             isOpen = false;
             timer = 5.0f;
         }

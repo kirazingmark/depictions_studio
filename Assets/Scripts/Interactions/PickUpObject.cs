@@ -29,7 +29,6 @@ public class PickUpObject : MonoBehaviour {
     public GameObject Ethan_Note3;
     public GameObject Ethan_Note4;
     public GameObject Ethan_Note5;
-    public GameObject Ethan_Note6; // Note 5 was cut into 2 parts due to length.
     public GameObject Sophie_Note1;
     public GameObject Sophie_Note2;
     public GameObject Sophie_Note3;
@@ -40,7 +39,6 @@ public class PickUpObject : MonoBehaviour {
     public GameObject EthanNote3;
     public GameObject EthanNote4;
     public GameObject EthanNote5;
-    public GameObject EthanNote6;
     public GameObject SophieNote1;
     public GameObject SophieNote2;
     public GameObject SophieNote3;
@@ -51,7 +49,6 @@ public class PickUpObject : MonoBehaviour {
     public GameObject Note3Illuminator;
     public GameObject Note4Illuminator;
     public GameObject Note5Illuminator;
-    public GameObject Note6Illuminator;
 
     // Note Door Lock GameObjects.
     public GameObject Note1_DoorLock; // Bedroom Door.
@@ -65,7 +62,6 @@ public class PickUpObject : MonoBehaviour {
     public AudioClip note_Ethan3;
     public AudioClip note_Ethan4;
     public AudioClip note_Ethan5;
-    public AudioClip note_Ethan6;
     public AudioClip note_Sophie1;
     public AudioClip note_Sophie2;
     public AudioClip note_Sophie3;
@@ -77,7 +73,6 @@ public class PickUpObject : MonoBehaviour {
     public bool note_Ethan3_Played = false;
     public bool note_Ethan4_Played = false;
     public bool note_Ethan5_Played = false;
-    public bool note_Ethan6_Played = false;
     public bool note_Sophie1_Played = false;
     public bool note_Sophie2_Played = false;
     public bool note_Sophie3_Played = false;
@@ -88,7 +83,6 @@ public class PickUpObject : MonoBehaviour {
     public bool Ethan_Note3_CurrentlyRunning;
     public bool Ethan_Note4_CurrentlyRunning;
     public bool Ethan_Note5_CurrentlyRunning;
-    public bool Ethan_Note6_CurrentlyRunning;
     public bool Sophie_Note1_CurrentlyRunning;
     public bool Sophie_Note2_CurrentlyRunning;
     public bool Sophie_Note3_CurrentlyRunning;
@@ -99,7 +93,6 @@ public class PickUpObject : MonoBehaviour {
     public bool isEthanNote3Active;
     public bool isEthanNote4Active;
     public bool isEthanNote5Active;
-    public bool isEthanNote6Active;
     public bool isSophieNote1Active;
     public bool isSophieNote2Active;
     public bool isSophieNote3Active;
@@ -162,7 +155,6 @@ public class PickUpObject : MonoBehaviour {
         Ethan_Note3.SetActive(false);
         Ethan_Note4.SetActive(false);
         Ethan_Note5.SetActive(false);
-        Ethan_Note6.SetActive(false);
         Sophie_Note1.SetActive(false);
         Sophie_Note2.SetActive(false);
         Sophie_Note3.SetActive(false);
@@ -173,7 +165,6 @@ public class PickUpObject : MonoBehaviour {
         EthanNote3.SetActive(false);
         EthanNote4.SetActive(false);
         EthanNote5.SetActive(false);
-        EthanNote6.SetActive(false);
         SophieNote1.SetActive(false);
         SophieNote2.SetActive(false);
         SophieNote3.SetActive(false);
@@ -184,7 +175,6 @@ public class PickUpObject : MonoBehaviour {
         Note3Illuminator.SetActive(false);
         Note4Illuminator.SetActive(false);
         Note5Illuminator.SetActive(false);
-        Note6Illuminator.SetActive(false);
 
         // Note Active Flags.
         isEthanNote1Active = true;
@@ -192,7 +182,6 @@ public class PickUpObject : MonoBehaviour {
         isEthanNote3Active = false;
         isEthanNote4Active = false;
         isEthanNote5Active = false;
-        isEthanNote6Active = false;
         isSophieNote1Active = false;
         isSophieNote2Active = false;
         isSophieNote3Active = false;
@@ -203,7 +192,6 @@ public class PickUpObject : MonoBehaviour {
         Ethan_Note3_CurrentlyRunning = false;
         Ethan_Note4_CurrentlyRunning = false;
         Ethan_Note5_CurrentlyRunning = false;
-        Ethan_Note6_CurrentlyRunning = false;
         Sophie_Note1_CurrentlyRunning = false;
         Sophie_Note2_CurrentlyRunning = false;
         Sophie_Note3_CurrentlyRunning = false;
@@ -254,12 +242,6 @@ public class PickUpObject : MonoBehaviour {
                 {
                     Ethan_Note5.transform.Translate(Vector3.down * Time.deltaTime * 650);
                     //Ethan_Note5.transform.Translate(Vector3.left * Time.deltaTime * 700);
-                    elapsedTime += Time.deltaTime;
-                }
-                else if (isEthanNote6Active == true)
-                {
-                    Ethan_Note6.transform.Translate(Vector3.down * Time.deltaTime * 650);
-                    //Ethan_Note6.transform.Translate(Vector3.left * Time.deltaTime * 700);
                     elapsedTime += Time.deltaTime;
                 }
                 else if (isSophieNote1Active == true)
@@ -325,12 +307,6 @@ public class PickUpObject : MonoBehaviour {
                     //Ethan_Note5.transform.Translate(Vector3.right * Time.deltaTime * 700);
                     elapsedTime += Time.deltaTime;
                 }
-                else if (isEthanNote6Active == true)
-                {
-                    Ethan_Note6.transform.Translate(Vector3.up * Time.deltaTime * 650);
-                    //Ethan_Note6.transform.Translate(Vector3.right * Time.deltaTime * 700);
-                    elapsedTime += Time.deltaTime;
-                }
                 else if (isSophieNote1Active == true)
                 {
                     Sophie_Note1.transform.Translate(Vector3.up * Time.deltaTime * 650);
@@ -386,7 +362,7 @@ public class PickUpObject : MonoBehaviour {
 
         // Disable Note 1 Door Lock GameObject.
         Note1_DoorLock.SetActive(false);
-        Door_Bedroom.SetActive(false);
+        //Door_Bedroom.SetActive(false);
 
         // Disable UI Elements here.
         ReadingPanel.SetActive(false);
@@ -548,7 +524,7 @@ public class PickUpObject : MonoBehaviour {
         if (note_Ethan2_Played == true && note_Ethan3_Played == true && note_Ethan4_Played == true)
         {
             Note2_3_4_DoorLock1.SetActive(false);
-            Door_BabiesRoom.SetActive(false);
+            //Door_BabiesRoom.SetActive(false);
             audioPlayBack.clip = doorUnlock;
             audioPlayBack.Play();
         }
@@ -590,18 +566,26 @@ public class PickUpObject : MonoBehaviour {
         note_Ethan5_Played = true;
 
         // Change Next Note Visibility Flag.
-        isEthanNote6Active = true;
-        EthanNote6.SetActive(true);
         Note5Illuminator.SetActive(false);
-        Note6Illuminator.SetActive(true);
+        isSophieNote1Active = true;
+        SophieNote1.SetActive(true);
 
         reading = false;
 
         // Check to see if conditions to unlock Exterior Doors have been met.
-        if (note_Ethan5_Played == true && note_Ethan6_Played == true)
+        if (note_Ethan5_Played == true)
         {
             Note5_6_DoorLock1.SetActive(false);
             Note5_6_DoorLock2.SetActive(false);
+            audioPlayBack.clip = doorUnlock;
+            audioPlayBack.Play();
+
+            Note5_6_DoorLock1.SetActive(false);
+            Note5_6_DoorLock2.SetActive(false);
+            //Door_FrontDoor.SetActive(false);
+            //Door_SideDoorLeft.SetActive(false);
+            //Door_SideDoorRight.SetActive(false);
+            //Door_Studio.SetActive(false);
             audioPlayBack.clip = doorUnlock;
             audioPlayBack.Play();
         }
@@ -611,63 +595,6 @@ public class PickUpObject : MonoBehaviour {
 
         Ethan_Note5_CurrentlyRunning = false;
         isEthanNote5Active = false;
-    }
-
-    // ETHAN BABIES ROOM FUNCTION 2.
-    public IEnumerator EthanNote6_Function()
-    {
-        noteMaximised = true;
-        isEthanNote6Active = true;
-        Debug.Log("Ethan 6 Function Called!");
-
-        Ethan_Note6_CurrentlyRunning = true;
-
-        // Enable UI Elements here.
-        ReadingPanel.SetActive(true);
-        Ethan_Note6.SetActive(true);
-
-        reading = true;
-
-        audioPlayBack.clip = note_Ethan6;
-        audioPlayBack.PlayOneShot(note_Ethan6, 1.0f);
-
-        
-
-        yield return new WaitForSeconds(audioPlayBack.clip.length);
-
-        // Disable UI Elements here.
-        ReadingPanel.SetActive(false);
-        Ethan_Note6.SetActive(false);
-        Note6Illuminator.SetActive(false);
-
-        reading = false;
-
-        // Change Ethan Note 6 Flag.
-        note_Ethan6_Played = true;
-
-
-        // Change Next Note Visibility Flag.
-        isSophieNote1Active = true;
-        SophieNote1.SetActive(true);
-
-        // Check to see if conditions to unlock Exterior Doors have been met.
-        if (note_Ethan5_Played == true && note_Ethan6_Played == true)
-        {
-            Note5_6_DoorLock1.SetActive(false);
-            Note5_6_DoorLock2.SetActive(false);
-            Door_FrontDoor.SetActive(false);
-            Door_SideDoorLeft.SetActive(false);
-            Door_SideDoorRight.SetActive(false);
-            Door_Studio.SetActive(false);
-            audioPlayBack.clip = doorUnlock;
-            audioPlayBack.Play();
-        }
-        else
-        {
-        }
-
-        Ethan_Note6_CurrentlyRunning = false;
-        isEthanNote6Active = true;
     }
 
     // SOPHIE STUDIO NOTE FUNCTION.
@@ -1089,19 +1016,6 @@ public class PickUpObject : MonoBehaviour {
                         else if (note_Ethan5_Played == true)
                         {
                             Debug.Log("Ethan's Fifth Note Already Played!");
-                        }
-                    }
-                    else if (c.tag == "ReadableNoteEthan6")
-                    {
-                        Debug.Log("Ethan's Sixth Note Found!");
-
-                        if (note_Ethan6_Played == false && Ethan_Note6_CurrentlyRunning == false)
-                        {
-                            StartCoroutine(EthanNote6_Function());
-                        }
-                        else if (note_Ethan6_Played == true)
-                        {
-                            Debug.Log("Ethan's Sixth Note Already Played!");
                         }
                     }
                     else if (c.tag == "ReadableNoteSophie1")
