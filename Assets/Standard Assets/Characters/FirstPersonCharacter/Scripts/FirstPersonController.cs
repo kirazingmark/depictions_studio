@@ -98,6 +98,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 m_MouseLook.YSensitivity = m_MouseLook.YSensitivity * -1;
                 m_IsInverted = false;
+                
             }
         }
 

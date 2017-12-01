@@ -788,9 +788,9 @@ public class PickUpObject : MonoBehaviour {
                 if (p != null)
                 {
                     audioPlayBack.PlayOneShot(pickup, 1.0F);
-                    isCarrying = true;
-                    carriedObject = p.gameObject;
-                    p.rb.isKinematic = true;
+                    //isCarrying = true;
+                    //carriedObject = p.gameObject;
+                    //p.rb.isKinematic = true;
                     mood.happyMeter += (int)p.point;
                     p.pickedUp = true;
                 }
