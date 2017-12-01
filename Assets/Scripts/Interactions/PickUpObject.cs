@@ -735,8 +735,7 @@ public class PickUpObject : MonoBehaviour {
         if (isCarrying)
         {
             objectName = "";
-            carry(carriedObject);
-            checkDrop();
+           
         }
         else
         {
@@ -765,10 +764,6 @@ public class PickUpObject : MonoBehaviour {
         //}
     }
 
-    void carry(GameObject objects)
-    {
-        objects.transform.position = Vector3.Lerp(objects.transform.position, mainCamera.transform.position + mainCamera.transform.forward * distance, Time.deltaTime * smooth);
-    }
 
     void PickUp()
     {
@@ -806,21 +801,6 @@ public class PickUpObject : MonoBehaviour {
         }
     }
 
-    void checkDrop()
-    {
-		if(Input.GetKeyDown(KeyCode.E))
-        {
-            dropObject();
-        }
-    }
-
-    void dropObject()
-    {
-        audioPlayBack.PlayOneShot(drop, 1.0F);
-        isCarrying = false;
-        carriedObject.gameObject.GetComponent<Rigidbody>().isKinematic = false;
-        carriedObject = null;
-    }
 
     void TrackObjectName()
     {
