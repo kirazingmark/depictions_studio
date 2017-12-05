@@ -8,7 +8,7 @@ public class CursorManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
         pCamera = GameObject.FindGameObjectWithTag("Player").GetComponent<CameraSwitcher>();
     }
 	
@@ -21,7 +21,7 @@ public class CursorManager : MonoBehaviour {
         }
         else
         {
-            Cursor.lockState = CursorLockMode.Locked;
+            //Cursor.lockState = CursorLockMode.Locked;
         }
 		
 	}

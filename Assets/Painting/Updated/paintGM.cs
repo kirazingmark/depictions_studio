@@ -107,8 +107,8 @@ public class paintGM : MonoBehaviour {
                 whiteUselessDot.SetActive(false);
                 po.objectName = "";
                 onSomething = true;
-                Cursor.visible = true;
-                Cursor.lockState = CursorLockMode.None;
+                //Cursor.visible = true;
+                //Cursor.lockState = CursorLockMode.None;
                 
                 if (Input.GetKey(mouseLeft))
                 {
@@ -151,7 +151,7 @@ public class paintGM : MonoBehaviour {
            
         else
         {
-            //Cursor.visible = false;
+            Cursor.visible = false;
             pCamera.Camera1.enabled = true;
             //Cursor.lockState = CursorLockMode.Locked;
             chara.m_WalkSpeed = 1 + (mood.happyMeter / 100);

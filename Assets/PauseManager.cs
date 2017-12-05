@@ -34,8 +34,8 @@ public class PauseManager : MonoBehaviour {
                 Time.timeScale = 0;
                 PausePanel.SetActive(true);
                 Cursor.visible = true;
-                //chara.m_MouseLook.m_cursorIsLocked = false;
-                // Screen.lockCursor = false; // Old, depricated function.
+                chara.m_MouseLook.lockCursor = false;
+                chara.m_MouseLook.m_cursorIsLocked = false;
                 //Cursor.lockState = CursorLockMode.None;
             }
             else
@@ -43,8 +43,8 @@ public class PauseManager : MonoBehaviour {
                 Time.timeScale = 1;
                 PausePanel.SetActive(false);
                 Cursor.visible = false;
-                //chara.m_MouseLook.m_cursorIsLocked = true;
-                
+                chara.m_MouseLook.lockCursor = true;
+                chara.m_MouseLook.m_cursorIsLocked = true;
                 //Screen.lockCursor = true; // Old, depricated function.
                 //Cursor.lockState = CursorLockMode.Locked;
             }

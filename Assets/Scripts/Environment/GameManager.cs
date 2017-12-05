@@ -35,14 +35,14 @@ public class GameManager : MonoBehaviour {
         if (happyMeter <= 0)
             happyMeter = 0;
 
-        if (Input.GetKeyDown("f") || Input.GetMouseButtonDown(0))
-        {
-            happyMeter += happyScore;
-        }
-        if(Input.GetKeyDown("r") || Input.GetMouseButtonDown(1))
-        {
-            happyMeter -= sadScore;
-        }
+        //if (Input.GetKeyDown("f") || Input.GetMouseButtonDown(0))
+        //{
+        //    happyMeter += happyScore;
+        //}
+        //if(Input.GetKeyDown("r") || Input.GetMouseButtonDown(1))
+        //{
+        //    happyMeter -= sadScore;
+        //}
 
       
         Camera.main.GetComponent<CameraEffect>().Fade = (100 - happyMeter) / 100;

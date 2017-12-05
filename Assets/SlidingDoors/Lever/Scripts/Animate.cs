@@ -15,9 +15,9 @@ public class Animate : MonoBehaviour
 	}
 	void Update ()
 	{
-		if (Input.GetMouseButtonDown(0))
-		{
-			Lever.SetTrigger("Trigger");
-		}
+		//if (Input.GetMouseButtonDown(0))
+		//{
+		//	Lever.SetTrigger("Trigger");
+		//}
 	}
 }
