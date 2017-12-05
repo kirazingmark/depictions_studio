@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityStandardAssets.Characters.FirstPerson;
 
@@ -15,11 +16,16 @@ public class PauseManager : MonoBehaviour {
     public FirstPersonController chara;
     CameraSwitcher pCamera;
 
+    public List<Button> pauses = new List<Button>();
+
     // Use this for initialization
     void Start()
     {
         chara = GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>();
-        PausePanel.SetActive(false);
+        foreach (Button but in pauses)
+        {
+            but.gameObject.SetActive(false);
+        }
         Cursor.visible = false;
         pCamera = GameObject.FindGameObjectWithTag("Player").GetComponent<CameraSwitcher>();
 
@@ -35,9 +41,13 @@ public class PauseManager : MonoBehaviour {
             if (!paused && pCamera.Camera1.enabled)
             {
                 paused = true;
-                Time.timeScale = 0.00000000001f;
-                PausePanel.SetActive(true);
+                Time.timeScale = 0;
+                foreach(Button but in pauses)
+                {
+                    but.gameObject.SetActive(true);
+                }
 
+                //PausePanel.SetActive(true);
                 Cursor.visible = true;
                 chara.m_MouseLook.lockCursor = false;
                 chara.m_MouseLook.m_cursorIsLocked = false;
@@ -47,7 +57,11 @@ public class PauseManager : MonoBehaviour {
             {
                 paused = false;
                 Time.timeScale = 1;
-                PausePanel.SetActive(false);
+                //PausePanel.SetActive(false);
+                foreach (Button but in pauses)
+                {
+                    but.gameObject.SetActive(false);
+                }
                 //Cursor.visible = false;
                 //chara.m_MouseLook.lockCursor = true;
                 //chara.m_MouseLook.m_cursorIsLocked = true;
@@ -61,7 +75,11 @@ public class PauseManager : MonoBehaviour {
     {
 
         Time.timeScale = 1;
-        PausePanel.SetActive(false);
+        //PausePanel.SetActive(false);
+        foreach (Button but in pauses)
+        {
+            but.gameObject.SetActive(false);
+        }
         Cursor.visible = false;
         chara.m_MouseLook.m_cursorIsLocked = true;
         
