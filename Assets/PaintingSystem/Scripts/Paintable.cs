@@ -99,7 +99,7 @@ public class Paintable : MonoBehaviour
 	void Update () 
 	{
         // is the painting part started?
-        if(pCamera.Camera7.enabled)
+        if(pCamera.Camera7.enabled && Time.timeScale == 1)
         {
             BrushColour = colSelect.finalColor;
             // is the mouse down?

@@ -819,7 +819,7 @@ public class PickUpObject : MonoBehaviour {
             {
                 
                 PickUpable p = hit.collider.GetComponent<PickUpable>();
-                Easel e = hit.collider.GetComponent<Easel>();
+                
                 Chair c = hit.collider.GetComponent<Chair>(); // Notes are also classed under Chairs in this script.
                 if (p != null)
                 {
@@ -843,12 +843,7 @@ public class PickUpObject : MonoBehaviour {
                         objectName = "";
                     }
                 }
-                else if (e != null)
-                {
-                    enter = true;
-                    objectName = "<color=white><size=40>Paint - 'E'</size></color>";
-
-                }
+                
                 else if (c != null && c.tag != "LawnMower")
                 {
                     enter = true;

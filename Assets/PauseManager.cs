@@ -10,43 +10,48 @@ public class PauseManager : MonoBehaviour {
     public GameObject PausePanel;
     public string playMainMenu;
     public string playCredits;
+    bool paused;
 
     public FirstPersonController chara;
-
+    CameraSwitcher pCamera;
 
     // Use this for initialization
     void Start()
     {
         chara = GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>();
         PausePanel.SetActive(false);
-        //Cursor.visible = false;
-        
+        Cursor.visible = false;
+        pCamera = GameObject.FindGameObjectWithTag("Player").GetComponent<CameraSwitcher>();
+
+
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
         
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log(chara.m_MouseLook.m_cursorIsLocked);
-            if (Time.timeScale == 1)
+            
+            if (!paused && pCamera.Camera1.enabled)
             {
-                Time.timeScale = 0;
+                paused = true;
+                Time.timeScale = 0.00000000001f;
                 PausePanel.SetActive(true);
+
                 Cursor.visible = true;
                 chara.m_MouseLook.lockCursor = false;
                 chara.m_MouseLook.m_cursorIsLocked = false;
-                //Cursor.lockState = CursorLockMode.None;
+
             }
-            else
+            else if(paused && pCamera.Camera1.enabled)
             {
+                paused = false;
                 Time.timeScale = 1;
                 PausePanel.SetActive(false);
-                Cursor.visible = false;
-                chara.m_MouseLook.lockCursor = true;
-                chara.m_MouseLook.m_cursorIsLocked = true;
-                //Screen.lockCursor = true; // Old, depricated function.
-                //Cursor.lockState = CursorLockMode.Locked;
+                //Cursor.visible = false;
+                //chara.m_MouseLook.lockCursor = true;
+                //chara.m_MouseLook.m_cursorIsLocked = true;
+
             }
         }
 	}
@@ -59,8 +64,7 @@ public class PauseManager : MonoBehaviour {
         PausePanel.SetActive(false);
         Cursor.visible = false;
         chara.m_MouseLook.m_cursorIsLocked = true;
-        //Screen.lockCursor = true; // Old, depricated function.
-        //Cursor.lockState = CursorLockMode.Locked;
+        
     }
 
     // Return to Main Menu.

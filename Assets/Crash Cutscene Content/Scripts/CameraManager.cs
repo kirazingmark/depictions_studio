@@ -17,7 +17,7 @@ public class CameraManager : MonoBehaviour {
         Camera2.enabled = false;
         Camera3.enabled = false;
 
-        //Cursor.visible = false;
+        Cursor.visible = false;
 
         StartCoroutine(Camera1ToCamera2());
         StartCoroutine(Camera2ToCamera3());
