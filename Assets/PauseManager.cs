@@ -34,54 +34,58 @@ public class PauseManager : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            
-            if (!paused && pCamera.Camera1.enabled)
+            if (!paused /*&& pCamera.Camera1.enabled*/)
             {
                 paused = true;
+                Cursor.visible = true;
+                chara.m_MouseLook.lockCursor = false;
+                chara.m_MouseLook.m_cursorIsLocked = false;
                 Time.timeScale = 0;
+               
                 foreach(Button but in pauses)
                 {
                     but.gameObject.SetActive(true);
                 }
 
                 //PausePanel.SetActive(true);
-                Cursor.visible = true;
-                chara.m_MouseLook.lockCursor = false;
-                chara.m_MouseLook.m_cursorIsLocked = false;
+               
 
             }
-            else if(paused && pCamera.Camera1.enabled)
+            else if(paused /*&& pCamera.Camera1.enabled*/)
             {
                 paused = false;
+                Cursor.visible = false;
+                chara.m_MouseLook.lockCursor = true;
+                chara.m_MouseLook.m_cursorIsLocked = true;
                 Time.timeScale = 1;
                 //PausePanel.SetActive(false);
                 foreach (Button but in pauses)
                 {
                     but.gameObject.SetActive(false);
                 }
-                //Cursor.visible = false;
-                //chara.m_MouseLook.lockCursor = true;
-                //chara.m_MouseLook.m_cursorIsLocked = true;
+               
 
             }
         }
-	}
+    }
 
     // Return to Main Game.
     public void PlayResume()
     {
-
+        paused = false;
+        Cursor.visible = false;
+        chara.m_MouseLook.lockCursor = true;
+        chara.m_MouseLook.m_cursorIsLocked = true;
         Time.timeScale = 1;
         //PausePanel.SetActive(false);
         foreach (Button but in pauses)
         {
             but.gameObject.SetActive(false);
         }
-        Cursor.visible = false;
-        chara.m_MouseLook.m_cursorIsLocked = true;
+        
         
     }
 

@@ -52,12 +52,12 @@ public class DialogueParser : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            pCamera.Camera5.enabled = false;
-            pCamera.Camera1.enabled = true;
-            //player.transform.position = new Vector3(-46, 2, 10);
-        }
+        //if(Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    pCamera.Camera5.enabled = false;
+        //    pCamera.Camera1.enabled = true;
+        //    //player.transform.position = new Vector3(-46, 2, 10);
+        //}
         if (pCamera.Camera5.enabled == true)
         {
             //unlock mouse
@@ -94,12 +94,10 @@ public class DialogueParser : MonoBehaviour
         }
         else
         {
-            //Cursor.visible = false;
-            //Cursor.lockState = CursorLockMode.Locked;
-            pCamera.Camera1.enabled = true;
             panel.SetActive(false);
             gameStart = false;
         }
+       
     }
 
     void LoadDialogue(string filename)

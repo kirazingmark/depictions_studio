@@ -20,12 +20,14 @@ public class CursorManager : MonoBehaviour {
 
         if (pCamera.Camera7.enabled == true)
         {
+            pCamera.Camera1.enabled = false;
             Cursor.visible = true;
-            chara.m_MouseLook.lockCursor = false;
+            //chara.m_MouseLook.lockCursor = false;
             chara.m_MouseLook.m_cursorIsLocked = false;
         }
-        else if(pCamera.Camera1.enabled == true && Time.timeScale == 1)
+        else if(pCamera.Camera7.enabled == false && Time.timeScale == 1)
         {
+            pCamera.Camera1.enabled = true;
             Cursor.visible = false;
             chara.m_MouseLook.lockCursor = true;
             chara.m_MouseLook.m_cursorIsLocked = true;

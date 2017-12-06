@@ -744,10 +744,7 @@ public class PickUpObject : MonoBehaviour {
             ChangeCamera();
         }
 
-        //if (Input.GetKeyDown(KeyCode.Escape))
-        //{
-        //    SceneManager.LoadScene(sceneName);
-        //}
+       
 
         if (Input.GetKeyDown("q"))
         {
