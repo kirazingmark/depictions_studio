@@ -79,9 +79,9 @@ public class PickupObject : MonoBehaviour {
                 Chair c = hit.collider.GetComponent<Chair>();
                 if(c!= null)
                 {
-                    Debug.Log("running");
-                    pCamera.Camera1.enabled = false;
-                    pCamera.Camera7.enabled = true;
+                    //Debug.Log("running");
+                    //pCamera.Camera1.enabled = false;
+                    //pCamera.Camera7.enabled = true;
                 }
             }
 		}
