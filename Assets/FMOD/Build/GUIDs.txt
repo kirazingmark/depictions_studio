@@ -1,0 +1,46 @@
+{42dae45d-8c13-4f2e-9d09-97e60a46b4a7} event:/Ambient/Ambient
+{cdaa1ab0-7276-45a7-9f5d-765484a300fb} event:/Ambient/Cleaning
+{13ece47d-4b85-4984-81d8-0ca75a614b40} event:/Ambient/Door unlock
+{169f574e-b467-4f6d-99d2-33c4905caa48} event:/Ambient/Eating
+{bf06d2f8-27c2-4f18-a9e5-5039eac5ec18} event:/Ambient/Footsteps
+{dbe50b55-916f-4641-aa0c-93ec85a1dca0} event:/Ambient/Music
+{dd71d520-3f47-4cd7-bb86-349faa127aa9} event:/Ambient/Painting
+{b786467a-0d10-495e-8437-a66827442807} event:/Ambient/Piano - music
+{06baf7c3-3137-45a5-bacd-c5acc8274937} event:/Ambient/Pond
+{1e6d3872-e4bc-4030-adad-b17e43b7e337} event:/Ambient/Swing
+{c87ed815-7dd1-4541-b953-fc3828652b0b} event:/Ambient/Weeding
+{64e4d817-a595-4a3a-9a65-30116f42024b} event:/Dialogue One liners/Baby Cot
+{00961972-56cf-4e30-8482-67fafd61393c} event:/Dialogue One liners/Boxes in baby room
+{25ea8334-67c6-4fe6-a9c2-08a0e5a0548e} event:/Dialogue One liners/Broccoli monster painting
+{07c289ac-7833-494e-8f00-b0daedb32e8f} event:/Dialogue One liners/Clothes line
+{623b9f74-8aee-4471-bc58-352bc98cf3d1} event:/Dialogue One liners/Easal
+{ae1f0fe3-3f56-4c29-9388-489cfcfb26a2} event:/Dialogue One liners/Final Letter Pick up
+{8993b9ea-db27-4123-89a0-55cef292bd61} event:/Dialogue One liners/Flowers in Vase - Dinning
+{8ea38c8d-383e-4789-8c97-598e9ab60951} event:/Dialogue One liners/Flowers In Vase - Lounge
+{0b65ebe2-00c8-4124-a3e1-429606c02b97} event:/Dialogue One liners/Fridge door
+{a516d6c3-cf9b-4050-8a97-aec23f24fcac} event:/Dialogue One liners/Fruit Basket
+{45a102be-5a29-4c29-9ad5-934099d703c5} event:/Dialogue One liners/Handheld Lamp
+{10546c2b-90d1-4523-b886-507b9e9e7e60} event:/Dialogue One liners/Kitchen
+{bb4ff6a4-b121-426d-aeb7-9c75db11ffcd} event:/Dialogue One liners/Kitchen Window
+{220f4f6e-a42f-431c-9067-8ad75a730db0} event:/Dialogue One liners/Lawn Mower
+{94ba366e-02f6-4dd8-a923-bd0e67464e2c} event:/Dialogue One liners/News Articles
+{49a4f4ee-ac1d-414c-be35-bba8fc772795} event:/Dialogue One liners/Photos on wall
+{4490242b-aebf-4b96-8707-1e073c7573df} event:/Dialogue One liners/Piano
+{b65e1467-e30f-4d92-82bb-7778116e98c5} event:/Dialogue One liners/Pink Robe
+{e6cbc4d1-31bb-4682-9023-a5c58ba97abf} event:/Dialogue One liners/Pizza Boxes
+{6b4b3055-d25e-4181-8c01-e8bd48dac1e2} event:/Dialogue One liners/Pond
+{e1f8c2de-bebd-43fa-a34a-901299e45700} event:/Dialogue One liners/Seat at pond
+{0f05757b-7aef-48b0-8faf-a1eb1f0c7aa2} event:/Dialogue One liners/Sophie's paintings
+{4806c87e-1a1b-448e-90d6-5a5899e4820e} event:/Dialogue One liners/Stepping into the art studio
+{d7113b28-7f6c-4f43-9899-75ac2fd9407e} event:/Dialogue One liners/Swings
+{bacdb62a-2584-4c8b-9b35-84029d60556e} event:/Dialogue One liners/Teddy Bear
+{48aec4a1-d6ab-4429-98f6-2187b199bc20} event:/Dialogue One liners/Tree
+{0e875496-e995-4f7f-a5fa-75bceb01dc25} event:/Dialogue One liners/TV
+{4bd794c0-36aa-4a34-8a16-8ef17640dfe5} event:/Dialogue One liners/Ultrasound
+{0a56a563-84a2-497c-9e9c-12b34774c260} event:/Dialogue One liners/Umbrella Stand
+{b8780143-8758-4899-9638-e63a0b43db4c} event:/Dialogue One liners/Waking Up
+{e194e508-e1a7-4de2-9dc2-73707de5076e} event:/Dialogue One liners/Walking outside for the fist time
+{4a5197f2-4a68-4268-9b35-2f414f11de6c} event:/Dialogue One liners/Window looking at art studio
+{595e95f8-f497-4ee8-ab38-6c7dc7442201} bus:/
+{9b5b0461-e805-4418-ae04-1b040ab04b2c} bus:/Reverb
+{afe31cde-7b67-4d89-892e-02890c384453} bank:/Master Bank
