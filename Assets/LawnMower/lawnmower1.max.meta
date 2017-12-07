@@ -1,0 +1,305 @@
+fileFormatVersion: 2
+guid: acbb1660e0fcf5e4499202e18c02f727
+timeCreated: 1512593873
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Box01
+    100002: Box02
+    100004: Box03
+    100006: Box04
+    100008: Box05
+    100010: Box06
+    100012: Box07
+    100014: Box08
+    100016: Camera01
+    100018: Camera01.Target
+    100020: Cylinder01
+    100022: Cylinder03
+    100024: Cylinder04
+    100026: Cylinder05
+    100028: Cylinder07
+    100030: Cylinder08
+    100032: Cylinder09
+    100034: Cylinder10
+    100036: Direct01
+    100038: Direct01.Target
+    100040: //RootNode
+    100042: lawnmowler1a
+    100044: Line01
+    100046: Line02
+    100048: Object01
+    100050: Object02
+    100052: Object03
+    100054: Object04
+    100056: Object05
+    100058: Object06
+    100060: Object07
+    100062: Object08
+    100064: Object10
+    100066: Object13
+    100068: Object14
+    100070: Object15
+    100072: Object16
+    100074: OilTank01
+    100076: OilTank02
+    100078: Plane01
+    400000: Box01
+    400002: Box02
+    400004: Box03
+    400006: Box04
+    400008: Box05
+    400010: Box06
+    400012: Box07
+    400014: Box08
+    400016: Camera01
+    400018: Camera01.Target
+    400020: Cylinder01
+    400022: Cylinder03
+    400024: Cylinder04
+    400026: Cylinder05
+    400028: Cylinder07
+    400030: Cylinder08
+    400032: Cylinder09
+    400034: Cylinder10
+    400036: Direct01
+    400038: Direct01.Target
+    400040: //RootNode
+    400042: lawnmowler1a
+    400044: Line01
+    400046: Line02
+    400048: Object01
+    400050: Object02
+    400052: Object03
+    400054: Object04
+    400056: Object05
+    400058: Object06
+    400060: Object07
+    400062: Object08
+    400064: Object10
+    400066: Object13
+    400068: Object14
+    400070: Object15
+    400072: Object16
+    400074: OilTank01
+    400076: OilTank02
+    400078: Plane01
+    2000000: Camera01
+    2300000: Box01
+    2300002: Box02
+    2300004: Box03
+    2300006: Box04
+    2300008: Box05
+    2300010: Box06
+    2300012: Box07
+    2300014: Box08
+    2300016: Cylinder01
+    2300018: Cylinder03
+    2300020: Cylinder04
+    2300022: Cylinder05
+    2300024: Cylinder07
+    2300026: Cylinder08
+    2300028: Cylinder09
+    2300030: Cylinder10
+    2300032: Line01
+    2300034: Line02
+    2300036: Object01
+    2300038: Object02
+    2300040: Object03
+    2300042: Object04
+    2300044: Object05
+    2300046: Object06
+    2300048: Object07
+    2300050: Object08
+    2300052: Object10
+    2300054: Object13
+    2300056: Object14
+    2300058: Object15
+    2300060: Object16
+    2300062: OilTank01
+    2300064: OilTank02
+    2300066: Plane01
+    3300000: Box01
+    3300002: Box02
+    3300004: Box03
+    3300006: Box04
+    3300008: Box05
+    3300010: Box06
+    3300012: Box07
+    3300014: Box08
+    3300016: Cylinder01
+    3300018: Cylinder03
+    3300020: Cylinder04
+    3300022: Cylinder05
+    3300024: Cylinder07
+    3300026: Cylinder08
+    3300028: Cylinder09
+    3300030: Cylinder10
+    3300032: Line01
+    3300034: Line02
+    3300036: Object01
+    3300038: Object02
+    3300040: Object03
+    3300042: Object04
+    3300044: Object05
+    3300046: Object06
+    3300048: Object07
+    3300050: Object08
+    3300052: Object10
+    3300054: Object13
+    3300056: Object14
+    3300058: Object15
+    3300060: Object16
+    3300062: OilTank01
+    3300064: OilTank02
+    3300066: Plane01
+    4300000: Box01
+    4300002: Box02
+    4300004: Object03
+    4300006: Object02
+    4300008: Object04
+    4300010: Box03
+    4300012: Object07
+    4300014: Box04
+    4300016: Box05
+    4300018: Object08
+    4300020: Cylinder03
+    4300022: Cylinder04
+    4300024: OilTank01
+    4300026: Line01
+    4300028: OilTank02
+    4300030: Object13
+    4300032: Box06
+    4300034: Cylinder05
+    4300036: Object14
+    4300038: Line02
+    4300040: Cylinder01
+    4300042: Object15
+    4300044: Cylinder07
+    4300046: Object16
+    4300048: Box07
+    4300050: Box08
+    4300052: Object01
+    4300054: Object05
+    4300056: Cylinder08
+    4300058: Object06
+    4300060: Cylinder09
+    4300062: Object10
+    4300064: Cylinder10
+    4300066: Plane01
+    9500000: //RootNode
+    10800000: Direct01
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #28'
+    second: {fileID: 2100000, guid: 6871239599a56354e8cec53a867bd0f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #29'
+    second: {fileID: 2100000, guid: 82b03c53764b85f49a0ef3ad07d964f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #30'
+    second: {fileID: 2100000, guid: a7943bf985cf75d469ccba780b476356, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #31'
+    second: {fileID: 2100000, guid: 04b98dffac011994893ccd74e68f8028, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #32'
+    second: {fileID: 2100000, guid: 7ff5e292299c8bf4f887f453189f9c57, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #33'
+    second: {fileID: 2100000, guid: ce6defbc4b8f6254199e6d6308a17c94, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #34'
+    second: {fileID: 2100000, guid: c1b014edef877484c92b0d461f23178b, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

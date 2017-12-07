@@ -1,0 +1,172 @@
+fileFormatVersion: 2
+guid: eed448a1dbd923d45ab6fb1ebba02662
+timeCreated: 1512594793
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: ____
+    100002: ____1
+    100004: _____
+    100006: _____1
+    100008: ______
+    100010: Cap_12
+    100012: Cap_21
+    100014: Cloth_NURB
+    100016: Disc
+    100018: Extru
+    100020: Extrude_NU
+    100022: Lathe_NURB
+    100024: Null_
+    100026: Sweep
+    100028: //RootNode
+    400000: ____
+    400002: ____1
+    400004: _____
+    400006: _____1
+    400008: ______
+    400010: Cap_12
+    400012: Cap_21
+    400014: Cloth_NURB
+    400016: Disc
+    400018: Extru
+    400020: Extrude_NU
+    400022: Lathe_NURB
+    400024: Null_
+    400026: Sweep
+    400028: //RootNode
+    2300000: ____
+    2300002: ____1
+    2300004: _____
+    2300006: _____1
+    2300008: ______
+    2300010: Cap_12
+    2300012: Cap_21
+    2300014: Cloth_NURB
+    2300016: Disc
+    2300018: Extru
+    2300020: Extrude_NU
+    2300022: Lathe_NURB
+    2300024: Null_
+    2300026: Sweep
+    3300000: ____
+    3300002: ____1
+    3300004: _____
+    3300006: _____1
+    3300008: ______
+    3300010: Cap_12
+    3300012: Cap_21
+    3300014: Cloth_NURB
+    3300016: Disc
+    3300018: Extru
+    3300020: Extrude_NU
+    3300022: Lathe_NURB
+    3300024: Null_
+    3300026: Sweep
+    4300000: ____
+    4300002: ______
+    4300004: Null_
+    4300006: ____1
+    4300008: _____1
+    4300010: Cloth_NURB
+    4300012: Extru
+    4300014: Extrude_NU
+    4300016: Disc
+    4300018: _____
+    4300020: Sweep
+    4300022: Cap_12
+    4300024: Cap_21
+    4300026: Lathe_NURB
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ',Black_'
+    second: {fileID: 2100000, guid: 295da06c095e1a449ba6506aa5044f35, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Croco Black Skin
+    second: {fileID: 2100000, guid: a1b8a91545c9da04f8a637ae2cd6f682, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood adler
+    second: {fileID: 2100000, guid: 196d299c747767c48b668a53b2a9eb77, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
