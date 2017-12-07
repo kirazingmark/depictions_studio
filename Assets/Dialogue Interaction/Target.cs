@@ -22,7 +22,7 @@ public class Target : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         //put text here
-        text.text = "DUMBs";
+        //text.text = "DUMBs";
 	}
 	
 	// Update is called once per frame

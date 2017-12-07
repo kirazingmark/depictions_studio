@@ -18,7 +18,7 @@ public class Mood : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        happyMeter = 100;
+        happyMeter = 0;
         painting = false;
 
         chara = GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>();
@@ -82,7 +82,7 @@ public class Mood : MonoBehaviour {
         if (happyMeter <= 0)
         {
             happyMeter = 0;
-            SceneManager.LoadScene(po.sceneName);
+            //SceneManager.LoadScene(po.sceneName);
         }
     }
 }

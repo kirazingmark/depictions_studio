@@ -23,6 +23,7 @@ public class PickUpObject : MonoBehaviour {
     public float noteMoveDuration = 1.00f;
     public bool noteCurrentlyMoving = false;
     public bool noteMaximised = true;
+    public Text endingDialogueSubtitle;
 
     // Note Sprite UI Elements.
     public GameObject ReadingPanel;
@@ -719,7 +720,10 @@ public class PickUpObject : MonoBehaviour {
         audioPlayBack.clip = endingDialogue;
         audioPlayBack.PlayOneShot(audioPlayBack.clip, 1.0f);
 
+        endingDialogueSubtitle.gameObject.SetActive(true);
         yield return new WaitForSeconds(audioPlayBack.clip.length);
+        endingDialogueSubtitle.gameObject.SetActive(false);
+        //Destroy(this.gameObject);
 
         yield return new WaitForSeconds(2.0f);
 
