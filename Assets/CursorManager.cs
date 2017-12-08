@@ -22,15 +22,13 @@ public class CursorManager : MonoBehaviour {
         {
             pCamera.Camera1.enabled = false;
             Cursor.visible = true;
-            //chara.m_MouseLook.lockCursor = false;
-            chara.m_MouseLook.m_cursorIsLocked = false;
+            Cursor.lockState = CursorLockMode.None;
         }
-        else if(pCamera.Camera7.enabled == false && Time.timeScale == 1)
+        else if (pCamera.Camera7.enabled == false && Time.timeScale == 1)
         {
             pCamera.Camera1.enabled = true;
             Cursor.visible = false;
-            chara.m_MouseLook.lockCursor = true;
-            chara.m_MouseLook.m_cursorIsLocked = true;
+            Cursor.lockState = CursorLockMode.Locked;
         }
 
     }

@@ -28,7 +28,7 @@ public class PauseManager : MonoBehaviour {
         }
         Cursor.visible = false;
         pCamera = GameObject.FindGameObjectWithTag("Player").GetComponent<CameraSwitcher>();
-
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
 
     }
 
@@ -37,12 +37,12 @@ public class PauseManager : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            
             if (!paused /*&& pCamera.Camera1.enabled*/)
             {
                 paused = true;
                 Cursor.visible = true;
-                chara.m_MouseLook.lockCursor = false;
-                chara.m_MouseLook.m_cursorIsLocked = false;
+                Cursor.lockState = CursorLockMode.None;
                 Time.timeScale = 0;
                
                 foreach(Button but in pauses)
@@ -58,8 +58,7 @@ public class PauseManager : MonoBehaviour {
             {
                 paused = false;
                 Cursor.visible = false;
-                chara.m_MouseLook.lockCursor = true;
-                chara.m_MouseLook.m_cursorIsLocked = true;
+                Cursor.lockState = CursorLockMode.Locked;
                 Time.timeScale = 1;
                 //PausePanel.SetActive(false);
                 foreach (Button but in pauses)
@@ -77,8 +76,7 @@ public class PauseManager : MonoBehaviour {
     {
         paused = false;
         Cursor.visible = false;
-        chara.m_MouseLook.lockCursor = true;
-        chara.m_MouseLook.m_cursorIsLocked = true;
+        Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1;
         //PausePanel.SetActive(false);
         foreach (Button but in pauses)

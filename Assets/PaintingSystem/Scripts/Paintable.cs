@@ -101,6 +101,8 @@ public class Paintable : MonoBehaviour
         // is the painting part started?
         if(pCamera.Camera7.enabled && Time.timeScale == 1)
         {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.Locked;
             BrushColour = colSelect.finalColor;
             // is the mouse down?
             if (Input.GetMouseButton(0))
